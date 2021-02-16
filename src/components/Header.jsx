@@ -1,18 +1,34 @@
-import React from 'react';
-import { HashLink } from 'react-router-hash-link';
+import React, { useState } from 'react';
+import MainMenu from './MainMenu';
 
 const Header = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <header>
-            <div className='inner'>
+
+            <div className='inner main-menu-desktop hide-sm'>
                 <div>Aerial Photography</div>
-                <nav>
-                    <ul>
-                        <li><HashLink smooth to={'#about'}>About</HashLink></li>
-                        <li><HashLink smooth to={'#contact'}>Contact</HashLink></li>
-                    </ul>
-                </nav>
+                <MainMenu />
             </div>
+
+            <div className='header-mobile show-sm'>
+                <div>Aerial Photography</div>
+                <button onClick={() => setOpen(true)}>
+                    <span className='hide'>Open Menu</span>
+                    <i className="fas fa-bars"></i>
+                </button>
+            </div>
+
+            {open &&
+                <div className='main-menu-mobile show-sm'>
+                    <button className="close" onClick={() => setOpen(false)}>
+                        &times;
+                        <span className='hide'>Close menu</span>
+                    </button>
+                    <MainMenu />
+                </div>
+            }
         </header>
     )
 }
