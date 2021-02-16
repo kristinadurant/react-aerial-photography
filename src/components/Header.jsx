@@ -23,7 +23,7 @@ const Header = () => {
             {open &&
                 <div className='main-menu-mobile show-sm'>
                     <button className="close" onClick={() => setOpen(false)}>
-                        &times;
+                        <i className="fas fa-times"></i>
                         <span className='hide'>Close menu</span>
                     </button>
                     <MainMenu />
