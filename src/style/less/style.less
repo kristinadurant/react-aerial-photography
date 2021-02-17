@@ -56,7 +56,11 @@ button {
   min-width: 44px;
 }
 button:focus,
-button:active {
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
   outline: none;
 }
 li {
@@ -167,38 +171,4 @@ footer .inner > div {
 #about .inner {
   .flex-center;
   height: 100%;
-}
-
-/*=================
-    Responsive
-===================*/
-
-/* Small Devices */
-@media only screen and (max-width: 767px) {
-  .hide-sm {
-    display: none !important;
-  }
-  .show-sm {
-    display: initial;
-  }
-
-  /*=================
-    Header Mobile
-    ===================*/
-  .header-mobile {
-    .flex-justify;
-  }
-  .main-menu-mobile {
-    min-height: 100vh;
-    width: 100vw;
-    .flex-center;
-    position: fixed;
-    top: 0;
-    background-color: #f8f8f8;
-  }
-  .main-menu-mobile .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
 }

@@ -21,9 +21,10 @@ const handleSubmit = () => {
                 <input type='email' id='email' name='email' required />
             </div>
             <div>
-                <label htmlFor='message' className='required'>Questions/Comments:</label>
+                <label htmlFor='message' className='required'>Message:</label>
                 <textarea id='message' name='message' rows="4" required/>
             </div>
+            <button type='submit'>Send Message</button>
         </form>
     )
 }

@@ -53,7 +53,11 @@ button {
   min-width: 44px;
 }
 button:focus,
-button:active {
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
   outline: none;
 }
 li {
@@ -129,7 +133,7 @@ footer {
   background-color: #edebe7;
 }
 footer .inner > div {
-  border-bottom: 2px solid #cfa264;
+  border-bottom: 1px solid #cfa264;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -168,39 +172,4 @@ footer .inner > div {
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-/*=================
-    Responsive
-===================*/
-/* Small Devices */
-@media only screen and (max-width: 767px) {
-  .hide-sm {
-    display: none !important;
-  }
-  .show-sm {
-    display: initial;
-  }
-  /*=================
-    Header Mobile
-    ===================*/
-  .header-mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .main-menu-mobile {
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background-color: #f8f8f8;
-  }
-  .main-menu-mobile .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
 }
