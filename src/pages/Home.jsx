@@ -1,11 +1,14 @@
 import React from 'react';
 import { Banner, About, Services } from '../components';
+import { ServicesContextProvider } from '../context/ServicesContext';
 
 const Home = () => {
     return (
         <main>
             <Banner />
-            <Services />
+            <ServicesContextProvider>
+                <Services />
+            </ServicesContextProvider>
             <About />
         </main>
     )

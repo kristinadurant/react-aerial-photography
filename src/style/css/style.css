@@ -188,6 +188,10 @@ footer form label {
   justify-content: space-between;
   align-items: center;
 }
+#services button.active,
+#services button:hover {
+  color: #ffab00;
+}
 /*=================
     About
 ===================*/

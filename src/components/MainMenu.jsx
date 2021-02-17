@@ -7,6 +7,7 @@ const MainMenu = () => {
     return (
         <nav>
             <ul>
+                <li><HashLink smooth to={'#services'}>Services</HashLink></li>
                 <li><HashLink smooth to={'#about'}>About</HashLink></li>
                 <li><Link to='gallery'>Gallery</Link></li>
                 <li><HashLink smooth to={'#contact'}>Contact</HashLink></li>
