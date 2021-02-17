@@ -7,7 +7,9 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Banner />
+      <main>
+        <Banner />
+      </main>
     </BrowserRouter>
   );
 }
