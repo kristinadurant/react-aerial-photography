@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import MainMenu from './MainMenu';
 
 const Header = () => {
@@ -8,7 +9,7 @@ const Header = () => {
         <header>
 
             <div className='main-menu-desktop hide-sm inner'>
-                <div className='logo'>Pierre</div>
+                <Link to='/' className='logo'>Pierre</Link>
                 <MainMenu />
             </div>
 

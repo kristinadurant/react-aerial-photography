@@ -27,7 +27,7 @@ const Form = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-
+            
             <div>
                 <label htmlFor='name' className='required'>
                     Name:

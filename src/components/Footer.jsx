@@ -4,7 +4,7 @@ import Form from './Form';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer id='contact'>
             <div className='inner'>
                 <div>
                     <h2>Contact Pierre</h2>

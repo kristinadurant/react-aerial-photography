@@ -124,19 +124,30 @@ header .logo {
   padding: 0.2em 0.5em;
 }
 .main-menu-desktop li:last-of-type a {
-  border: 2px solid #cfa264;
+  border: 2px solid #ffd57f;
 }
 /*=================
     Footer
 ===================*/
 footer {
-  background-color: #edebe7;
+  background-color: #77929257;
+  padding: 5% 0 2%;
 }
 footer .inner > div {
-  border-bottom: 1px solid #cfa264;
+  color: #062b2d;
+  border-bottom: 1px solid #062b2d;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+footer .inner > div:last-of-type {
+  border-bottom: none;
+}
+/*=================
+    Form
+===================*/
+footer form label {
+  display: block;
 }
 /*=================
     Banner
@@ -163,6 +174,19 @@ footer .inner > div {
   color: #fff;
   font-size: 3em;
   padding-bottom: 1%;
+}
+/*=================
+    Services
+===================*/
+#services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#services .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /*=================
     About

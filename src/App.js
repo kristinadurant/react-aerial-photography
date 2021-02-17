@@ -5,6 +5,10 @@ import { Header, Footer } from './components';
 import { Home, Gallery } from './pages';
 
 function App() {
+  // document.addEventListener('contextmenu', (e) => {
+  //   e.preventDefault();
+  // });
+
   return (
     <BrowserRouter>
       <Header />

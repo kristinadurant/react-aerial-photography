@@ -1,6 +1,11 @@
-@color-tan: #edebe7;
-@color-green: rgb(166, 183, 149);
-@accent-color: rgb(207, 162, 100);
+@color-white: #b3bebe;
+@color-primary-light: #77929257;
+@color-primary: #01969d;
+@color-primary-dark: #062b2d;
+@color-grey: #016b70;
+@color-accent-ligth: #ffd57f;
+@color-accent: #ffbf3c;
+@color-accent-dark: #ffab00;
 @color: rgb(51, 65, 63);
 @font: "Italiana", serif;
 .font2 {
@@ -124,18 +129,30 @@ header .logo {
   padding: 0.2em 0.5em;
 }
 .main-menu-desktop li:last-of-type a {
-  border: 2px solid @accent-color;
+  border: 2px solid @color-accent-ligth;
 }
 
 /*=================
     Footer
 ===================*/
 footer {
-  background-color: @color-tan;
+  background-color: @color-primary-light;
+  padding: 5% 0 2%;
 }
 footer .inner > div {
-  border-bottom: 1px solid @accent-color;
+  color: @color-primary-dark;
+  border-bottom: 1px solid @color-primary-dark;
   .flex-justify;
+}
+footer .inner > div:last-of-type {
+  border-bottom: none;
+}
+
+/*=================
+    Form
+===================*/
+footer form label {
+  display: block;
 }
 
 /*=================
@@ -163,6 +180,16 @@ footer .inner > div {
   color: #fff;
   font-size: 3em;
   padding-bottom: 1%;
+}
+
+/*=================
+    Services
+===================*/
+#services {
+  .flex-center;
+}
+#services .inner {
+  .flex-justify;
 }
 
 /*=================
