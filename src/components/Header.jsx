@@ -7,11 +7,9 @@ const Header = () => {
     return (
         <header>
 
-            <div className='main-menu-desktop hide-sm'>
-                <div className='inner'>
-                    <div className='logo'>Aerial Photography</div>
-                    <MainMenu />
-                </div>
+            <div className='main-menu-desktop hide-sm inner'>
+                <div className='logo'>Pierre</div>
+                <MainMenu />
             </div>
 
             <div className='header-mobile show-sm'>

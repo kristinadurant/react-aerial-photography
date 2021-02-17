@@ -3,6 +3,11 @@
 @accent-color: rgb(207, 162, 100);
 @color: rgb(51, 65, 63);
 @font: "Italiana", serif;
+.font2 {
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
 /*=================
     Less Styles
 ===================*/
@@ -26,9 +31,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.6;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 img {
   max-width: 100%;
@@ -54,8 +60,12 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  line-height: 44px;
 }
-
+p {
+  font-size: 1.25em;
+}
 /*=================
     Global Style
 ===================*/
@@ -74,37 +84,73 @@ span.hide {
   width: 90%;
   margin: auto;
 }
+section {
+  height: 100vh;
+  min-height: 700px;
+}
 
 /*=================
     Header Desktop
 ===================*/
-header .main-menu-desktop {
+header {
   position: absolute;
   width: 100%;
   color: white;
-  font-size: 2.5em;
+  font-size: 1.5em;
   z-index: 20;
+  .font2;
 }
-.main-menu-desktop > div {
+.main-menu-desktop {
   display: flex;
   justify-content: space-between;
+  padding-top: 3%;
 }
 header .logo {
   font-family: @font;
 }
 .main-menu-desktop ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
-
+.main-menu-desktop li a {
+  padding: 0.2em 0.5em;
+}
+.main-menu-desktop li:last-of-type a {
+  border: 2px solid @accent-color;
+}
 /*=================
     Banner
 ===================*/
 .banner {
   position: relative;
 }
+.banner .video-container {
+  height: 100%;
+  overflow: hidden;
+}
 .banner video {
   display: block;
+}
+.banner .container {
+  position: absolute;
+  bottom: 8%;
+  width: 100%;
+  z-index: 25;
+}
+.banner h1 {
+  border-bottom: 2px solid white;
+  font-family: @font;
+  color: #fff;
+  font-size: 3em;
+  padding-bottom: 1%;
+}
+
+/*=================
+    About
+===================*/
+#about .inner {
+  .flex-center;
+  height: 100%;
 }
 
 /*=================
