@@ -1,4 +1,13 @@
 /*=================
+    Less Styles
+===================*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=================
     Basic Styling
 ===================*/
 * {
@@ -11,16 +20,14 @@ img {
   height: auto;
 }
 button {
+  .flex-center;
   cursor: pointer;
   background-color: transparent;
   border: none;
   line-height: 3.2;
   padding: 0 1em;
-  display: flex;
   min-height: 44px;
   min-width: 44px;
-  align-items: center;
-  justify-content: center;
 }
 button:focus,
 button:active {
@@ -88,9 +95,7 @@ header > div {
   .main-menu-mobile {
     min-height: 100vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .flex-center;
     position: fixed;
     top: 0;
     background-color: #f8f8f8;
