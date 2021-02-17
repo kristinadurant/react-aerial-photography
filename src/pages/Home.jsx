@@ -1,5 +1,5 @@
 import React from 'react';
-import { Banner, About, Services } from '../components';
+import { Banner, About, Services, ImagesCarousel } from '../components';
 import { ServicesContextProvider } from '../context/ServicesContext';
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
             <ServicesContextProvider>
                 <Services />
             </ServicesContextProvider>
-            <Carousel />
+            <ImagesCarousel />
             <About />
         </main>
     )
