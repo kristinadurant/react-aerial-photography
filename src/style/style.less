@@ -1,3 +1,8 @@
+@color-tan: #edebe7;
+@color-green: rgb(166, 183, 149);
+@accent-color: rgb(207, 162, 100);
+@color: rgb(51, 65, 63);
+@font: "Italiana", serif;
 /*=================
     Less Styles
 ===================*/
@@ -6,7 +11,14 @@
   justify-content: center;
   align-items: center;
 }
-
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4c4c4c7a;
+}
 /*=================
     Basic Styling
 ===================*/
@@ -14,6 +26,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
 }
 img {
   max-width: 100%;
@@ -63,13 +78,33 @@ span.hide {
 /*=================
     Header Desktop
 ===================*/
-header > div {
+header .main-menu-desktop {
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-size: 2.5em;
+  z-index: 20;
+}
+.main-menu-desktop > div {
   display: flex;
   justify-content: space-between;
+}
+header .logo {
+  font-family: @font;
 }
 .main-menu-desktop ul {
   display: flex;
   justify-content: space-between;
+}
+
+/*=================
+    Banner
+===================*/
+.banner {
+  position: relative;
+}
+.banner video {
+  display: block;
 }
 
 /*=================

@@ -7,17 +7,21 @@ const Header = () => {
     return (
         <header>
 
-            <div className='inner main-menu-desktop hide-sm'>
-                <div>Aerial Photography</div>
-                <MainMenu />
+            <div className='main-menu-desktop hide-sm'>
+                <div className='inner'>
+                    <div className='logo'>Aerial Photography</div>
+                    <MainMenu />
+                </div>
             </div>
 
             <div className='header-mobile show-sm'>
-                <div>Aerial Photography</div>
-                <button onClick={() => setOpen(true)}>
-                    <span className='hide'>Open Menu</span>
-                    <i className="fas fa-bars"></i>
-                </button>
+                <div>
+                    <div>Aerial Photography</div>
+                    <button onClick={() => setOpen(true)}>
+                        <span className='hide'>Open Menu</span>
+                        <i className="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
 
             {open &&

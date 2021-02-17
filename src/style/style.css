@@ -1,4 +1,20 @@
 /*=================
+    Less Styles
+===================*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4c4c4c7a;
+}
+/*=================
     Basic Styling
 ===================*/
 * {
@@ -6,21 +22,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
 img {
   max-width: 100%;
   height: auto;
 }
 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   background-color: transparent;
   border: none;
   line-height: 3.2;
   padding: 0 1em;
-  display: flex;
   min-height: 44px;
   min-width: 44px;
-  align-items: center;
-  justify-content: center;
 }
 button:focus,
 button:active {
@@ -54,13 +73,32 @@ span.hide {
 /*=================
     Header Desktop
 ===================*/
-header > div {
+header .main-menu-desktop {
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-size: 2.5em;
+  z-index: 20;
+}
+.main-menu-desktop > div {
   display: flex;
   justify-content: space-between;
+}
+header .logo {
+  font-family: "Italiana", serif;
 }
 .main-menu-desktop ul {
   display: flex;
   justify-content: space-between;
+}
+/*=================
+    Banner
+===================*/
+.banner {
+  position: relative;
+}
+.banner video {
+  display: block;
 }
 /*=================
     Responsive
