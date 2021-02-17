@@ -9,6 +9,7 @@ const Home = () => {
             <ServicesContextProvider>
                 <Services />
             </ServicesContextProvider>
+            <Carousel />
             <About />
         </main>
     )
