@@ -1,15 +1,18 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './style/style.css';
-import { Header, Banner } from './components';
+import { Header, Footer } from './components';
+import { Home, Gallery } from './pages';
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main>
-        <Banner />
-      </main>
+      <Switch>
+          <Route exact path='/' component={Home} /> 
+          <Route exact path='/gallery' component={Gallery} /> 
+      </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
