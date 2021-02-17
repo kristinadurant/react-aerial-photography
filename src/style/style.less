@@ -16,6 +16,11 @@
   justify-content: center;
   align-items: center;
 }
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -101,8 +106,7 @@ header {
   .font2;
 }
 .main-menu-desktop {
-  display: flex;
-  justify-content: space-between;
+  .flex-justify;
   padding-top: 3%;
 }
 header .logo {
@@ -118,6 +122,18 @@ header .logo {
 .main-menu-desktop li:last-of-type a {
   border: 2px solid @accent-color;
 }
+
+/*=================
+    Footer
+===================*/
+footer {
+  background-color: @color-tan;
+}
+footer .inner > div {
+  border-bottom: 1px solid @accent-color;
+  .flex-justify;
+}
+
 /*=================
     Banner
 ===================*/
@@ -170,8 +186,7 @@ header .logo {
     Header Mobile
     ===================*/
   .header-mobile {
-    display: flex;
-    justify-content: space-between;
+    .flex-justify;
   }
   .main-menu-mobile {
     min-height: 100vh;

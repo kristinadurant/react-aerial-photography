@@ -11,6 +11,11 @@
   justify-content: center;
   align-items: center;
 }
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -101,6 +106,7 @@ header {
 .main-menu-desktop {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 3%;
 }
 header .logo {
@@ -115,6 +121,18 @@ header .logo {
 }
 .main-menu-desktop li:last-of-type a {
   border: 2px solid #cfa264;
+}
+/*=================
+    Footer
+===================*/
+footer {
+  background-color: #edebe7;
+}
+footer .inner > div {
+  border-bottom: 2px solid #cfa264;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /*=================
     Banner
@@ -168,6 +186,7 @@ header .logo {
   .header-mobile {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .main-menu-mobile {
     min-height: 100vh;
