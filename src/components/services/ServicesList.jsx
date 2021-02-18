@@ -1,25 +1,28 @@
-import React, { useContext } from 'react';
-import { ServicesContext } from '../../context/ServicesContext';
+import React from 'react';
+import { HashLink } from 'react-router-hash-link';
+const services = [
+    'Photoshop',
+    'Portraits',
+    'Aerial Videos of Properties',
+    'Unique Prints'  
+]
 
 const ServicesList = () => {
-    const { services, service, setService } = useContext(ServicesContext);
 
     return (
-        <ul>
-            {services.map(serv => {
-                return (
-                    <li key={serv.id}>                                    
-                        <i className="fas fa-check"></i>
-                        <button 
-                            className={serv.id===service? 'active': null}
-                            onClick={() => setService(serv.id)}
-                        >
-                            {serv.description}
-                        </button>
-                    </li>
-                );
-            })}
-        </ul>
+        <>
+            <ul className='font2'>
+                {services.map(service => {
+                    return (
+                        <li key={service}>                                    
+                            <i className="fas fa-check"></i>
+                            <span>{service}</span>
+                        </li>
+                    );
+                })}
+            </ul>
+            <HashLink smooth to='#contact'>Let’s work together.</HashLink>
+        </>
     )
 }
 

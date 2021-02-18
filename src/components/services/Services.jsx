@@ -3,13 +3,13 @@ import ServicesImage from './ServicesImage';
 import ServicesList from './ServicesList';
 
 const Services = () => {
+
     return (
         <section id='services'>
             <div className='inner'>
                 <div>
-                    <h2>Video and Photo Services</h2>
-                    <p>Have a project in mind?</p>
-                    <p>Let’s work together.</p>
+                    <h2 className='font2'>Video and Photo Services</h2>
+                    <p className='font1'>Have a project in mind?</p>
                     <ServicesImage />
                 </div>
                 <div>

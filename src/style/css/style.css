@@ -1,7 +1,12 @@
+.font1 {
+  font-family: "Italiana", serif;
+  font-size: 3em;
+}
 .font2 {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  font-size: 1em;
 }
 /*=================
     Less Styles
@@ -31,10 +36,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  line-height: 1.6;
 }
 body {
   font-family: "Mulish", sans-serif;
+  line-height: 1.6;
 }
 img {
   max-width: 100%;
@@ -106,6 +111,7 @@ header {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  font-size: 1em;
 }
 .main-menu-desktop {
   display: flex;
@@ -131,17 +137,18 @@ header .logo {
 ===================*/
 footer {
   background-color: #77929257;
+  color: #062b2d;
   padding: 5% 0 2%;
 }
-footer .inner > div {
-  color: #062b2d;
+footer .inner > div:first-of-type,
+footer .inner > div:nth-of-type(2) {
   border-bottom: 1px solid #062b2d;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 footer .inner > div:last-of-type {
-  border-bottom: none;
+  text-align: right;
 }
 /*=================
     Form
@@ -188,9 +195,40 @@ footer form label {
   justify-content: space-between;
   align-items: center;
 }
-#services button.active,
-#services button:hover {
-  color: #ffab00;
+#services ul li {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 2em;
+}
+#services ul i {
+  border: 2px solid grey;
+  border-radius: 100%;
+  width: 2em;
+  height: 2em;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#services ul span {
+  line-height: 1.3;
+  font-size: 1.25em;
+}
+/*=================
+    Carousel
+===================*/
+.carousel {
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+.carousel .link {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  margin: auto;
+  text-align: right;
 }
 /*=================
     About
