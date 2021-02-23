@@ -254,3 +254,20 @@ footer form label {
   position: absolute;
   right: 0;
 }
+/*=================
+    Gallery
+===================*/
+.search {
+  padding-top: 10%;
+  background-color: #016b70;
+}
+section.gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.gallery .container {
+  width: 33%;
+  height: 20vw;
+  overflow: hidden;
+}

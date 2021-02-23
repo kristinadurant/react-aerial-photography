@@ -3,7 +3,7 @@ import { Banner, About, Services, Carousel } from '../components';
 
 const Home = () => {
     return (
-        <main>
+        <main id='home-page'>
             <Banner />
             <Services />
             <Carousel />
