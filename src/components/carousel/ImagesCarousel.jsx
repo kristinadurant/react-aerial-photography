@@ -2,10 +2,11 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 const images = [
-    { id: 0, description: 'Photoshop', img: 'brickell.jpg'},
-    { id: 1, description: 'Portraits', img: 'portrait.jpg'},
-    { id: 2, description: 'Aerial Videos of Properties', img: 'brickell.jpg'},
-    { id: 3, description: 'Unique Prints', img: 'zion.jpg'}  
+    { id: 0, description: 'Photoshop', img: 'IMG_1531.jpg'},
+    { id: 1, description: 'Portraits', img: 'DJI_0167.jpg'},
+    { id: 2, description: 'Aerial Videos of Properties', img: 'DJI_0145.jpg'},
+    { id: 3, description: 'Unique Prints', img: 'DJI_0164.jpg'},
+    { id: 4, description: 'Unique Prints', img: 'IMG_1495.jpg'}
 ];
 
 const ImagesCarousel = () => {

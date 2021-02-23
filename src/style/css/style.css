@@ -29,7 +29,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #4c4c4c7a;
 }
 /*=================
     Basic Styling
@@ -171,6 +170,9 @@ footer form label {
   min-height: 100%;
   width: auto;
 }
+.banner .overlay {
+  background-color: #4c4c4c7a;
+}
 .banner .container {
   position: absolute;
   bottom: 8%;
@@ -253,6 +255,7 @@ footer form label {
 #about .image {
   position: absolute;
   right: 0;
+  max-width: 400px;
 }
 /*=================
     Gallery
@@ -267,7 +270,7 @@ section.gallery {
   align-items: center;
 }
 section.gallery .container {
-  width: 33%;
+  width: 33.33%;
   height: 20vw;
   overflow: hidden;
 }
