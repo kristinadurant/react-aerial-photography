@@ -47,6 +47,9 @@
     justify-content: space-between;
     align-items: center;
   }
+  .header-mobile button {
+    padding-right: 0;
+  }
   .main-menu-mobile {
     min-height: 100vh;
     width: 100vw;
@@ -63,6 +66,8 @@
     position: absolute;
     right: 0;
     top: 0;
+    font-size: 2em;
+    color: #33413f;
   }
   .menu-bars {
     display: flex;
