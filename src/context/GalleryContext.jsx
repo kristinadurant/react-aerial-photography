@@ -4,8 +4,9 @@ import { galleryRef } from '../firebase';
 const GalleryContext = createContext({});
 
 const GalleryContextProvider = ({ children }) => {
-    const [ images, setImages ] = useState([]);
+    const [ data, setData ] = useState([]);
     const [ loading, setLoading ] = useState(false);
+    const [ search, setSearch ] = useState('');
 
     function getGallery() {
         setLoading(true);
@@ -14,7 +15,7 @@ const GalleryContextProvider = ({ children }) => {
             querySnapshot.forEach( doc => {
                 items.push(doc.data());
             });
-            setImages(items);
+            setData(items);
         });   
         setLoading(false);
     }
@@ -23,9 +24,12 @@ const GalleryContextProvider = ({ children }) => {
         getGallery();
     },[]); 
 
-    
+    const images = data?.filter(image => {
+        return image.tags.toLowerCase().includes(search.toLowerCase());
+    });
+
   return (
-    <GalleryContext.Provider value={{ images }}>
+    <GalleryContext.Provider value={{ images, setSearch }}>
       {children}
     </GalleryContext.Provider>
   );

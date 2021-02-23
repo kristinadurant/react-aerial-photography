@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { GalleryContext } from '../../context/GalleryContext';
 
 const Search = () => {
     const [ term, setTerm ] = useState('');
+    const { setSearch } = useContext(GalleryContext);
 
     function handleChange(e) {
-        setTerm(e.target.value);
+        setSearch(e.target.value);
         console.log(term);
     }
 
