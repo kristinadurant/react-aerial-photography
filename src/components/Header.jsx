@@ -1,12 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import MobileMenu from './MobileMenu';
 
 
+
 const Header = () => {
+    const location = useLocation();
+    const path = location.pathname;
+    const color = path==='/'? 'transparent': '#016b70';
+
     return (
-        <header>
+        <header style={{ backgroundColor: color}}>
 
             <div className='main-menu-desktop hide-sm inner'>
                 <Link to='/' className='logo'>Pierre</Link>
