@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GalleryContext } from '../../context/GalleryContext';
 // const image = [
 //     { id: 0, description: 'Portraits', url: 'IMG_1495.jpg'},
 //     { id: 1, description: 'Aerial Videos of Properties', url: 'DJI_0164.jpg'},
@@ -26,7 +27,9 @@ import React from 'react';
 //     { id: 24, description: 'Unique Prints', url: 'DJI_0167.jpg'}
 // ];
 
-const Images = ({ images }) => {
+const Images = () => {
+    const { images } = useContext(GalleryContext);
+    
     return (
         <section className='gallery'>
             {images.map(img => {
