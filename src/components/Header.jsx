@@ -13,14 +13,16 @@ const Header = () => {
                 <MainMenu />
             </div>
 
-            <div className='header-mobile show-sm'>
-                <div>
-                    <div>Aerial Photography</div>
+            <div className='header-mobile show-sm inner'>
+                    <div>Pierre</div>
                     <button onClick={() => setOpen(true)}>
                         <span className='hide'>Open Menu</span>
-                        <i className="fas fa-bars"></i>
+                        <div className='menu-bars'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </button>
-                </div>
             </div>
 
             {open &&

@@ -56,11 +56,28 @@
     position: fixed;
     top: 0;
     background-color: #f8f8f8;
+    color: #33413f;
+    text-align: center;
   }
   .main-menu-mobile .close {
     position: absolute;
     right: 0;
     top: 0;
+  }
+  .menu-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .menu-bars span {
+    display: block;
+    margin-top: 0.3rem;
+    width: 2rem;
+    border-bottom: 0.1rem solid white;
+  }
+  .menu-bars span:nth-of-type(2) {
+    width: 1.5rem;
   }
   /*=================
     Banner
