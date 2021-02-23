@@ -61,11 +61,13 @@ button {
 }
 button:focus,
 button:active,
+input,
 input:focus,
 input:active,
 textarea:focus,
 textarea:active {
   outline: none;
+  border: none;
 }
 li {
   list-style: none;
@@ -261,8 +263,24 @@ footer form label {
     Gallery
 ===================*/
 .search {
-  padding-top: 10%;
+  padding: 10% 0 2%;
   background-color: #016b70;
+}
+.search form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  max-width: 400px;
+  border-bottom: 1px solid white;
+}
+.search form button {
+  color: #fff;
+}
+.search input {
+  background-color: transparent;
+  width: 100%;
+  color: #fff;
 }
 section.gallery {
   display: flex;

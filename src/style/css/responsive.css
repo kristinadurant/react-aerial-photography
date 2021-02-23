@@ -20,13 +20,13 @@
   section .inner {
     padding: 15vw 0;
   }
-}
-/*=================
+  /*=================
     Banner
   ===================*/
-.banner video {
-  min-height: 0;
-  width: 100%;
+  .banner video {
+    min-height: 0;
+    width: 100%;
+  }
 }
 /* Small Devices */
 @media only screen and (max-width: 767px) {
