@@ -29,9 +29,9 @@ import { GalleryContext } from '../../context/GalleryContext';
 
 const Images = () => {
     const { images } = useContext(GalleryContext);
-    
+
     return (
-        <section className='gallery'>
+        <section className='gallery inner'>
             {images.map(img => {
                 return (
                     <div key={img.id} className='container'>
@@ -49,7 +49,7 @@ const Images = () => {
             {images.map(img => {
                 return (
                     <div key={img.id} className='container'>
-                        <img src={require(`../../assets/images/${img.url}`).default} alt={img.description} height='auto' width='100%' />
+                        <img src={require(`../../assets/images/${img.url}`).default} alt={img.title} height='auto' width='100%' />
                     </div>
                 )
             })}

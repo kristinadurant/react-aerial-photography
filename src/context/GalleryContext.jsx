@@ -28,8 +28,10 @@ const GalleryContextProvider = ({ children }) => {
         return image.tags.toLowerCase().includes(search.toLowerCase());
     });
 
+    let numberOfResults = images.length; 
+
   return (
-    <GalleryContext.Provider value={{ images, setSearch }}>
+    <GalleryContext.Provider value={{ images, search, setSearch, numberOfResults }}>
       {children}
     </GalleryContext.Provider>
   );
