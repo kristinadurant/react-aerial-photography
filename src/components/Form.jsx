@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { db } from '../firebase';
+// import { db } from '../firebase';
 
 const Form = () => {
     const [loading, setLoading] = useState(false);
@@ -13,15 +13,15 @@ const Form = () => {
         const form = e.target;
         e.preventDefault();
         setLoading(true);
-        db.collection("emails").add(formData)
-        .then((docRef) => {
-            console.log("Document written with ID: ", docRef.id);
-            setFormData({});
-            form.reset();
-        })
-        .catch((error) => {
-            console.log(error);      
-        });
+        // db.collection("emails").add(formData)
+        // .then((docRef) => {
+        //     console.log("Document written with ID: ", docRef.id);
+        //     setFormData({});
+        //     form.reset();
+        // })
+        // .catch((error) => {
+        //     console.log(error);      
+        // });
         setLoading(false);
     }
 

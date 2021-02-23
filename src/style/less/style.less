@@ -7,16 +7,17 @@
 @color-accent: #ffbf3c;
 @color-accent-dark: #ffab00;
 @color: rgb(51, 65, 63);
-@font: "Italiana", serif;
 .font1 {
-  font-family: @font;
-  font-size: 3em;
+  font-family: "Italiana", serif;
+  font-size: 2.4em;
+  line-height: 1;
+  padding-bottom: 0.5em;
 }
 .font2 {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 /*=================
     Less Styles
@@ -50,6 +51,7 @@
 body {
   font-family: "Mulish", sans-serif;
   line-height: 1.6;
+  font-size: 1.25rem;
 }
 img {
   max-width: 100%;
@@ -82,9 +84,6 @@ a {
   display: inline-block;
   line-height: 44px;
 }
-p {
-  font-size: 1.25em;
-}
 /*=================
     Global Style
 ===================*/
@@ -103,7 +102,7 @@ span.hide {
   width: 90%;
   margin: auto;
 }
-section {
+section.full-screen {
   height: 100vh;
   min-height: 700px;
 }
@@ -124,7 +123,7 @@ header {
   padding-top: 3%;
 }
 header .logo {
-  font-family: @font;
+  font-family: "Italiana", serif;
 }
 .main-menu-desktop ul {
   display: flex;
@@ -173,6 +172,8 @@ footer form label {
 }
 .banner video {
   display: block;
+  min-height: 100%;
+  width: auto;
 }
 .banner .container {
   position: absolute;
@@ -182,10 +183,8 @@ footer form label {
 }
 .banner h1 {
   border-bottom: 2px solid white;
-  font-family: @font;
+  .font1;
   color: #fff;
-  font-size: 3em;
-  padding-bottom: 1%;
 }
 
 /*=================
@@ -215,7 +214,10 @@ footer form label {
   line-height: 1.3;
   font-size: 1.25em;
 }
-
+.link {
+  color: @color-accent-dark;
+  font-size: 0.8em;
+}
 /*=================
     Carousel
 ===================*/
@@ -236,6 +238,16 @@ footer form label {
     About
 ===================*/
 #about .inner {
-  .flex-center;
   height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#about .inner > :nth-child(n) {
+  width: 40%;
+}
+#about .image {
+  position: absolute;
+  right: 0;
 }

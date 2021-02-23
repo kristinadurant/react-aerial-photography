@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink } from 'react-router-hash-link';
 const services = [
     'Photoshop',
     'Portraits',
@@ -21,7 +20,6 @@ const ServicesList = () => {
                     );
                 })}
             </ul>
-            <HashLink smooth to='#contact'>Let’s work together.</HashLink>
         </>
     )
 }

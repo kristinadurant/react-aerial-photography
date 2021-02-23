@@ -4,7 +4,7 @@ import ImagesCarousel from './ImagesCarousel';
 
 const Carousel = () => {
     return (
-        <section className='carousel'>
+        <section className='carousel full-screen'>
             <ImagesCarousel />
             <div className='overlay'>
                 <div className='inner'>

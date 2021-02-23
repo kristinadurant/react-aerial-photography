@@ -1,3 +1,32 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Medium Devices */
+@media only screen and (max-width: 1023px) {
+  section.full-screen {
+    min-height: initial;
+    height: auto;
+  }
+  section .inner {
+    padding: 15vw 0;
+  }
+}
+/*=================
+    Banner
+  ===================*/
+.banner video {
+  min-height: 0;
+  width: 100%;
+}
+
 /* Small Devices */
 @media only screen and (max-width: 767px) {
   .hide-sm {
@@ -6,7 +35,9 @@
   .show-sm {
     display: initial;
   }
-
+  body {
+    font-size: 1rem;
+  }
   /*=================
       Header Mobile
     ===================*/
@@ -25,5 +56,31 @@
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  /*=================
+    Banner
+  ===================*/
+  .banner .container {
+    display: none;
+  }
+
+  /*=================
+    Services
+  ===================*/
+  #services .inner {
+    flex-direction: column;
+  }
+  #services .image {
+    display: none;
+  }
+  /*=================
+      About
+    ===================*/
+  #about .inner > :nth-child(n) {
+    width: 100%;
+  }
+  #about .image {
+    position: relative;
   }
 }

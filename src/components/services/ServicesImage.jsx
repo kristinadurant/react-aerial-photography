@@ -20,7 +20,7 @@ const ServicesImage = () => {
     useEffect(() => void setInterval(() => set(state => (state + 1) % 4), 5000), [])
 
     return (
-        <div style={{position: 'relative'}}>
+        <div style={{position: 'relative'}} className='image'>
             {transitions.map(({ item, props, key }) =>
             // <animated.div key={key} style={{...props, height: '300px', width: '200px', overflow: 'hidden'}}>
                 <animated.div 
