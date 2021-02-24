@@ -16,20 +16,18 @@ const Search = () => {
 
     return (
         <div className='search'>
-            <div className='inner'>
-                <form onSubmit={e => handleSubmit(e)}>
-                    <button>
-                        <span className='hide'>Search</span>
-                        <i className="fas fa-search"></i>
-                    </button>
-                    <input
-                        className="searchbar"
-                        type="text"
-                        placeholder="Search..."
-                        onChange={e => handleChange(e)}
-                    />
-                </form>
-            </div>
+            <form onSubmit={e => handleSubmit(e)}>
+                <input
+                    className="searchbar"
+                    type="text"
+                    placeholder="Search..."
+                    onChange={e => handleChange(e)}
+                />
+                                <button>
+                    <span className='hide'>Search</span>
+                    <i className="fas fa-search"></i>
+                </button>
+            </form>
         </div>
     )
 }

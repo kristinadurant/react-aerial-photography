@@ -118,7 +118,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 3%;
+  padding: 3% 0 1%;
 }
 header .logo {
   font-family: "Italiana", serif;
@@ -262,9 +262,11 @@ footer form label {
 /*=================
     Gallery
 ===================*/
-.search {
+section.intro {
   padding: 10% 0 2%;
-  background-color: #016b70;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .search form {
   display: flex;
@@ -272,15 +274,11 @@ footer form label {
   align-items: center;
   width: 70%;
   max-width: 400px;
-  border-bottom: 1px solid white;
-}
-.search form button {
-  color: #fff;
+  border-bottom: 1px solid #33413f;
 }
 .search input {
   background-color: transparent;
   width: 100%;
-  color: #fff;
 }
 section.gallery {
   display: flex;

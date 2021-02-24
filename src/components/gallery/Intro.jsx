@@ -1,17 +1,21 @@
 import React, { useContext } from 'react';
 import { GalleryContext } from '../../context/GalleryContext';
+import { Search } from './index';
 
 const Intro = () => {
     const { search, numberOfResults } = useContext(GalleryContext);
     
     return  (
-        <div className='inner'>
-            <h1>
-                { search && search}
-                { !search && 'Gallery'}
-            </h1>
-            { !numberOfResults && <p>No results</p> }
-        </div>
+        <section className='inner intro'>
+            <div>
+                <h1>
+                    { search && search}
+                    { !search && 'Gallery'}
+                </h1>
+                { !numberOfResults && <p>No results</p> }
+            </div>
+            <Search />
+        </section>
     )
 }
 
