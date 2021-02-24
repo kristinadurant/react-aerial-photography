@@ -297,7 +297,14 @@ section.gallery {
   flex-wrap: wrap;
 }
 section.gallery .container {
-  width: 33.33%;
-  height: 20vw;
+  width: 33%;
+  padding-bottom: 20%;
   overflow: hidden;
+  position: relative;
+}
+section.gallery .container img {
+  position: absolute;
+}
+section.gallery .container .overlay {
+  position: absolute;
 }

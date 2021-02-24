@@ -4,7 +4,7 @@ import './style/css/style.css';
 import './style/css/responsive.css';
 import { Header, Footer } from './components';
 import { Home, Gallery } from './pages';
-import { GalleryContextProvider } from './context/GalleryContext';
+import { AppContextProvider } from './context/AppContext';
 
 function App() {
   // document.addEventListener('contextmenu', (e) => {
@@ -13,13 +13,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <GalleryContextProvider>
+      <AppContextProvider>
         <Header />
         <Switch>
             <Route exact path='/' component={Home} /> 
             <Route exact path='/gallery' component={Gallery} /> 
         </Switch>
-      </GalleryContextProvider>
+      </AppContextProvider>
       <Footer />
     </BrowserRouter>
   );

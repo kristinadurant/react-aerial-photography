@@ -1,39 +1,25 @@
-import React, { createContext, useState, useEffect } from 'react';
-import { galleryRef } from '../firebase';
-
+import React, { createContext, useState, useContext } from 'react';
+import { AppContext } from './AppContext';
 const GalleryContext = createContext({});
 
 const GalleryContextProvider = ({ children }) => {
-    const [ data, setData ] = useState([]);
+    const { images } = useContext(AppContext);
     const [ search, setSearch ] = useState('');
 
-    function getGallery() {
-        galleryRef.get().then(querySnapshot => {
-            const items = [];
-            querySnapshot.forEach( doc => {
-                items.push(doc.data());
-            });
-            setData(items);
-        });   
-    }
 
-    useEffect(() => {
-        getGallery();
-    },[]); 
-
-    const images = data?.filter(image => {
+    const filteredImages = images?.filter(image => {
         return image.tags.toLowerCase().includes(search.toLowerCase());
     });
 
-    let numberOfResults = images.length; 
+    let numberOfResults = filteredImages?.length; 
 
   return (
     <GalleryContext.Provider 
         value={{
-            images, 
+            filteredImages,
+            numberOfResults,
             search,
-            setSearch,
-            numberOfResults
+            setSearch
         }}>
       {children}
     </GalleryContext.Provider>
