@@ -134,6 +134,16 @@ header .logo {
   border: 2px solid #ffd57f;
 }
 /*=================
+    Favorites
+===================*/
+.favorites {
+  background-color: #000;
+}
+.favorites .inner button {
+  color: #fff;
+  margin-right: 0;
+}
+/*=================
     Footer
 ===================*/
 footer {

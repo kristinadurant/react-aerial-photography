@@ -28,14 +28,26 @@ import { GalleryContext } from '../../context/GalleryContext';
 // ];
 
 const Images = () => {
-    const { images } = useContext(GalleryContext);
+    const { images, favorites, setFavorites } = useContext(GalleryContext);
 
+    function addFavorite(img) {
+        img.favorite = true;
+        console.log(images);
+    }
+    console.log(images);
     return (
         <section className='gallery inner'>
             {images.map(img => {
                 return (
                     <div key={img.id} className='container'>
                         <img src={require(`../../assets/images/${img.url}`).default} alt={img.description} height='auto' width='100%' />
+                        <button onClick={() => addFavorite(img)} value={img}>
+                            <span className='hide'>Favorites</span>
+                            {img.favorite
+                            ? <i className="fas fa-heart"></i>
+                            : <i className="far fa-heart"></i>
+                            }
+                        </button>
                     </div>
                 )
             })}

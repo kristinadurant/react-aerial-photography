@@ -15,7 +15,7 @@ const Carousel = () => {
             </div>
             <div className='link'>
                 <Link to='/gallery'>View Gallery</Link>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i className="fas fa-long-arrow-alt-right"></i>
             </div>
         </section>
     )

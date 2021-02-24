@@ -5,11 +5,9 @@ const GalleryContext = createContext({});
 
 const GalleryContextProvider = ({ children }) => {
     const [ data, setData ] = useState([]);
-    const [ loading, setLoading ] = useState(false);
     const [ search, setSearch ] = useState('');
 
     function getGallery() {
-        setLoading(true);
         galleryRef.get().then(querySnapshot => {
             const items = [];
             querySnapshot.forEach( doc => {
@@ -17,7 +15,6 @@ const GalleryContextProvider = ({ children }) => {
             });
             setData(items);
         });   
-        setLoading(false);
     }
 
     useEffect(() => {
@@ -31,7 +28,13 @@ const GalleryContextProvider = ({ children }) => {
     let numberOfResults = images.length; 
 
   return (
-    <GalleryContext.Provider value={{ images, search, setSearch, numberOfResults }}>
+    <GalleryContext.Provider 
+        value={{
+            images, 
+            search,
+            setSearch,
+            numberOfResults
+        }}>
       {children}
     </GalleryContext.Provider>
   );

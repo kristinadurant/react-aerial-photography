@@ -19,7 +19,7 @@ const Footer = () => {
                     <Form />
                 </div>
                 <div>
-                    <HashLink smooth to='#root'>Back to Top<i class="fas fa-long-arrow-alt-up"></i></HashLink>            
+                    <HashLink smooth to='#root'>Back to Top<i className="fas fa-long-arrow-alt-up"></i></HashLink>            
                 </div>   
             </div>        
         </footer>

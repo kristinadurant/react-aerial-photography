@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import MobileMenu from './MobileMenu';
-
+import Favorites from './Favorites';
 
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <header style={{ backgroundColor: color}}>
-
+            <Favorites />
             <div className='main-menu-desktop hide-sm inner'>
                 <Link to='/' className='logo'>Pierre</Link>
                 <nav>
