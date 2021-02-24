@@ -21,6 +21,16 @@ const AppContextProvider = ({ children }) => {
         getImages();
     },[]); 
 
+    function addFavorite(img) {
+        setFavorites([...favorites, img]);
+    }
+
+    function removeFavorite(img) {
+        const newFavorites = favorites.filter(fav => fav !== img);
+        setFavorites(newFavorites);
+        console.log(img)
+    }
+
 
   return (
     <AppContext.Provider 
@@ -28,7 +38,8 @@ const AppContextProvider = ({ children }) => {
             images,
             setImages,
             favorites,
-            setFavorites
+            addFavorite,
+            removeFavorite
         }}>
       {children}
     </AppContext.Provider>

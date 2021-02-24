@@ -1,21 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { GalleryContext } from '../context/GalleryContext';
+import React, { useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 
 
 const FavoritesList = () => {
-    const { images } = useContext(GalleryContext);
-    const [favorites, setFavorites] = useState([]);
+    const { favorites, removeFavorite } = useContext(AppContext);
 
-    useEffect(()=> {
-        const list = images.filter( image => {
-            return image.favorite === true;
-        });
-        setFavorites(list);
-    },[images]);
-
-    function removeFavorite(img) {
-        img.favorite = false;
-    }
 
     return (
         <div className='container'>
@@ -24,7 +13,7 @@ const FavoritesList = () => {
                     return (
                     <li key={item.id}>
                         {item.title}
-                        <button onClick={ item => removeFavorite(item)}>x</button>
+                        <button onClick={() => removeFavorite(item)}>x</button>
                     </li>
                 )})}
             </ul>

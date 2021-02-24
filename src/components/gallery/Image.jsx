@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
 
 const Image = ({ img }) => {
+    const { addFavorite } = useContext(AppContext);
     const [ selected, setSelected ] = useState(false);
-
-    function addFavorite(img) {
-        img.favorite? img.favorite = false : img.favorite = true;
-        setSelected(!selected);
-    }
 
     return (
         <div key={img.id} className='container'>
@@ -14,7 +11,7 @@ const Image = ({ img }) => {
             <div className='overlay'>
                 <button onClick={() => addFavorite(img)} value={img}>
                     <span className='hide'>Favorites</span>
-                    {selected
+                    {selected || img.favorite
                     ? <i className="fas fa-heart"></i>
                     : <i className="far fa-heart"></i>
                     }
