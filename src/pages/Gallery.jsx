@@ -1,5 +1,5 @@
 import React from 'react'
-import { Intro, Images } from '../components/gallery';
+import { Intro, Images, Modal } from '../components/gallery';
 import { GalleryContextProvider } from '../context/GalleryContext';
 
 
@@ -10,6 +10,7 @@ const Gallery = () => {
             <GalleryContextProvider>
                 <Intro />
                 <Images />
+                <Modal />
             </GalleryContextProvider>
         </main>
     )

@@ -7,12 +7,12 @@ const Favorites = () => {
     return (
         <div className='favorites'>
             <div className='inner'>
-                <button onClick={() => setOpen(!open)}>
-                    <span className='hide'>Favorites</span>
-                    <i className="far fa-heart"></i>
+                <button onClick={() => setOpen(!open)} title='Bookmarks'>
+                    <span className='hide'>Bookmarked Images</span>
+                    <i className="far fa-bookmark"></i>
                 </button>
-            </div>
-            {open && <FavoritesList />}
+                <FavoritesList open={open} setOpen={setOpen}/>
+            </div>       
         </div>
     )
 }

@@ -2,12 +2,11 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 
-const FavoritesList = () => {
+const FavoritesList = ({ open, setOpen }) => {
     const { favorites, removeFavorite } = useContext(AppContext);
 
-
-    return (
-        <div className='container'>
+    return open && (
+        <div id='favorites' className='container' onMouseLeave={() => setOpen(false)}>
             <ul>
                 {favorites.map( item => {
                     return (

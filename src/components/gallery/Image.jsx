@@ -1,31 +1,32 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
+import { GalleryContext } from '../../context/GalleryContext';
 
 const Image = ({ img }) => {
     const { favorites, addFavorite } = useContext(AppContext);
-    const [ selected, setSelected ] = useState(false);
+    const { setModal } = useContext(GalleryContext);
+    const [ disabled, setDisabled ] = useState(false);
 
     function handleClick(img) {
         addFavorite(img);
-        setSelected(true);
+        setDisabled(true);
     }
     useEffect(()=> {
-        if(favorites.includes(img)) setSelected(true);
-        console.log(selected);
-    }, []);
+        if(favorites.includes(img)) setDisabled(true);
+    }, [favorites]);
 
     return (
-        <div key={img.id} className='container'>
+        <div key={img.id} className='image'>
             <img src={require(`../../assets/images/${img.url}`).default} alt={img.description} height='auto' width='100%' />       
-            <div className='overlay'>
-                <button onClick={() => handleClick(img)} disabled={selected} >
-                    <span className='hide'>Favorites</span>
-                    {selected
-                    ? <i className="fas fa-heart"></i>
-                    : <i className="far fa-heart"></i>
-                    }
-                </button>    
-            </div>
+            <div className='overlay' onClick={() => setModal(img)} />
+            <button onClick={() => handleClick(img)} disabled={disabled} title='Bookmark this Image'>
+                <span className='hide'>Bookmark this Image</span>
+                {disabled
+                ? <i className="fas fa-bookmark"></i>
+                : <i className="far fa-bookmark"></i>
+                }
+            </button>    
+            
         </div>
     )
 }

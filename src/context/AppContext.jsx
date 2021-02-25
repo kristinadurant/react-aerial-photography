@@ -28,7 +28,6 @@ const AppContextProvider = ({ children }) => {
     function removeFavorite(img) {
         const newFavorites = favorites.filter(fav => fav !== img);
         setFavorites(newFavorites);
-        console.log(img)
     }
 
 

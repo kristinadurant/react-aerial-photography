@@ -5,6 +5,7 @@ const GalleryContext = createContext({});
 const GalleryContextProvider = ({ children }) => {
     const { images } = useContext(AppContext);
     const [ search, setSearch ] = useState('');
+    const [ modal, setModal ] = useState(false);
 
 
     const filteredImages = images?.filter(image => {
@@ -19,7 +20,9 @@ const GalleryContextProvider = ({ children }) => {
             filteredImages,
             numberOfResults,
             search,
-            setSearch
+            setSearch,
+            modal,
+            setModal
         }}>
       {children}
     </GalleryContext.Provider>

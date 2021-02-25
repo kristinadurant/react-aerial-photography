@@ -115,8 +115,9 @@ header {
   position: absolute;
   width: 100%;
   color: white;
-  font-size: 1.5em;
   z-index: 20;
+}
+header nav {
   .font2;
 }
 .main-menu-desktop {
@@ -125,6 +126,8 @@ header {
 }
 header .logo {
   font-family: "Italiana", serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 .main-menu-desktop ul {
   display: flex;
@@ -143,9 +146,30 @@ header .logo {
 .favorites {
   background-color: #000;
 }
+.favorites .inner {
+  position: relative;
+}
 .favorites .inner button {
   color: #fff;
+  margin: auto;
   margin-right: 0;
+}
+.favorites .container {
+  position: absolute;
+  right: 0;
+  background-color: #000;
+  font-size: 0.75em;
+  padding: 1em;
+  padding-right: 0;
+}
+.favorites .container li {
+  .flex-justify;
+}
+.favorites .container p {
+  padding-right: 1em;
+  text-align: center;
+  margin-top: 1em;
+  color: @color-accent-ligth;
 }
 /*=================
     Footer
@@ -288,15 +312,35 @@ section.gallery {
   .flex-justify;
   flex-wrap: wrap;
 }
-section.gallery .container {
+section.gallery .image {
   width: 33%;
   padding-bottom: 20%;
   overflow: hidden;
   position: relative;
 }
-section.gallery .container img {
+section.gallery .image img {
+  position: absolute;
+  transition: transform 0.5s;
+}
+section.gallery .image button {
   position: absolute;
 }
-section.gallery .container .overlay {
+section.gallery .image .overlay {
   position: absolute;
+  cursor: pointer;
+}
+section.gallery .image:hover img {
+  cursor: pointer;
+  background-color: #000;
+  transform: scale(1.2);
+}
+/*=================
+    Gallery Modal
+===================*/
+#modal {
+  .overlay;
+  .flex-center;
+  position: fixed;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
 }
