@@ -5,10 +5,10 @@ const Banner = ({ title, image, children }) => {
 
     return (
         <section 
-            className='banner full-screen'
+            className='banner full-screen background-image'
             style={{ backgroundImage: `url(${image.default}`}}
         >
-            <div className='overlay flex-center'>
+            <div className='overlay'>
                 <div className='inner '>
                     <h1>{title}</h1>
                     {children}

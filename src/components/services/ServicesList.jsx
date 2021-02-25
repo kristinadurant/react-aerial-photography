@@ -12,11 +12,11 @@ const ServicesList = () => {
                 </li>
                 <li>                                    
                     <i className="fas fa-check"></i>
-                    <Link to=''>Schedule an Aerial Video Shoot</Link>
+                    <Link to='/aerial-photo-video-shoot'>Schedule an Aerial Video Shoot</Link>
                 </li>
                 <li>                                    
                     <i className="fas fa-check"></i>
-                    <Link to=''>Shedule a Photo Shoot</Link>
+                    <Link to='/aerial-photo-video-shoot'>Shedule a Photo Shoot</Link>
                 </li>
                 <li>                                    
                     <i className="fas fa-check"></i>

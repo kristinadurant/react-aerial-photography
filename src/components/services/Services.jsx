@@ -15,7 +15,7 @@ const Services = () => {
                 </div>
                 <div>
                     <ServicesList />
-                    <HashLink smooth to='#contact' className='link'>Let’s work together.</HashLink>
+                    <p className='note'>* Video and Photo Shoots are available only in Miami, FL.</p>
                 </div>
             </div>
         </section>
