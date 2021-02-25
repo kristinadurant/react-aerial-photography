@@ -17,7 +17,7 @@ const Image = ({ img }) => {
 
     return (
         <div key={img.id} className='image'>
-            <img src={require(`../../assets/images/${img.url}`).default} alt={img.description} height='auto' width='100%' />       
+            <img src={require(`../../assets/images/${img.url}`).default} alt={img.title} height='auto' width='100%' />       
             <div className='overlay' onClick={() => setModal(img)} />
             <button onClick={() => handleClick(img)} disabled={disabled} title='Bookmark this Image'>
                 <span className='hide'>Bookmark this Image</span>

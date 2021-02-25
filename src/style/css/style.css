@@ -150,6 +150,9 @@ header .logo {
   margin: auto;
   margin-right: 0;
 }
+.favorites button .total {
+  margin-right: 5px;
+}
 .favorites .container {
   position: absolute;
   right: 0;
@@ -254,7 +257,7 @@ footer form label {
   justify-content: center;
   align-items: center;
 }
-#services ul span {
+#services ul a {
   line-height: 1.3;
   font-size: 1.25em;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './style/css/style.css';
 import './style/css/responsive.css';
+import ScrollToTop from './ScrollToTop';
 import { Header, Footer } from './components';
 import { Home, Gallery } from './pages';
 import { AppContextProvider } from './context/AppContext';
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppContextProvider>
         <Header />
         <Switch>

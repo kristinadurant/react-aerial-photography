@@ -1,24 +1,27 @@
 import React from 'react';
-const services = [
-    'Photoshop',
-    'Portraits',
-    'Aerial Videos of Properties',
-    'Unique Prints'  
-]
+import { Link } from 'react-router-dom';
 
 const ServicesList = () => {
 
     return (
         <>
             <ul className='font2'>
-                {services.map(service => {
-                    return (
-                        <li key={service}>                                    
-                            <i className="fas fa-check"></i>
-                            <span>{service}</span>
-                        </li>
-                    );
-                })}
+                <li>                                    
+                    <i className="fas fa-check"></i>
+                    <Link to='/gallery'>Download a High Resolution Photo & Video</Link>
+                </li>
+                <li>                                    
+                    <i className="fas fa-check"></i>
+                    <Link to=''>Schedule an Aerial Video Shoot</Link>
+                </li>
+                <li>                                    
+                    <i className="fas fa-check"></i>
+                    <Link to=''>Shedule a Photo Shoot</Link>
+                </li>
+                <li>                                    
+                    <i className="fas fa-check"></i>
+                    <Link to=''>Get a Professional Retouch of Your Photos</Link>
+                </li>
             </ul>
         </>
     )
