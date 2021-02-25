@@ -378,3 +378,34 @@ section.gallery .image:hover img {
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.8);
 }
+/*=================
+    PhotoEditing
+===================*/
+.before-after .image {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.before-after img {
+  position: absolute;
+  top: 0;
+}
+.before-after img.after {
+  z-index: 1;
+}
+.before-after img.after {
+  z-index: 2;
+}
+.before-after .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-editing-page section:nth-of-type(n + 2) .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
