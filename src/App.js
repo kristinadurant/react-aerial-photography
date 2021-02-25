@@ -4,7 +4,7 @@ import './style/css/style.css';
 import './style/css/responsive.css';
 import ScrollToTop from './ScrollToTop';
 import { Header, Footer } from './components';
-import { Home, Gallery } from './pages';
+import { Home, Gallery, About } from './pages';
 import { AppContextProvider } from './context/AppContext';
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
         <Switch>
             <Route exact path='/' component={Home} /> 
             <Route exact path='/gallery' component={Gallery} /> 
+            <Route exact path='/about-pierre-photographer' component={About} />
         </Switch>
       </AppContextProvider>
       <Footer />

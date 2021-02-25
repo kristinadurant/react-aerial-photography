@@ -182,12 +182,13 @@ footer {
   color: @color-primary-dark;
   padding: 5% 0 2%;
 }
-footer .inner > div:first-of-type,
-footer .inner > div:nth-of-type(2) {
+footer .inner > div:first-of-type {
   border-bottom: 1px solid @color-primary-dark;
   .flex-justify;
 }
-footer .inner > div:last-of-type {
+footer .bottom {
+  border-top: 1px solid @color-primary-dark;
+  .flex-justify;
   text-align: right;
 }
 
@@ -213,21 +214,24 @@ footer form label {
   min-height: 100%;
   width: auto;
 }
-.banner .overlay {
-  background-color: #4c4c4c7a;
-}
-.banner .container {
-  position: absolute;
-  bottom: 8%;
-  width: 100%;
-  z-index: 25;
-}
 .banner h1 {
-  border-bottom: 2px solid white;
   .font1;
   color: #fff;
 }
-
+#home-page .banner .inner {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#home-page .banner h1 {
+  border-bottom: 2px solid white;
+}
+.banner .flex-center .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /*=================
     Services
 ===================*/
