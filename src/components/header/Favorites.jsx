@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import FavoritesList from './FavoritesList';
-import { AppContext } from '../context/AppContext';
+import { AppContext } from '../../context/AppContext';
 
 const Favorites = () => {
     const { favorites } = useContext(AppContext);

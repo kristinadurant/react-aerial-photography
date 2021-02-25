@@ -1,5 +1,5 @@
 import React from 'react'
-import { Intro, Images, Modal } from '../components/gallery';
+import { Intro, Images, Modal } from '../components/pageGallery';
 import { Banner } from '../components';
 import { GalleryContextProvider } from '../context/GalleryContext';
 const image = require('../assets/images/IMG_1531.jpg');

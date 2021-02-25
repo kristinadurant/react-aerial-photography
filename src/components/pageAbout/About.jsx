@@ -8,7 +8,7 @@ const About = () => {
                 <span className='font2'>Enterpreneur, Parent & World Traveler</span>
                 <h2 className='font1'>Pierre the Photographer</h2>
                 <div className='image'>
-                    <img src={require('../assets/images/Pierre_Photographer.jpg').default} alt='Portrait of Pierre the Photographer'/>
+                    <img src={require('../../assets/images/Pierre_Photographer.jpg').default} alt='Portrait of Pierre the Photographer'/>
                 </div>
                 <div>
                     <p>My name is Pierre, and I decided to change my occupation after five years of working in sales. 

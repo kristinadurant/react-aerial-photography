@@ -20,11 +20,11 @@ const ServicesList = () => {
                 </li>
                 <li>                                    
                     <i className="fas fa-check"></i>
-                    <Link to=''>Get a Professional Retouch of Your Photos</Link>
+                    <Link to='/professional-photo-editing'>Get a Professional Editing of Your Photos</Link>
                 </li>
             </ul>
         </>
     )
 }
 
-export default ServicesList
+export default ServicesList;
