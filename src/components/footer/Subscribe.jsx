@@ -11,7 +11,7 @@ const Subscribe = () => {
             <h3>Don't miss new Photos and Videos</h3>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor='email'>
+                    <label htmlFor='email' className='hide'>
                         Email:
                     </label>
                     <input type='email' id='email' name='email' required />

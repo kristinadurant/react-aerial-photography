@@ -9,16 +9,16 @@ const FooterMain = () => {
                 <h3>Services</h3>
                 <ul>
                     <li>
-                        <button>High Resolution Photos & Videos</button>
+                        <Link to='/gallery'>High Resolution Photos & Videos</Link>
                     </li>
                     <li>
-                        <button>Aerial Video Shoots</button>
+                        <Link to='/aerial-photo-video-shoot'>Aerial Video Shoots</Link>
                     </li>
                     <li>
-                        <button>Photo Shoots</button>
+                        <Link to='/aerial-photo-video-shoot'>Photo Shoots</Link>
                     </li>
                     <li>
-                        <button>Professional Photo Retouching</button>
+                        <Link to='/professional-photo-editing'>Professional Photo Retouching</Link>
                     </li>
                 </ul>
             </div>
@@ -29,7 +29,7 @@ const FooterMain = () => {
                         <li><Link to='/about-pierre-photographer'>About Pierre</Link></li>
                         <li><Link to='/gallery'>Gallery</Link></li>
                         <li><Link to='/gallery'>Videos</Link></li>
-                        <li><button>Contact</button></li>
+                        <li><Link to='/'>Contact</Link></li>
                     </ul>
                 </nav>
             </div>
