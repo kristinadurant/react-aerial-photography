@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-// import { db } from '../firebase';
+import { useParams } from 'react-router-dom'
+// import { db } from '../../firebase';
 
-const Form = () => {
+const Form = ({ props }) => {
+    const params = useParams();
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({});
-
+console.log(params);
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };    
@@ -27,7 +29,6 @@ const Form = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            
             <div>
                 <label htmlFor='name' className='required'>
                     Name:

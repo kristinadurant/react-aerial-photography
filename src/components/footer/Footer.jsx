@@ -22,7 +22,7 @@ const Footer = () => {
                 <FooterMain />
                 <div className='bottom'>
                     <p>Video and Photo Shoots are available only in Miami, FL</p>
-                    <HashLink smooth to='#root'>Back to Top<i className="fas fa-long-arrow-alt-up"></i></HashLink>            
+                    <HashLink smooth to='#'>Back to Top<i className="fas fa-long-arrow-alt-up"></i></HashLink>            
                 </div>   
             </div>        
         </footer>

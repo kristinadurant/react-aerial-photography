@@ -4,7 +4,7 @@ import './style/css/style.css';
 import './style/css/responsive.css';
 import ScrollToTop from './ScrollToTop';
 import { Header, Footer } from './components';
-import { Home, Gallery, About, Photoshoot, PhotoEditing } from './pages';
+import { Home, Gallery, About, Photoshoot, PhotoEditing, Contact } from './pages';
 import { AppContextProvider } from './context/AppContext';
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
             <Route exact path='/about-pierre-photographer' component={About} />
             <Route exact path='/aerial-photo-video-shoot' component={Photoshoot} />
             <Route exact path='/professional-photo-editing' component={PhotoEditing} />
+            <Route exact path='/contact' component={Contact} />
         </Switch>
       </AppContextProvider>
       <Footer />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BannerVideo, About, Services, Carousel } from '../components';
+import { BannerVideo, Services, Carousel } from '../components';
 
 const Home = () => {
     return (
@@ -7,7 +7,6 @@ const Home = () => {
             <BannerVideo />
             <Services />
             <Carousel />
-            <About />
         </main>
     )
 }

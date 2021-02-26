@@ -410,3 +410,19 @@ section.gallery .image:hover img {
   justify-content: space-around;
   align-items: center;
 }
+/*=================
+    Contact
+===================*/
+#contact-form input,
+#contact-form textarea {
+  border: none;
+  border-bottom: 1px solid #062b2d;
+  background-color: transparent;
+}
+#contact-form label {
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+  display: block;
+}

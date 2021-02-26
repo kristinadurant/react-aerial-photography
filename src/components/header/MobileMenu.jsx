@@ -28,9 +28,9 @@ const MobileMenu = () => {
                     <nav>
                         <ul>
                             <li><HashLink smooth to={'#services'} onClick={() => setOpen(false)}>Services</HashLink></li>
-                            <li><HashLink smooth to={'#about'} onClick={() => setOpen(false)}>About</HashLink></li>
-                            <li><Link to='gallery' onClick={() => setOpen(false)}>Gallery</Link></li>
-                            <li><HashLink smooth to={'#contact'} onClick={() => setOpen(false)}>Contact</HashLink></li>
+                            <li><Link to='/about-pierre-photographer' onClick={() => setOpen(false)}>About</Link></li>
+                            <li><Link to='/gallery' onClick={() => setOpen(false)}>Gallery</Link></li>
+                            <li><Link to='/contact' onClick={() => setOpen(false)}>Contact</Link></li>
                         </ul>
                     </nav>  
                 </div>

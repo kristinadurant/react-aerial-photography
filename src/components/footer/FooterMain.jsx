@@ -29,7 +29,7 @@ const FooterMain = () => {
                         <li><Link to='/about-pierre-photographer'>About Pierre</Link></li>
                         <li><Link to='/gallery'>Gallery</Link></li>
                         <li><Link to='/gallery'>Videos</Link></li>
-                        <li><Link to='/'>Contact</Link></li>
+                        <li><Link to='/contact'>Contact</Link></li>
                     </ul>
                 </nav>
             </div>

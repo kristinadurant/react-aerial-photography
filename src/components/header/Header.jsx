@@ -19,9 +19,9 @@ const Header = () => {
                 <nav>
                     <ul>
                         <li><HashLink smooth to={'#services'}>Services</HashLink></li>
-                        <li><Link to='gallery'>Gallery</Link></li>
-                        <li><Link to='about-pierre-photographer'>About</Link></li>                      
-                        <li><HashLink smooth to={'#contact'}>Contact</HashLink></li>
+                        <li><Link to='/gallery'>Gallery</Link></li>
+                        <li><Link to='/about-pierre-photographer'>About</Link></li>                      
+                        <li><Link to='/contact'>Contact</Link></li>
                     </ul>
                 </nav>
             </div>
