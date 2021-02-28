@@ -3,7 +3,7 @@
 @color-primary: #01969d;
 @color-primary-dark: #062b2d;
 @color-grey: #016b70;
-@color-accent-ligth: #ffd57f;
+@color-accent-ligth: #edebe6;
 @color-accent: #ffbf3c;
 @color-accent-dark: #ffab00;
 @color: rgb(51, 65, 63);
@@ -39,6 +39,11 @@
   left: 0;
   right: 0;
 }
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 /*=================
     Basic Styling
 ===================*/
@@ -61,9 +66,15 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  padding: 0 1em;
+  min-height: 30px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+button.square {
   min-height: 44px;
   min-width: 44px;
+  padding: 0 1em;
 }
 button:focus,
 button:active,
@@ -114,7 +125,9 @@ section.full-screen {
   height: 100vh;
   min-height: 700px;
 }
-
+section:first-of-type > .inner {
+  padding-top: 100px;
+}
 /*=================
     Header Desktop
 ===================*/
@@ -123,27 +136,51 @@ header {
   width: 100%;
   color: white;
   z-index: 20;
+  display: flex;
+  flex-direction: column;
 }
 header nav {
   .font2;
 }
+header nav button {
+  .font2;
+  font-size: inherit;
+  line-height: 44px;
+}
 .main-menu-desktop {
   .flex-justify;
-  padding: 3% 0 1%;
+  height: 100px;
+}
+nav .submenu li {
+  position: relative;
+  font-size: 0.875em;
+  border-bottom: 1px solid #deddd9;
+  color: @color;
+}
+nav .submenu li:last-of-type {
+  border-bottom: none;
+}
+nav .submenu ul {
+  position: absolute;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: initial;
+  background-color: @color-accent-ligth;
+  padding: 0 1rem;
 }
 header .logo {
   font-family: "Italiana", serif;
   font-size: 1.5em;
   text-transform: uppercase;
 }
-.main-menu-desktop ul {
+.main-menu-desktop nav.menu > ul {
   display: flex;
   justify-content: flex-end;
 }
-.main-menu-desktop li a {
+.main-menu-desktop nav.menu > ul > li > :first-child {
   padding: 0.2em 0.5em;
 }
-.main-menu-desktop li:last-of-type a {
+.main-menu-desktop li.cta a {
   border: 2px solid @color-accent-ligth;
 }
 
@@ -185,7 +222,7 @@ header .logo {
     Footer
 ===================*/
 footer {
-  background-color: @color-primary-light;
+  background-color: @color-accent-ligth;
   color: @color-primary-dark;
   padding: 5% 0 2%;
 }
@@ -249,13 +286,13 @@ footer form label {
 #services .inner {
   .flex-justify;
 }
-#services ul li {
-  display: flex;
-  align-items: center;
-  justify-content: left;
+ul.check-list li {
   margin-bottom: 2em;
 }
-#services ul i {
+ul.check-list li:last-of-type {
+  margin-bottom: 0;
+}
+i.fa-check {
   border: 2px solid grey;
   border-radius: 100%;
   width: 2em;
@@ -263,7 +300,12 @@ footer form label {
   margin-right: 5%;
   .flex-center;
 }
-#services ul a {
+ul.check-list a {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+ul.check-list a span {
   line-height: 1.3;
   font-size: 1.25em;
 }
@@ -391,6 +433,32 @@ section.gallery .image:hover img {
 /*=================
     Contact
 ===================*/
+section.contact {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+section.contact .overlay {
+  z-index: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  background-image: url("../../assets/images/before.jpg");
+  .background-image;
+  filter: blur(10px) brightness(50%) saturate(50%);
+  box-shadow: none;
+}
+section.contact .inner {
+  position: relative;
+  z-index: 2;
+}
+section.contact li i.fa-check {
+  color: transparent;
+  transition: color 0.5s;
+}
+section.contact li:hover i.fa-check,
+section.contact li.active i.fa-check {
+  color: inherit;
+}
 #contact-form input,
 #contact-form textarea {
   border: none;

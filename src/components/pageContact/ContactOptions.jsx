@@ -1,26 +1,38 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { HashLink } from 'react-router-hash-link';
+import { ContactContext } from '../../context/ContactContext';
 
 const ContactOptions = () => {
+ const { option, setOption } = useContext(ContactContext);
 
     return (       
         <div style={{ width: '50%'}}>
-            <ul className='font2'>
-                <li>                                    
-                    <i className="fas fa-check"></i>
-                    <HashLink smooth to='#contact-form'>Send a Message</HashLink>
+            <ul className='font2 check-list'>
+                <li className={option==='message' && 'active'}>                                    
+                    
+                    <HashLink smooth to='#contact-form' onClick={() => setOption('message')}>
+                        <i className="fas fa-check"></i>
+                        <span>Send a Message</span>
+                    </HashLink>
                 </li>
-                <li>                                    
-                    <i className="fas fa-check"></i>
-                    <HashLink smooth to='#contact-form'>Schedule an Aerial Photo & Video Shoot</HashLink>
+                <li className={option==='schedule' && 'active'}>                                    
+                    
+                    <HashLink smooth to='#contact-form' onClick={() => setOption('schedule')}>
+                        <i className="fas fa-check"></i>
+                        <span>Schedule an Aerial Photo & Video Shoot</span>
+                    </HashLink>
                 </li>
-                <li>                                    
-                    <i className="fas fa-check"></i>
-                    <HashLink smooth to='#contact-form'>Download a High Resolution Photo & Video</HashLink>
+                <li className={option==='message' && 'inquiry'}>                                                
+                    <HashLink smooth to='#contact-form' onClick={() => setOption('inquiry')}>
+                        <i className="fas fa-check"></i>
+                        <span>Download a High Resolution Photo & Video</span>
+                    </HashLink>
                 </li>
-                <li>                                    
+                <li className={option==='message' && 'editing'}>                                    
+                    <HashLink smooth to='#contact-form' onClick={() => setOption('editing')}>
                     <i className="fas fa-check"></i>
-                    <HashLink smooth to='#contact-form'>Get a Professional Editing of Your Photos</HashLink>
+                        <span>Get a Professional Editing of Your Photos</span>
+                    </HashLink>
                 </li>
             </ul>
         </div>

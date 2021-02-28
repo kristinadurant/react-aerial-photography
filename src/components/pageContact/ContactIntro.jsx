@@ -5,6 +5,7 @@ const ContactIntro = () => {
 
     return (
         <section className='contact full-screen flex-justify'>
+            <div className='overlay' />
             <div className='inner flex-justify'>
 
                 <div style={{ width: '50%'}}>

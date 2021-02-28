@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import MainMenu from './MainMenu';
 
 const MobileMenu = () => {
     const [open, setOpen] = useState(false);
@@ -25,14 +25,15 @@ const MobileMenu = () => {
                         <i className="fas fa-times"></i>
                         <span className='hide'>Close menu</span>
                     </button>
-                    <nav>
+                    <MainMenu />
+                    {/* <nav>
                         <ul>
                             <li><HashLink smooth to={'#services'} onClick={() => setOpen(false)}>Services</HashLink></li>
                             <li><Link to='/about-pierre-photographer' onClick={() => setOpen(false)}>About</Link></li>
                             <li><Link to='/gallery' onClick={() => setOpen(false)}>Gallery</Link></li>
                             <li><Link to='/contact' onClick={() => setOpen(false)}>Contact</Link></li>
                         </ul>
-                    </nav>  
+                    </nav>   */}
                 </div>
             }
         </>

@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom'
 // import { db } from '../../firebase';
 
-const Form = ({ props }) => {
-    const params = useParams();
-    const [loading, setLoading] = useState(false);
-    const [formData, setFormData] = useState({});
-console.log(params);
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };    
+const Form = ({ children }) => {
+    const [loading, setLoading] = useState(false);  
 
     const handleSubmit = async (e) => {
         const form = e.target;
@@ -33,22 +26,18 @@ console.log(params);
                 <label htmlFor='name' className='required'>
                     Name:
                 </label>
-                <input onChange={handleChange} type='text' id='name' name='name' required />
+                <input type='text' id='name' name='name' required />
             </div>
             <div>
                 <label htmlFor='email' className='required'>
                     Email:
                 </label>
-                <input onChange={handleChange} type='email' id='email' name='email' required />
-            </div>
-            <div>
-                <label htmlFor='message' className='required'>
-                    Message:
-                </label>
-                <textarea onChange={handleChange} id='message' name='message' rows="4" required/>
+                <input type='email' id='email' name='email' required />
             </div>
 
-            <button type='submit' disabled={loading}>Send Message</button>
+            { children }
+
+            <button type='submit' disabled={loading}>Send</button>
 
         </form>
     )

@@ -5,22 +5,30 @@ const ServicesList = () => {
 
     return (
         <>
-            <ul className='font2'>
+            <ul className='font2 check-list'>
                 <li>                                    
-                    <i className="fas fa-check"></i>
-                    <Link to='/gallery'>Download a High Resolution Photo & Video</Link>
+                    <Link to='/gallery'>
+                        <i className="fas fa-check"></i>
+                        <span>Download a High Resolution Photo & Video</span>
+                    </Link>
                 </li>
-                <li>                                    
-                    <i className="fas fa-check"></i>
-                    <Link to='/aerial-photo-video-shoot'>Schedule an Aerial Video Shoot</Link>
+                <li>
+                    <Link to='/aerial-photo-video-shoot'>
+                        <i className="fas fa-check"></i>
+                        <span>Schedule an Aerial Video Shoot</span>
+                    </Link>
                 </li>
-                <li>                                    
-                    <i className="fas fa-check"></i>
-                    <Link to='/aerial-photo-video-shoot'>Shedule a Photo Shoot</Link>
+                <li>
+                    <Link to='/aerial-photo-video-shoot'>
+                        <i className="fas fa-check"></i>
+                        <span>Shedule a Photo Shoot</span>
+                    </Link>
                 </li>
-                <li>                                    
-                    <i className="fas fa-check"></i>
-                    <Link to='/professional-photo-editing'>Get a Professional Editing of Your Photos</Link>
+                <li>                                               
+                    <Link to='/professional-photo-editing'>
+                        <i className="fas fa-check"></i>
+                        <span>Get a Professional Editing of Your Photos</span>
+                    </Link>
                 </li>
             </ul>
         </>

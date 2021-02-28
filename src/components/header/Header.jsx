@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 import MobileMenu from './MobileMenu';
 import Favorites from './Favorites';
+import MainMenu from './MainMenu';
 
 
 const Header = () => {
@@ -16,14 +16,7 @@ const Header = () => {
             <Favorites />
             <div className='main-menu-desktop hide-sm inner'>
                 <Link to='/' className='logo'>Pierre</Link>
-                <nav>
-                    <ul>
-                        <li><HashLink smooth to={'#services'}>Services</HashLink></li>
-                        <li><Link to='/gallery'>Gallery</Link></li>
-                        <li><Link to='/about-pierre-photographer'>About</Link></li>                      
-                        <li><Link to='/contact'>Contact</Link></li>
-                    </ul>
-                </nav>
+                <MainMenu />
             </div>
         
             <MobileMenu />
