@@ -5,14 +5,14 @@ import { Form, FormEditing, FormInquiry, FormSchedule } from './';
 const ContactForm = () => {
     const { option } = useContext(ContactContext);
     const options = {
-        message: {title: 'Send a Message', textarea: 'Questions/Message'},
+        message: {title: 'Send a Message/Question', textarea: 'Questions/Message'},
         schedule: {title: 'Schedule an Aerial Photo & Video Shoot'},
         inquiry: {title: 'Send an Inquiry', textarea: 'Questions/Comments'},
         editing: {title: 'Send an Inquiry about Photo Editing'}
     }
 
     return (
-        <section id='contact-form' className='inner'>
+        <section id='contact-form' className='inner full-screen'>
 
             <h2>{options[option].title}</h2>
 

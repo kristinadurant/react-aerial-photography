@@ -4,37 +4,40 @@ import { Link } from 'react-router-dom';
 const Services = () => {
     return (
         <section id='services' className='full-screen'>
-            <div className='inner flex-center'>
-
-                <div>
-                    <h2 className='font2'>Video and Photo Services</h2>
-                    <p className='font1'>Have a project in mind?</p>
-                    <ul className='font2 check-list'>
-                        <li>                                    
+            <div className='inner'>
+                    <div>
+                        <h2 className='font2'>We Can Offer You Professional Video & Photo Services</h2>                   
+                    </div>
+                    <div className='blocks'>
+                        <div>
+                            <h3>Download a Photo or Video</h3> 
+                            <p>Our gallery includes high resolution photos and videos. 
+                            Bookmark all the images and videos that you like and send an inquiry. 
+                            Depending on the images and quantity we will provide you with a price for 
+                            downloading all images and individual prices. </p>                                   
                             <Link to='/gallery'>
-                                <span className='checkmark'><i /></span>
-                                <span>Download a High Resolution Photo & Video</span>
+                                View Gallery
                             </Link>
-                        </li>
-                        <li>
+                        </div>
+                        <div>
+                            <h3>Aerial Photo & Video Shoot</h3>
+                            <p>Drone Photography and Videography has become widely used for different purposes. 
+                            We can help you create better visuals of memorable moments, high quality property 3D tours or any other 
+                            project you might have in mind.</p>
                             <Link to='/aerial-photo-video-shoot'>
-                                <span className='checkmark'><i /></span>
-                                <span>Schedule an Aerial Photo & Video Shoot</span>
+                                Schedule Now
                             </Link>
-                        </li>
-                        <li>                                               
+                        </div>
+                        <div>       
+                            <h3>Photo Editing</h3>   
+                            <p>You have photos but you want them to be perfect? We can help you with 
+                                variety of photo editing tools. All you need to do is send us your photos, 
+                                describe your desires and we will take care of you.</p>                                     
                             <Link to='/professional-photo-editing'>
-                                <span className='checkmark'><i /></span>
-                                <span>Get a Professional Editing of Your Photos</span>
+                                View Services
                             </Link>
-                        </li>
-                    </ul>
-                    <p className='note'>* Video and Photo Shoots are available only in Miami, FL.</p>
-                </div>
-
-                <div>
-                    
-                </div>
+                        </div>
+                    </div>
 
             </div>
         </section>

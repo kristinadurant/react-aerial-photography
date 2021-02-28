@@ -13,7 +13,7 @@ const ContactOptions = () => {
                     
                     <HashLink smooth to='#contact-form' onClick={() => setOption('message')}>
                         <span className='checkmark'><i /></span>
-                        <span>Send a Message</span>
+                        <span>Send a Message/Question</span>
                     </HashLink>
                 </li>
 

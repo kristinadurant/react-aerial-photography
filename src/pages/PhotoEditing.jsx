@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../components/Banner';
-import ColorAdjustment from '../components/pagePhotoEditing/ColorAdjustment';
+import { Intro, ColorAdjustment } from '../components/pagePhotoEditing';
 const image = require('../assets/images/IMG_1531.jpg');
 
 const PhotoEditing = () => {
@@ -11,6 +11,7 @@ const PhotoEditing = () => {
                     Retouch - Color Adjustment - Object removal
                 </p>
             </Banner>
+            <Intro />
             <ColorAdjustment />
         </main>
     )

@@ -1,29 +1,30 @@
 import React, { useState } from 'react';
-const before = require('../../assets/images/before.jpg');
-const after = require('../../assets/images/after.jpg');
 
-const BeforeAfter = () => {
-    const [clip, setClip] = useState(70);
+const BeforeAfter = ({ before, after }) => {
+    const [clip, setClip] = useState(50);
 
     return (
         <div className='before-after'>
 
-            <div className='image' style={{ minWidth: '500px'}}>
+            <div className='image' style={{ width: '500px', height: '500px'}}>
                 <img 
-                    className='before' src={before.default}
+                    className='before' src={before.img} alt={before.description}
                 />
                 <img 
-                    className='after' src={after.default}
-                    style={{ clipPath: `inset(0 0 0 ${clip}%)`, transition: 'all 1s'}}
+                    className='after' src={after.img} alt={after.description}
+                    style={{ 
+                        clipPath: `polygon(${2*clip}% 0%,100% 0%,100% 100%,0% 100%,0% ${2*clip}%, ${clip}% ${clip}%)`, 
+                        transition: 'all 1s'
+                    }}
                 />
             </div>
 
             <div className='buttons'>
-                    <button onClick={() => setClip(0)}>
+                    <button className='square' onClick={() => setClip(0)}>
                         <i className="fas fa-caret-left fa-2x"></i>
                     </button>
 
-                    <button onClick={() => setClip(100)}>
+                    <button className='square' onClick={() => setClip(100)}>
                         <i className="fas fa-caret-right fa-2x"></i>               
                     </button>
             </div>     
