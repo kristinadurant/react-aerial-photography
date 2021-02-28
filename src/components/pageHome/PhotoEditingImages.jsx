@@ -8,7 +8,7 @@ const images = [
     { id: 3, description: 'Unique Prints', img: 'zion.jpg'}  
 ]
 
-const ServicesImage = () => {
+const PhotoEditingImages = () => {
     const [index, set] = useState(0)
     const transitions = useTransition(images[index], item => item.id, {
         from: { opacity: 0 },
@@ -39,4 +39,4 @@ const ServicesImage = () => {
     )
 }
 
-export default ServicesImage
+export default PhotoEditingImages;

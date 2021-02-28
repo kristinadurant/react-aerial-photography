@@ -16,6 +16,13 @@ const FormEditing = () => {
                 </label>
                 <input type='file' accept='.jpg, .jpeg' />
             </div>
+
+            <div>
+                <label htmlFor='message' className='required'>
+                Tell us a bit more about edits you would like to implement
+                </label>
+                <textarea id='message' name='message' rows="4" required/>
+            </div>
         </>
     )
 }

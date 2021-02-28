@@ -306,6 +306,7 @@ ul.check-list li {
 ul.check-list li:last-of-type {
   margin-bottom: 0;
 }
+.checkmark,
 i.fa-check {
   border: 2px solid grey;
   border-radius: 100%;
@@ -313,15 +314,22 @@ i.fa-check {
   height: 2em;
   margin-right: 5%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+#services .checkmark i {
+  background-image: url("../../assets/checkmark2.svg");
+}
+.checkmark i {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 2em;
 }
 ul.check-list a {
   display: flex;
   align-items: center;
   justify-content: left;
 }
-ul.check-list a span {
+ul.check-list a span:last-of-type {
   line-height: 1.3;
   font-size: 1.25em;
 }
@@ -479,13 +487,14 @@ section.contact .inner {
   position: relative;
   z-index: 2;
 }
-section.contact li i.fa-check {
-  color: transparent;
-  transition: color 0.5s;
+section.contact li .checkmark i {
+  background-image: url("../../assets/checkmark.svg");
+  opacity: 0;
+  transition: opacity 0.5s;
 }
-section.contact li:hover i.fa-check,
-section.contact li.active i.fa-check {
-  color: inherit;
+section.contact li:hover .checkmark i,
+section.contact li.active .checkmark i {
+  opacity: 1;
 }
 #contact-form input,
 #contact-form textarea {

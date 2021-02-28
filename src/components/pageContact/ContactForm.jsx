@@ -6,9 +6,9 @@ const ContactForm = () => {
     const { option } = useContext(ContactContext);
     const options = {
         message: {title: 'Send a Message', textarea: 'Questions/Message'},
-        schedule: {title: 'Schedule an Aerial Photo & Video Shoot', textarea: 'Tell us a bit more about yourself or your project'},
+        schedule: {title: 'Schedule an Aerial Photo & Video Shoot'},
         inquiry: {title: 'Send an Inquiry', textarea: 'Questions/Comments'},
-        editing: {title: 'Send an Inquiry about Photo Editing', textarea: 'Tell us a bit more about edits you would like to implement'}
+        editing: {title: 'Send an Inquiry about Photo Editing'}
     }
 
     return (
