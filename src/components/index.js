@@ -6,3 +6,4 @@ export { default as About } from './pageAbout/About';
 export { default as Services } from './pageHome/Services';
 export { default as PhotoEditing } from './pageHome/PhotoEditing';
 export { default as Carousel } from './carousel/Carousel';
+export { default as Gallery } from './pageHome/Gallery';

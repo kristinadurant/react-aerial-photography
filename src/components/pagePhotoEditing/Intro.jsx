@@ -6,25 +6,21 @@ const Intro = () => {
         <div>
             <ol className='steps'>
                 <li>
-                    <span>One</span>
-                    <p>
+                    <span>
                         Upload your sample images through our 
                         <Link to='/contact'> contact form </Link> 
                         or via email
                         <a href='mailto: pierre.videophotographer@gmail.com'> pierre.videophotographer@gmail.com</a>.
-                    </p>
+                    </span>
                 </li>
                 <li>
-                    <span>Two</span>
-                    <p>Receive a custom time and price quote according to editing complexity and photos quantity.</p>
+                    <span>Receive a custom time and price quote according to editing complexity and photos quantity.</span>
                 </li>
                 <li>
-                    <span>Three</span>
-                    <p>Accept our quote and we will start editing your images right away.</p>
+                    <span>Accept our quote and we will start editing your images right away.</span>
                 </li>
                 <li>
-                    <span>Four</span>
-                    <p>Review and approve editing. Submit a payment and receive your images.</p>
+                    <span>Review and approve editing. Submit a payment and receive your images.</span>
                 </li>
             </ol>
         </div>

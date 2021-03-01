@@ -159,17 +159,16 @@ nav .submenu li {
   position: relative;
   font-size: 0.875em;
   border-bottom: 1px solid #deddd9;
-  color: @color;
+  // color: @color;
 }
 nav .submenu li:last-of-type {
   border-bottom: none;
 }
 nav .submenu ul {
   position: absolute;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-transform: initial;
-  background-color: @color-accent-ligth;
   padding: 0 1rem;
 }
 header .logo {
@@ -455,8 +454,21 @@ section.gallery .image:hover img {
   justify-content: space-around;
   align-items: center;
 }
-.steps li > span {
+.steps li:first-of-type:before {
+  content: "one";
+}
+.steps li:nth-of-type(2):before {
+  content: "two";
+}
+.steps li:nth-of-type(3):before {
+  content: "three";
+}
+.steps li:nth-of-type(4):before {
+  content: "four";
+}
+.steps li:before {
   .font2;
+  display: block;
 }
 
 /*=================
