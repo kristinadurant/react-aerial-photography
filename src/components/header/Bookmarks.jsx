@@ -14,7 +14,7 @@ const Bookmarks = () => {
                     <span className='hide'>Bookmarked Images</span>
                     <i className="far fa-bookmark"></i>
                 </button>
-                <BookmarksList open={open} setOpen={setOpen}/>
+                {open && <BookmarksList setOpen={setOpen}/>}
             </div>       
         </div>
     ) : null;

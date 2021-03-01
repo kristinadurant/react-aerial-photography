@@ -2,7 +2,6 @@ import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 const About = () => {
-    console.log('about')
     return (
         <section id='about' className='full-screen'>
             <div className='inner'>

@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { BookmarksContext } from '../../context/BookmarksContext';
 
 
-const BookmarksList = ({ open, setOpen }) => {
+const BookmarksList = ({ setOpen }) => {
     const { bookmarks, removeBookmark } = useContext(BookmarksContext);
 
-    return open && (
+    return (
         <div id='bookmarks' className='container' onMouseLeave={() => setOpen(false)}>
             <ul>
                 {bookmarks.map( item => {
