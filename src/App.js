@@ -5,7 +5,7 @@ import './style/css/responsive.css';
 import ScrollToTop from './ScrollToTop';
 import { Header, Footer } from './components';
 import { Home, Gallery, About, Photoshoot, PhotoEditing, Contact } from './pages';
-import { AppContextProvider } from './context/AppContext';
+import { BookmarksContextProvider } from './context/BookmarksContext';
 
 function App() {
   // document.addEventListener('contextmenu', (e) => {
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <AppContextProvider>
+      <BookmarksContextProvider>
         <Header />
         <Switch>
             <Route exact path='/' component={Home} /> 
@@ -25,7 +25,7 @@ function App() {
             <Route exact path='/professional-photo-editing' component={PhotoEditing} />
             <Route exact path='/contact' component={Contact} />
         </Switch>
-      </AppContextProvider>
+      </BookmarksContextProvider>
       <Footer />
     </BrowserRouter>
   );

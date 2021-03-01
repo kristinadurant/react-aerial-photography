@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { AppContext } from '../../context/AppContext';
 import { GalleryContext } from '../../context/GalleryContext';
+import { BookmarksContext } from '../../context/BookmarksContext';
 
 const Image = ({ img }) => {
-    const { favorites, addFavorite } = useContext(AppContext);
+    const { bookmarks, addBookmark } = useContext(BookmarksContext);
     const { setModal } = useContext(GalleryContext);
     const [ disabled, setDisabled ] = useState(false);
 
     function handleClick(img) {
-        addFavorite(img);
-        setDisabled(true);
+        addBookmark(img);
     }
     useEffect(()=> {
-        if(favorites.includes(img)) setDisabled(true);
-    }, [favorites]);
+        const bookmarked = bookmarks.filter(bookmark => bookmark.url === img.url);
+        bookmarked.length > 0? setDisabled(true) : setDisabled(false);
+    }, [bookmarks]);
 
     return (
         <div key={img.id} className='image'>

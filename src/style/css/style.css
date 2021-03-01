@@ -189,23 +189,23 @@ header .logo {
   border: 2px solid #edebe6;
 }
 /*=================
-    Favorites
+    Bookmarks
 ===================*/
-.favorites {
+.bookmarks {
   background-color: #000;
 }
-.favorites .inner {
+.bookmarks .inner {
   position: relative;
 }
-.favorites .inner button {
+.bookmarks .inner button {
   color: #fff;
   margin: auto;
   margin-right: 0;
 }
-.favorites button .total {
+.bookmarks button .total {
   margin-right: 5px;
 }
-.favorites .container {
+.bookmarks .container {
   position: absolute;
   right: 0;
   background-color: #000;
@@ -213,12 +213,12 @@ header .logo {
   padding: 1em;
   padding-right: 0;
 }
-.favorites .container li {
+.bookmarks .container li {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.favorites .container p {
+.bookmarks .container p {
   padding-right: 1em;
   text-align: center;
   margin-top: 1em;
@@ -373,14 +373,14 @@ ul.check-list a span:last-of-type {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
 }
 #about .inner > :nth-child(n) {
   width: 40%;
 }
 #about .image {
   position: absolute;
-  right: 0;
-  max-width: 400px;
+  left: 0;
 }
 /*=================
     Gallery

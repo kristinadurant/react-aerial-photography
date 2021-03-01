@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
-import Favorites from './Favorites';
+import Bookmarks from './Bookmarks';
 import MainMenu from './MainMenu';
 
 
@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <header style={{ backgroundColor: backgroundColor, color: color}}>
-            <Favorites />
+            <Bookmarks />
             <div className='main-menu-desktop hide-sm inner'>
                 <Link to='/' className='logo'>Pierre</Link>
                 <MainMenu />
