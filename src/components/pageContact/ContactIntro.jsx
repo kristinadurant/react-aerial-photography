@@ -8,12 +8,14 @@ const ContactIntro = () => {
             <div className='overlay' />
             <div className='inner'>
                 <h1 className='font1'>
-                    Please use the contact form for better assistance
+                    Contact Us
                 </h1>
-                <ContactOptions /> 
-                <a href='mailto: pierre.videophotographer@gmail.com'>
-                    pierre.videophotographer@gmail.com    
-                </a>                       
+                <ContactOptions />
+                <p className='email-link'>
+                    <a href='mailto: pierre.videophotographer@gmail.com'>
+                        pierre.videophotographer@gmail.com    
+                    </a> 
+                </p>                      
             </div>
         </section>
     )

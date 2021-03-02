@@ -4,7 +4,7 @@
 @color-primary-dark: #062b2d;
 @color-grey: #016b70;
 @color-accent-ligth: #edebe6;
-@color-accent: #ffbf3c;
+@color-accent: #ffe968;
 @color-accent-dark: #ffab00;
 @color: rgb(51, 65, 63);
 .font1 {
@@ -68,10 +68,7 @@ button {
   .flex-center;
   cursor: pointer;
   background-color: transparent;
-  border: none;
   min-height: 30px;
-  font-family: inherit;
-  font-size: inherit;
   color: inherit;
 }
 button.square {
@@ -79,15 +76,37 @@ button.square {
   min-width: 44px;
   padding: 0 1em;
 }
+button,
 button:focus,
 button:active,
 input,
 input:focus,
 input:active,
+textarea,
 textarea:focus,
 textarea:active {
   outline: none;
   border: none;
+  font-family: inherit;
+  font-size: 1rem;
+}
+fieldset {
+  border: none;
+}
+input {
+  min-width: 250px;
+  color: inherit;
+}
+input[type="number"] {
+}
+textarea {
+  width: 100%;
+  max-width: 650px;
+  color: inherit;
+}
+label.required::after {
+  content: "*";
+  color: red;
 }
 .button {
   .font2;
@@ -95,6 +114,10 @@ textarea:active {
   color: #fff;
   border: 1px solid #fff;
   padding: 1em 2.2em;
+}
+.button.secondary {
+  background-color: @color-primary-dark;
+  min-width: 200px;
 }
 li {
   list-style: none;
@@ -228,6 +251,8 @@ footer {
   background-color: @color-accent-ligth;
   color: @color-primary-dark;
   padding: 5% 0 2%;
+  .font2;
+  font-size: 0.75em;
 }
 footer .inner > div:first-of-type {
   border-bottom: 1px solid @color-primary-dark;
@@ -319,7 +344,7 @@ i.fa-check {
   border-radius: 100%;
   width: 2em;
   height: 2em;
-  margin-right: 5%;
+  margin-right: 2em;
   display: flex;
 }
 
@@ -479,12 +504,11 @@ section.contact {
   color: #fff;
   position: relative;
   overflow: hidden;
-  font-size: 0.75em;
 }
 section.contact .overlay {
   z-index: 0;
   background-color: rgba(255, 255, 255, 0.15);
-  background-image: url("../../assets/images/before.jpg");
+  background-image: url("../../assets/images/IMG_7640.jpg");
   .background-image;
   filter: blur(10px) brightness(50%) saturate(50%);
   box-shadow: none;
@@ -494,13 +518,12 @@ section.contact .inner {
   z-index: 2;
 }
 section.contact h1 {
-  border-bottom: 1px solid white;
   margin-bottom: 1em;
   display: inline-block;
 }
-section.contact .inner > a {
-  margin-top: 2em;
-  color: @color-accent;
+section.contact .inner > p {
+  margin-top: 5%;
+  border-top: 1px solid #fff;
 }
 section.contact li .checkmark i {
   background-image: url("../../assets/checkmark.svg");
@@ -514,13 +537,20 @@ section.contact li.active .checkmark i {
 #contact-form {
   .padding;
 }
+#contact-form h2 {
+  margin-bottom: 1em;
+}
 #contact-form input,
 #contact-form textarea {
   border: none;
   border-bottom: 1px solid @color-primary-dark;
   background-color: transparent;
+  margin-bottom: 2em;
 }
-#contact-form label {
+#contact-form label,
+#contact-form legend {
   .font2;
+  font-size: 0.75em;
   display: block;
+  margin-bottom: 0.75em;
 }

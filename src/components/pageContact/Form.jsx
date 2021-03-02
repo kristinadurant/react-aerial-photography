@@ -24,20 +24,20 @@ const Form = ({ children }) => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor='name' className='required'>
-                    Name:
+                    Name
                 </label>
-                <input type='text' id='name' name='name' required />
+                <input type='text' id='name' name='name' required autoFocus/>
             </div>
             <div>
                 <label htmlFor='email' className='required'>
-                    Email:
+                    Email
                 </label>
                 <input type='email' id='email' name='email' required />
             </div>
 
             { children }
 
-            <button type='submit' disabled={loading}>Send</button>
+            <button type='submit' className='button secondary' disabled={loading}>Send</button>
 
         </form>
     )

@@ -18,8 +18,9 @@ const BookmarksContextProvider = ({ children }) => {
 	};
 
     function addBookmark(img) {
-        setBookmarks([...bookmarks, img]);
-        saveToLocalStorage(bookmarks);
+        const newBookmarks = [...bookmarks, img];
+        setBookmarks(newBookmarks);
+        saveToLocalStorage(newBookmarks);
     }
 
     function removeBookmark(img) {

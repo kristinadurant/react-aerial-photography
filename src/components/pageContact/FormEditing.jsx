@@ -4,17 +4,17 @@ const FormEditing = () => {
     return (
         <>
             <div>
-                <label>
-                    Number of Photos to be editted:
+                <label htmlFor='number-of-photos' className='required'>
+                    Number of Photos to be editted
                 </label>
-                <input type='number'/>
+                <input type='number' id='number-of-photos' name='number-of-photos' required min='0'/>
             </div>
 
             <div>
-                <label>
+                <label htmlFor='upload-photos' className='required'>
                     Upload files
                 </label>
-                <input type='file' accept='.jpg, .jpeg' />
+                <input type='file' accept='.jpg, .jpeg' id='upload-photos' name='upload-photos' required/>
             </div>
 
             <div>

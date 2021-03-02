@@ -4,7 +4,14 @@ const FormSchedule = () => {
     return (
         <>
             <div>
-                <input type="date" data-date-inline-picker="true" min='today' />
+                <label htmlFor='date' className='required'>
+                    Date of Photo/Video Shoot
+                </label>
+                <input 
+                    type="date" required
+                    id='date' name='date'
+                    data-date-inline-picker="true"
+                />
             </div>
             <div>
                 <label htmlFor='message' className='required'>

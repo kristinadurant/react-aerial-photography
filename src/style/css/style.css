@@ -61,10 +61,7 @@ button {
   align-items: center;
   cursor: pointer;
   background-color: transparent;
-  border: none;
   min-height: 30px;
-  font-family: inherit;
-  font-size: inherit;
   color: inherit;
 }
 button.square {
@@ -72,15 +69,35 @@ button.square {
   min-width: 44px;
   padding: 0 1em;
 }
+button,
 button:focus,
 button:active,
 input,
 input:focus,
 input:active,
+textarea,
 textarea:focus,
 textarea:active {
   outline: none;
   border: none;
+  font-family: inherit;
+  font-size: 1rem;
+}
+fieldset {
+  border: none;
+}
+input {
+  min-width: 250px;
+  color: inherit;
+}
+textarea {
+  width: 100%;
+  max-width: 650px;
+  color: inherit;
+}
+label.required::after {
+  content: "*";
+  color: red;
 }
 .button {
   font-weight: 200;
@@ -91,6 +108,10 @@ textarea:active {
   color: #fff;
   border: 1px solid #fff;
   padding: 1em 2.2em;
+}
+.button.secondary {
+  background-color: #062b2d;
+  min-width: 200px;
 }
 li {
   list-style: none;
@@ -231,6 +252,11 @@ footer {
   background-color: #edebe6;
   color: #062b2d;
   padding: 5% 0 2%;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+  font-size: 0.75em;
 }
 footer .inner > div:first-of-type {
   border-bottom: 1px solid #062b2d;
@@ -334,7 +360,7 @@ i.fa-check {
   border-radius: 100%;
   width: 2em;
   height: 2em;
-  margin-right: 5%;
+  margin-right: 2em;
   display: flex;
 }
 .checkmark i {
@@ -505,12 +531,11 @@ section.contact {
   color: #fff;
   position: relative;
   overflow: hidden;
-  font-size: 0.75em;
 }
 section.contact .overlay {
   z-index: 0;
   background-color: rgba(255, 255, 255, 0.15);
-  background-image: url("../../assets/images/before.jpg");
+  background-image: url("../../assets/images/IMG_7640.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -522,13 +547,12 @@ section.contact .inner {
   z-index: 2;
 }
 section.contact h1 {
-  border-bottom: 1px solid white;
   margin-bottom: 1em;
   display: inline-block;
 }
-section.contact .inner > a {
-  margin-top: 2em;
-  color: #ffbf3c;
+section.contact .inner > p {
+  margin-top: 5%;
+  border-top: 1px solid #fff;
 }
 section.contact li .checkmark i {
   background-image: url("../../assets/checkmark.svg");
@@ -542,16 +566,23 @@ section.contact li.active .checkmark i {
 #contact-form {
   padding: 8% 0 5%;
 }
+#contact-form h2 {
+  margin-bottom: 1em;
+}
 #contact-form input,
 #contact-form textarea {
   border: none;
   border-bottom: 1px solid #062b2d;
   background-color: transparent;
+  margin-bottom: 2em;
 }
-#contact-form label {
+#contact-form label,
+#contact-form legend {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8em;
+  font-size: 0.75em;
   display: block;
+  margin-bottom: 0.75em;
 }

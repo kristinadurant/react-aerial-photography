@@ -6,7 +6,7 @@ const ContactOptions = () => {
  const { option, setOption } = useContext(ContactContext);
 
     return (       
-        <div style={{ width: '50%'}}>
+        <div>
             <ul className='font2 check-list'>
 
                 <li className={option==='message' && 'active'}>                                    
@@ -27,14 +27,14 @@ const ContactOptions = () => {
                 <li className={option==='inquiry' && 'active'}>                                                
                     <HashLink smooth to='#contact-form' onClick={() => setOption('inquiry')}>
                         <span className='checkmark'><i /></span>
-                        <span>Download a High Resolution Photo & Video</span>
+                        <span>Inquiry about downloading Photos & Videos</span>
                     </HashLink>
                 </li>
 
                 <li className={option==='editing' && 'active'}>                                    
                     <HashLink smooth to='#contact-form' onClick={() => setOption('editing')}>
                         <span className='checkmark'><i /></span>
-                        <span>Get a Professional Editing of Your Photos</span>
+                        <span>Inquiry about Professional Editing of Your Photos</span>
                     </HashLink>
                 </li>
                 
