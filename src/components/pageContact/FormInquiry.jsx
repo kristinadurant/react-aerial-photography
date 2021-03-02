@@ -3,7 +3,7 @@ import { BookmarksContext } from '../../context/BookmarksContext';
 
 const FormInquiry = () => {
     const { bookmarks } = useContext(BookmarksContext);
-
+    console.log('checked');
     return (
         <>
             <fieldset>
@@ -11,9 +11,11 @@ const FormInquiry = () => {
                 <ul>
                     {bookmarks.map( item => {
                         return (
-                            <li key={item.id}>                           
-                                <input type='checkbox' checked/>
-                                <label>{item.title}</label>
+                            <li key={item.url}>                           
+                                <input type='checkbox' defaultChecked
+                                    id={item.url} name={item.title} value={item.url} 
+                                />
+                                <label htmlFor={item.url}>{item.title}</label>
                             </li>
                     )})}
                 </ul>

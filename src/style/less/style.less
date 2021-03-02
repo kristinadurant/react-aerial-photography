@@ -94,10 +94,17 @@ fieldset {
   border: none;
 }
 input {
-  min-width: 250px;
   color: inherit;
 }
+input[type="text"],
+input[type="email"] {
+  min-width: 250px;
+}
 input[type="number"] {
+}
+input[type="checkbox"] {
+  cursor: pointer;
+  margin-right: 1em;
 }
 textarea {
   width: 100%;
@@ -553,4 +560,16 @@ section.contact li.active .checkmark i {
   font-size: 0.75em;
   display: block;
   margin-bottom: 0.75em;
+}
+#contact-form fieldset {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+#contact-form fieldset label {
+  display: inline;
+  letter-spacing: initial;
+  text-transform: none;
+}
+#contact-form fieldset input {
+  margin-bottom: 1em;
 }
