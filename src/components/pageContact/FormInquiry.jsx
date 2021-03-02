@@ -3,7 +3,7 @@ import { BookmarksContext } from '../../context/BookmarksContext';
 
 const FormInquiry = () => {
     const { bookmarks } = useContext(BookmarksContext);
-    console.log('checked');
+    
     return (
         <>
             <fieldset>
