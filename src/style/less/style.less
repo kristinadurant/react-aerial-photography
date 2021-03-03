@@ -71,7 +71,7 @@ button {
   min-height: 30px;
   color: inherit;
 }
-button.square {
+.square {
   min-height: 44px;
   min-width: 44px;
   padding: 0 1em;
@@ -88,19 +88,17 @@ textarea:active {
   outline: none;
   border: none;
   font-family: inherit;
-  font-size: 1rem;
 }
 fieldset {
   border: none;
 }
 input {
   color: inherit;
+  font-size: 1rem;
 }
 input[type="text"],
 input[type="email"] {
   min-width: 250px;
-}
-input[type="number"] {
 }
 input[type="checkbox"] {
   cursor: pointer;
@@ -176,20 +174,26 @@ header {
 header nav {
   .font2;
 }
+header.white .main-menu-desktop {
+  background-color: #fff;
+  color: @color;
+}
 header nav button {
   .font2;
   font-size: inherit;
   line-height: 44px;
 }
-.main-menu-desktop {
+.main-menu-desktop .inner {
   .flex-justify;
   height: 100px;
+}
+header.white .submenu ul {
+  background-color: #fff;
 }
 nav .submenu li {
   position: relative;
   font-size: 0.875em;
   border-bottom: 1px solid #deddd9;
-  // color: @color;
 }
 nav .submenu li:last-of-type {
   border-bottom: none;
@@ -265,19 +269,31 @@ footer .inner > div:first-of-type {
   border-bottom: 1px solid @color-primary-dark;
   .flex-justify;
 }
+footer .social a {
+  font-size: 1.5em;
+  margin-left: 0.5em;
+}
+footer .main {
+  padding: 3em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 footer .bottom {
   border-top: 1px solid @color-primary-dark;
   .flex-justify;
   text-align: right;
 }
-
-/*=================
-    Form
-===================*/
-footer form label {
-  display: block;
+footer form input {
+  background-color: transparent;
+  border-bottom: 1px solid @color-primary-dark !important;
+  padding: 0.5em;
+  margin: 2em 0 1em;
 }
-
+footer form .button.secondary {
+  font-size: 0.875em;
+  min-width: 250px;
+}
 /*=================
     Banner
 ===================*/
@@ -373,7 +389,7 @@ ul.check-list a span:last-of-type {
 /*=================
     Carousel
 ===================*/
-.carousel {
+section.photo-shoots {
   overflow: hidden;
   position: relative;
   color: #fff;
@@ -407,7 +423,7 @@ ul.check-list a span:last-of-type {
     Gallery
 ===================*/
 section.intro {
-  padding: 10% 0 2%;
+  .padding;
   .flex-justify;
 }
 .search form {

@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { BookmarksContext } from '../../context/BookmarksContext';
 
 
@@ -15,11 +16,11 @@ const BookmarksList = ({ setOpen }) => {
                     return (
                     <li key={item.id}>
                         {item.title}
-                        <button onClick={() => removeBookmark(item)}>x</button>
+                        <button className='square' onClick={() => removeBookmark(item)}>x</button>
                     </li>
                 )})}
             </ul>
-            <p>Send inquiry about your bookmarks</p>
+            <Link to='/contact'>Send inquiry about your bookmarks</Link>
         </div>
     )
 }

@@ -8,17 +8,17 @@ import MainMenu from './MainMenu';
 const Header = () => {
     const location = useLocation();
     const path = location.pathname;
-    const backgroundColor = path==='/'? 'transparent': '#fff';
-    const color = path==='/'? '#fff': '#000';
+    const headerClassName = path==='/'? 'transparent': 'white';
 
     return (
-        <header style={{ backgroundColor: backgroundColor, color: color}}>
+        <header className={headerClassName}>
             <Bookmarks />
-            <div className='main-menu-desktop hide-sm inner'>
-                <Link to='/' className='logo'>Pierre</Link>
-                <MainMenu />
+            <div className='main-menu-desktop hide-sm'>
+                <div className='inner'>
+                    <Link to='/' className='logo'>Pierre</Link>
+                    <MainMenu />
+                </div>
             </div>
-        
             <MobileMenu />
 
         </header>

@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
                 <FooterMain />
                 <div className='bottom'>
-                    <p>Video and Photo Shoots are available only in Miami, FL</p>
+                    <p>Copyrights</p>
                     <HashLink smooth to='#'>Back to Top<i className="fas fa-long-arrow-alt-up"></i></HashLink>            
                 </div>   
             </div>        

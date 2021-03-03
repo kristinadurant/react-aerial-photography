@@ -14,9 +14,9 @@ const Subscribe = () => {
                     <label htmlFor='email' className='hide'>
                         Email:
                     </label>
-                    <input type='email' id='email' name='email' required />
+                    <input type='email' id='email' name='email' required placeholder='Enter your email here...'/>
                 </div>
-                <button type='submit'>Subscribe</button>
+                <button className='button secondary' type='submit'>Subscribe</button>
             </form>
         </div>
     )

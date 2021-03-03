@@ -4,7 +4,7 @@ import Subscribe from './Subscribe';
 
 const FooterMain = () => {
     return (
-        <div className='flex-justify'>
+        <div className='main'>
             <div>
                 <h3>Services</h3>
                 <ul>
@@ -12,13 +12,10 @@ const FooterMain = () => {
                         <Link to='/gallery'>High Resolution Photos & Videos</Link>
                     </li>
                     <li>
-                        <Link to='/aerial-photo-video-shoot'>Aerial Video Shoots</Link>
+                        <Link to='/aerial-photo-video-shoot'>Aerial Photo & Video Shoots</Link>
                     </li>
                     <li>
-                        <Link to='/aerial-photo-video-shoot'>Photo Shoots</Link>
-                    </li>
-                    <li>
-                        <Link to='/professional-photo-editing'>Professional Photo Retouching</Link>
+                        <Link to='/professional-photo-editing'>Professional Photo Editing</Link>
                     </li>
                 </ul>
             </div>
@@ -28,7 +25,6 @@ const FooterMain = () => {
                     <ul>
                         <li><Link to='/about-pierre-photographer'>About Pierre</Link></li>
                         <li><Link to='/gallery'>Gallery</Link></li>
-                        <li><Link to='/gallery'>Videos</Link></li>
                         <li><Link to='/contact'>Contact</Link></li>
                     </ul>
                 </nav>
