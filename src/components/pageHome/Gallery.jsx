@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Gallery = () => {
     return (
         <section className='gallery full-screen'>
-            <div className='inner'>
+            <div className='inner padding'>
                 <div>
                     <h2 style={{ fontSize: '1em'}}>
                         <p className='font2'>High Resolution</p>

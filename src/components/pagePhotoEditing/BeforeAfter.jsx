@@ -6,7 +6,7 @@ const BeforeAfter = ({ before, after }) => {
     return (
         <div className='before-after'>
 
-            <div className='image' style={{ width: '500px', height: '500px'}}>
+            <div className='image'>
                 <img 
                     className='before' src={before.img} alt={before.description}
                 />

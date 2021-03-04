@@ -1,17 +1,20 @@
 import React from 'react';
-import PhotoEditingImages from './PhotoEditingImages';
 import PhotoEditingList from './PhotoEditingList';
+import BeforeAfter from '../pagePhotoEditing/BeforeAfter';
+
+const before = { img: require('../../assets/images/photoEditing/before.jpg').default, title: 'before'};
+const after = { img: require('../../assets/images/photoEditing/after.jpg').default, title: 'before'};
 
 const PhotoEditing = () => {
 
     return (
-        <section id='services' className='full-screen'>
-            <div className='inner'>
-                <div>    
-                    <h2 className='font1'>Proffesional Photo Editing</h2>            
-                    <PhotoEditingImages />
-                </div>
-                <div>                  
+        <section className='full-screen photo-editing'>
+            <div className='inner flex-justify'>
+                               
+                <BeforeAfter before={before} after={after} />
+
+                <div>        
+                    <h2 className='font1'>Proffesional Photo Editing</h2>           
                     <PhotoEditingList />
                 </div>
             </div>
