@@ -2,7 +2,7 @@
   font-family: "Italiana", serif;
   font-size: 2.4em;
   line-height: 1;
-  padding-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 .font2 {
   font-weight: 200;
@@ -324,7 +324,7 @@ footer form .button.secondary {
   font-family: "Italiana", serif;
   font-size: 2.4em;
   line-height: 1;
-  padding-bottom: 0.5em;
+  margin-bottom: 1em;
   color: #fff;
 }
 #home-page .banner .inner {
@@ -365,7 +365,7 @@ footer form .button.secondary {
   font-family: "Italiana", serif;
   font-size: 2.4em;
   line-height: 1;
-  padding-bottom: 0.5em;
+  margin-bottom: 1em;
   font-size: 1.5em;
 }
 #services a {
@@ -376,8 +376,11 @@ footer form .button.secondary {
   font-size: 0.8em;
   font-weight: bold;
 }
-ul.check-list li {
+.contact .check-list li {
   margin-bottom: 2em;
+}
+.photo-editing .check-list li {
+  margin-bottom: 1em;
 }
 ul.check-list li:last-of-type {
   margin-bottom: 0;
@@ -386,10 +389,12 @@ ul.check-list li:last-of-type {
 i.fa-check {
   border: 2px solid grey;
   border-radius: 100%;
+  display: flex;
+}
+i.fa-check {
   width: 2em;
   height: 2em;
   margin-right: 2em;
-  display: flex;
 }
 .checkmark i {
   background-repeat: no-repeat;
@@ -397,7 +402,17 @@ i.fa-check {
   display: block;
   width: 2em;
 }
-ul.check-list a {
+.photo-editing .checkmark {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 1em;
+  border-color: #77929257;
+}
+.photo-editing .checkmark i {
+  background-image: url("../../assets/checkmark2.svg");
+}
+ul.check-list a,
+ul.check-list li {
   display: flex;
   align-items: center;
   justify-content: left;

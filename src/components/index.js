@@ -8,3 +8,4 @@ export { default as SectionPhotoShoots } from './pageHome/SectionPhotoShoots';
 export { default as PhotoEditing } from './pageHome/PhotoEditing';
 export { default as Carousel } from './carousel/Carousel';
 export { default as Gallery } from './pageHome/Gallery';
+export { default as CheckList } from './CheckList';

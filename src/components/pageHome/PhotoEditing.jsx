@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotoEditingList from './PhotoEditingList';
+import CheckList from '../index.js';
 import BeforeAfter from '../pagePhotoEditing/BeforeAfter';
 
 const before = { img: require('../../assets/images/photoEditing/before.jpg').default, title: 'before'};
@@ -12,11 +12,9 @@ const PhotoEditing = () => {
             <div className='inner flex-justify'>
                                
                 <BeforeAfter before={before} after={after} />
+        
+                <CheckList title='Proffesional Photo Editing' />
 
-                <div>        
-                    <h2 className='font1'>Proffesional Photo Editing</h2>           
-                    <PhotoEditingList />
-                </div>
             </div>
         </section>
     )
