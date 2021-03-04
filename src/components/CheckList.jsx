@@ -1,11 +1,6 @@
 import React from 'react';
 
-const CheckList = ({ title }) => {
-    const list = [ 
-        'Color Enhancement', 'Fixing lighting issues',
-        'Unnecessary props removal', 'Background editing',
-        'Retouching', 'Editing out shadows'
-    ];
+const CheckList = ({ title, list }) => {
 
     return (
         <div className='text'>

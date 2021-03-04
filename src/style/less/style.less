@@ -371,7 +371,7 @@ i.fa-check {
   border-radius: 100%;
   display: flex;
 }
-i.fa-check {
+.contact .checkmark {
   width: 2em;
   height: 2em;
   margin-right: 2em;
@@ -490,8 +490,18 @@ section.gallery .image:hover img {
 }
 
 /*=================
-    PhotoEditing
+    Photo Editing
 ===================*/
+.photo-editing-page section:nth-of-type(n + 2) .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.photo-editing .text {
+  width: 50%;
+}
 .before-after .image {
   width: 500px;
   height: 400px;
@@ -511,13 +521,6 @@ section.gallery .image:hover img {
 }
 .before-after .buttons {
   .flex-center;
-}
-.photo-editing-page section:nth-of-type(n + 2) .text {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
 .steps li:first-of-type:before {
   content: "one";

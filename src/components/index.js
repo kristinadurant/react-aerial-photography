@@ -9,3 +9,4 @@ export { default as PhotoEditing } from './pageHome/PhotoEditing';
 export { default as Carousel } from './carousel/Carousel';
 export { default as Gallery } from './pageHome/Gallery';
 export { default as CheckList } from './CheckList';
+export { default as BeforeAfter } from './BeforeAfter';
