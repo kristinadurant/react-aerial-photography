@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Steps = ({ list }) => {
+const Steps = ({ subTitle, title, list, link }) => {
     return (
         <div>
-            <h2 style={{ fontSize: '1em'}}>
-                <p className='font2'>High Resolution</p>
-                <p className='font1'>Photos & Videos</p>
-            </h2>
-                
+
+            {title && 
+                <h2 style={{ fontSize: '1em'}}>
+                    <p className='font2'>{subTitle}</p>
+                    <p className='font1'>{title}</p>
+                </h2>
+            }   
+
             <ol className='steps'> 
                 {list.map(( li, key) => {
                     return (
@@ -18,7 +21,8 @@ const Steps = ({ list }) => {
                 )})}
             </ol>
 
-            <Link to='/gallery'>View Gallery</Link>
+            {link && <Link to={link.url}>{link.text}</Link>}
+            
         </div>
     )
 }

@@ -16,7 +16,10 @@ const Home = () => {
 
             <section className='gallery full-screen'>
                 <div className='inner padding'>
-                    <Steps list={list} />
+                    <Steps 
+                        subTitle={'High Resolution'} title={'Photos & Videos'}
+                        list={list} link={{url: '/gallery', text: 'View Gallery'}}
+                    />
                 </div>
             </section>
 
