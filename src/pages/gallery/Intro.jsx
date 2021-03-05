@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { GalleryContext } from '../../context/GalleryContext';
-import { Search } from './index';
+import Search from './Search';
 
 const Intro = () => {
     const { search, numberOfResults } = useContext(GalleryContext);
