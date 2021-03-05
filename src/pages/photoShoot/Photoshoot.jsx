@@ -1,6 +1,6 @@
 import React from 'react';
-import { Banner } from '../components';
-const image = require('../assets/images/IMG_1531.jpg');
+import { Banner } from '../../components';
+const image = require('../../assets/images/IMG_1531.jpg');
 
 const Photoshoot = () => {
     return (
