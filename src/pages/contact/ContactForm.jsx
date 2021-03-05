@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ContactContext } from '../../context/ContactContext';
-import { Form, FormMessage, FormEditing, FormInquiry, FormSchedule } from './';
+import { Form, FormMessage, FormEditing, FormInquiry, FormSchedule } from '../../components/forms';
 
 const ContactForm = () => {
     const { option } = useContext(ContactContext);
