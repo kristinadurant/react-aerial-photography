@@ -6,15 +6,15 @@ const Intro = () => {
     const { search, numberOfResults } = useContext(GalleryContext);
     
     return  (
-        <section className='inner intro'>
-            <div>
-                <h1>
-                    { search && search}
-                    { !search && 'Gallery'}
-                </h1>
-                { !numberOfResults && <p>No results</p> }
+        <section className='intro'>
+            <div className='inner'>
+                <div className='flex-justify' style={{alignItems: 'flex-start'}}>
+                    <h2 className='font1'>Gallery</h2>                                      
+                    <Search />                  
+                </div>
+                { search && <em> {search}</em>}
+                { !numberOfResults && <em> - No results</em> }
             </div>
-            <Search />
         </section>
     )
 }

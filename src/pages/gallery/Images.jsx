@@ -6,22 +6,24 @@ const Images = () => {
     const { filteredImages } = useContext(GalleryContext);
 
     return (
-        <section className='gallery inner'>
-            {filteredImages.map(img => {
-                return (
-                    <Image img={img} />
-                )
-            })}
-            {filteredImages.map(img => {
-                return (
-                    <Image img={img} />
-                )
-            })}
-            {filteredImages.map(img => {
-                return (
-                    <Image img={img} />
-                )
-            })}
+        <section className='gallery'>
+            <div className='inner'>
+                {filteredImages.map(img => {
+                    return (
+                        <Image img={img} />
+                    )
+                })}
+                {filteredImages.map(img => {
+                    return (
+                        <Image img={img} />
+                    )
+                })}
+                {filteredImages.map(img => {
+                    return (
+                        <Image img={img} />
+                    )
+                })}
+            </div>
         </section>
     )
 }

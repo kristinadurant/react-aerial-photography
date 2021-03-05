@@ -7,9 +7,6 @@ const Image = ({ img }) => {
     const { setModal } = useContext(GalleryContext);
     const [ disabled, setDisabled ] = useState(false);
 
-    function handleClick(img) {
-        addBookmark(img);
-    }
     useEffect(()=> {
         const bookmarked = bookmarks.filter(bookmark => bookmark.url === img.url);
         bookmarked.length > 0? setDisabled(true) : setDisabled(false);
@@ -19,7 +16,11 @@ const Image = ({ img }) => {
         <div key={img.id} className='image'>
             <img src={require(`../../assets/images/${img.url}`).default} alt={img.title} height='auto' width='100%' />       
             <div className='overlay' onClick={() => setModal(img)} />
-            <button onClick={() => handleClick(img)} disabled={disabled} title='Bookmark this Image'>
+            <button 
+                className='square'
+                onClick={() => addBookmark(img)} disabled={disabled} 
+                title='Bookmark this Image'
+            >
                 <span className='hide'>Bookmark this Image</span>
                 {disabled
                 ? <i className="fas fa-bookmark"></i>
