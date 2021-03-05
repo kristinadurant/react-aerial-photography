@@ -1,29 +1,41 @@
 import React from 'react';
-import { BannerVideo, Services, Steps, PhotoEditing, SectionPhotoShoots } from '../../components';
-const list = [
-    'Bookmark Images',
-    'Send an Inquiry',
-    'Choose type of Payment',
-    'Receive High Resolution Files'
-];
+import Carousel from './Carousel';
+import { BannerVideo, Services, Steps, BeforeAfter, CheckList } from '../../components';
+import { gallerySteps, before, after, photoEditing } from './Content';
 
 const Home = () => {
     return (
         <main id='home-page'>
             <BannerVideo />
             <Services />
-            <SectionPhotoShoots />
+
+            <section className='photo-shoots full-screen'>
+                <Carousel />
+                <div className='inner'>
+                    <h2 className='font1'>
+                        Aerial Photo & Video Shoots
+                    </h2>
+                </div>
+            </section>
 
             <section className='gallery full-screen'>
                 <div className='inner padding'>
                     <Steps 
                         subTitle={'High Resolution'} title={'Photos & Videos'}
-                        list={list} link={{url: '/gallery', text: 'View Gallery'}}
+                        list={gallerySteps} link={{url: '/gallery', text: 'View Gallery'}}
                     />
                 </div>
             </section>
 
-            <PhotoEditing />
+            <section className='full-screen photo-editing'>
+                <div className='inner flex-justify'>
+                                
+                    <BeforeAfter before={before} after={after} />
+            
+                    <CheckList title='Proffesional Photo Editing' list={photoEditing} />
+
+                </div>
+            </section>
         </main>
     )
 }
