@@ -4,6 +4,7 @@ export { default as BannerVideo } from './BannerVideo';
 export { default as Banner } from './Banner';
 export { default as Services } from './Services';
 export { default as Carousel } from './carousel/Carousel';
+export { default as StepsHome } from './StepsHome';
 export { default as Steps } from './Steps';
 export { default as CheckList } from './CheckList';
 export { default as BeforeAfter } from './BeforeAfter';

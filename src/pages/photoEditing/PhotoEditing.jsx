@@ -12,17 +12,15 @@ const PhotoEditing = () => {
                 </p>
             </Banner>
 
-            <section className='full-screen'>
-                <div className='inner'>
-                    <Steps list={steps} />
-                </div>
-            </section>
+            <Steps list={steps} />
 
             {services.map(section => {
             return (
-                <section key={section.title} className='inner flex-justify full-screen photo-editing'>       
-                    <CheckList title={section.title} list={section.services} />
-                    <BeforeAfter before={section.before} after={section.after} />
+                <section key={section.title} className='photo-editing padding'>     
+                    <div className='inner flex-justify'> 
+                        <CheckList title={section.title} list={section.services} />
+                        <BeforeAfter before={section.before} after={section.after} />
+                    </div> 
                 </section>
             )
             })}

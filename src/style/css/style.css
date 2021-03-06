@@ -343,6 +343,29 @@ footer form .button.secondary {
   align-items: center;
 }
 /*=================
+    Steps
+===================*/
+.steps ol {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.steps ol li {
+  width: 30%;
+  position: relative;
+  padding-top: 7em;
+}
+.steps .number {
+  position: absolute;
+  font-size: 8em;
+  color: #edebe6;
+  top: 0;
+  z-index: -1;
+}
+.steps .text a {
+  line-height: inherit;
+}
+/*=================
     Services
 ===================*/
 #services {
@@ -434,7 +457,22 @@ section.photo-shoots {
   width: 100%;
 }
 /*=================
-    About
+    Page Home
+===================*/
+#home-page .gallery a {
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+  font-size: 0.75em;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 1em 2.2em;
+  background-color: #062b2d;
+  min-width: 200px;
+}
+/*=================
+    Page About
 ===================*/
 #about .inner {
   height: 100%;
@@ -519,14 +557,12 @@ section.gallery .image:hover img {
 /*=================
     Photo Editing
 ===================*/
-.photo-editing-page section:nth-of-type(n + 2) .text {
+.photo-editing .text {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-.photo-editing .text {
   width: 50%;
 }
 .before-after .image {
@@ -551,24 +587,36 @@ section.gallery .image:hover img {
   justify-content: center;
   align-items: center;
 }
-.steps li:first-of-type:before {
+/*======================
+    Steps Home
+=========================*/
+.steps-home li:first-of-type:before {
   content: "one";
 }
-.steps li:nth-of-type(2):before {
+.steps-home li:nth-of-type(2):before {
   content: "two";
 }
-.steps li:nth-of-type(3):before {
+.steps-home li:nth-of-type(3):before {
   content: "three";
 }
-.steps li:nth-of-type(4):before {
+.steps-home li:nth-of-type(4):before {
   content: "four";
 }
-.steps li:before {
+.steps-home li:before {
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8em;
   display: block;
+}
+/*=================
+    Page Photo Editing
+===================*/
+.photo-editing-page section.photo-editing:nth-of-type(2n + 1) {
+  background-color: #77929257;
+}
+.photo-editing-page section.photo-editing:nth-of-type(2n) .inner {
+  flex-direction: row-reverse;
 }
 /*=================
     Contact

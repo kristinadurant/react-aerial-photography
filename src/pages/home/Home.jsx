@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel';
-import { BannerVideo, Services, Steps, BeforeAfter, CheckList } from '../../components';
+import { BannerVideo, Services, StepsHome, BeforeAfter, CheckList } from '../../components';
 import { gallerySteps, before, after, photoEditing } from './Content';
 
 const Home = () => {
@@ -18,10 +18,10 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='gallery full-screen'>
-                <div className='inner padding'>
-                    <Steps 
-                        subTitle={'High Resolution'} title={'Photos & Videos'}
+            <section className='gallery full-screen padding'>
+                <div className='inner'>
+                    <StepsHome 
+                        title={'Download High Resolution Photos & Videos'}
                         list={gallerySteps} link={{url: '/gallery', text: 'View Gallery'}}
                     />
                 </div>

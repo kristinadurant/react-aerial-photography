@@ -1,29 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Steps = ({ subTitle, title, list, link }) => {
+const Steps = ({ list }) => {
     return (
-        <div>
-
-            {title && 
-                <h2 style={{ fontSize: '1em'}}>
-                    <p className='font2'>{subTitle}</p>
-                    <p className='font1'>{title}</p>
-                </h2>
-            }   
-
-            <ol className='steps'> 
-                {list.map(( li, key) => {
-                    return (
-                        <li key={key}>
-                            <span>{li}</span>
-                        </li>
-                )})}
-            </ol>
-
-            {link && <Link to={link.url}>{link.text}</Link>}
-            
-        </div>
+        <section className='steps padding'>
+            <div className='inner'>
+                <ol> 
+                    {list.map(( li, key) => {
+                        return (
+                            <li key={key}>
+                                <span className='number'>0{key+1}</span>
+                                <span className='text'>{li}</span>
+                            </li>
+                    )})}
+                </ol>
+            </div>
+        </section>
     )
 }
 

@@ -329,6 +329,29 @@ footer form .button.secondary {
   align-items: center;
 }
 /*=================
+    Steps
+===================*/
+.steps ol {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.steps ol li {
+  width: 30%;
+  position: relative;
+  padding-top: 7em;
+}
+.steps .number {
+  position: absolute;
+  font-size: 8em;
+  color: @color-accent-ligth;
+  top: 0;
+  z-index: -1;
+}
+.steps .text a {
+  line-height: inherit;
+}
+/*=================
     Services
 ===================*/
 #services {
@@ -415,9 +438,16 @@ section.photo-shoots {
   z-index: 20;
   width: 100%;
 }
+/*=================
+    Page Home
+===================*/
+#home-page .gallery a {
+  .button;
+  .button.secondary;
+}
 
 /*=================
-    About
+    Page About
 ===================*/
 #about .inner {
   height: 100%;
@@ -492,14 +522,12 @@ section.gallery .image:hover img {
 /*=================
     Photo Editing
 ===================*/
-.photo-editing-page section:nth-of-type(n + 2) .text {
+.photo-editing .text {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-.photo-editing .text {
   width: 50%;
 }
 .before-after .image {
@@ -522,23 +550,35 @@ section.gallery .image:hover img {
 .before-after .buttons {
   .flex-center;
 }
-.steps li:first-of-type:before {
+
+/*======================
+    Steps Home
+=========================*/
+.steps-home li:first-of-type:before {
   content: "one";
 }
-.steps li:nth-of-type(2):before {
+.steps-home li:nth-of-type(2):before {
   content: "two";
 }
-.steps li:nth-of-type(3):before {
+.steps-home li:nth-of-type(3):before {
   content: "three";
 }
-.steps li:nth-of-type(4):before {
+.steps-home li:nth-of-type(4):before {
   content: "four";
 }
-.steps li:before {
+.steps-home li:before {
   .font2;
   display: block;
 }
-
+/*=================
+    Page Photo Editing
+===================*/
+.photo-editing-page section.photo-editing:nth-of-type(2n + 1) {
+  background-color: @color-primary-light;
+}
+.photo-editing-page section.photo-editing:nth-of-type(2n) .inner {
+  flex-direction: row-reverse;
+}
 /*=================
     Contact
 ===================*/
