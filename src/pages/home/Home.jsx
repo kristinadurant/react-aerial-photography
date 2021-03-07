@@ -2,10 +2,18 @@ import React from 'react';
 import Carousel from './Carousel';
 import { BannerVideo, Services, StepsHome, BeforeAfter, CheckList } from '../../components';
 import { gallerySteps, before, after, photoEditing } from './Content';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     return (
         <main id='home-page'>
+
+            <Helmet>
+                <title>Aerial Photographer and Videographer</title>
+                <meta name='description' content='Photo and Video Shoots in Miami, download high resolution photos and videos, professional photo editing' />
+                <meta name='keywords' content='Aerial Photo Video Drone Miami' />
+            </Helmet>
+
             <BannerVideo />
             <Services />
 

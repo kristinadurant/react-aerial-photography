@@ -6,7 +6,7 @@ const Bookmarks = () => {
     const { bookmarks } = useContext(BookmarksContext);
     const [open, setOpen] = useState(false);
 
-    return bookmarks.length? (
+    return bookmarks?.length? (
         <div className='bookmarks'>
             <div className='inner'>
                 <button onClick={() => setOpen(!open)} title='Bookmarks'>

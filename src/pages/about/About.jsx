@@ -10,6 +10,7 @@ const About = () => {
             <Helmet>
                 <title>About Pierre the Photographer</title>
                 <meta name='description' content='Being open-minded allows me to feed off of other ideas while having a solid direction in mind.' />
+                <meta name='keywords' content='Aerial Photographer Drone Miami' />
             </Helmet>
 
             <section id='about' className='full-screen'>
