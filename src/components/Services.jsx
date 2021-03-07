@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Services = () => {
     return (
-        <section id='services' className='full-screen'>
+        <section id='services' className='padding'>
             <div className='inner'>
                     <div>
                         <h2 className='font2'>We Can Offer You Professional Video & Photo Services</h2>                   

@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet';
 import Images from './Images';
 import Intro from './Intro';
 import Modal from './Modal';
-import { Banner } from '../../components';
+import { Banner, Steps } from '../../components';
 import { GalleryContextProvider } from '../../context/GalleryContext';
-const image = require('../../assets/images/IMG_1531.jpg');
+import { steps } from './Content';
 
 const Gallery = () => {
     
@@ -23,9 +23,10 @@ const Gallery = () => {
                 <Banner 
                     title='High Resolution Images & Videos' 
                     subtitle='Bookmark. Send an Inquiry. Receive.'
-                    image={image}
+                    image={require('../../assets/images/IMG_1531.jpg')}
                 />
 
+                <Steps list={steps} />
                 <Intro />
                 <Images />
                 <Modal />

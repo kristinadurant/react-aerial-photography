@@ -55,6 +55,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Mulish", sans-serif;
   line-height: 1.6;
@@ -317,12 +320,18 @@ footer form input {
 }
 #home-page .banner .inner {
   position: absolute;
+  z-index: 5;
   bottom: 8%;
   left: 50%;
   transform: translateX(-50%);
 }
 #home-page .banner h1 {
   border-bottom: 2px solid white;
+  margin-bottom: 0;
+}
+#home-page .banner button {
+  margin: auto;
+  color: #fff;
 }
 .banner.background-image .inner {
   margin-top: 20%;
