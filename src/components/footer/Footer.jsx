@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink } from 'react-router-hash-link';
 import FooterMain from './FooterMain';
 
 const Footer = () => {
@@ -22,7 +21,9 @@ const Footer = () => {
                 <FooterMain />
                 <div className='bottom'>
                     <p>Copyrights</p>
-                    <HashLink smooth to='#'>Back to Top<i className="fas fa-long-arrow-alt-up"></i></HashLink>            
+                    <button onClick={() => window.scrollTo(0,0)}> 
+                        Back to Top<i className="fas fa-long-arrow-alt-up"></i>
+                    </button>     
                 </div>   
             </div>        
         </footer>
