@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Banner = ({ title, image, children }) => {
+const Banner = ({ title, subtitle, image, children }) => {
 
     return (
         <section 
@@ -11,6 +11,7 @@ const Banner = ({ title, image, children }) => {
             <div className='overlay'>
                 <div className='inner '>
                     <h1>{title}</h1>
+                    <p className='font2' style={{ fontWeight: 'bold'}}>{subtitle}</p>
                     {children}
                 </div>   
             </div>

@@ -12,8 +12,11 @@ const Photoshoot = () => {
                 <meta name='keywords' content='Aerial Photo Video Shoot Drone Miami' />
             </Helmet>
 
-            <Banner title='Aerial Photo & Video Shoot' image={bannerImage}>
-                <p className='font2' style={{ fontWeight: 'bold'}}>Miami, FL</p>
+            <Banner 
+                title='Aerial Photo & Video Shoot'
+                subtitle='Miami, FL'
+                image={bannerImage}
+            >
                 <button className='button'>Schedule Now</button>
             </Banner>
 

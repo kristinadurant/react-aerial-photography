@@ -12,15 +12,16 @@ const Gallery = () => {
         <main id='gallery-page'>
             <GalleryContextProvider>
 
-                <Banner title='High Resolution Images & Videos' image={image}>
-                    <p className='font2' style={{ fontWeight: 'bold'}}>
-                        Bookmark. Send an Inquiry. Receive.
-                    </p>
-                </Banner>
+                <Banner 
+                    title='High Resolution Images & Videos' 
+                    subtitle='Bookmark. Send an Inquiry. Receive.'
+                    image={image}
+                />
 
                 <Intro />
                 <Images />
                 <Modal />
+                
             </GalleryContextProvider>
         </main>
     )
