@@ -5,7 +5,7 @@ const CheckList = ({ title, list }) => {
     return (
         <div className='text'>
             <h2 className='font1'>{title}</h2>
-            <ul className='font2 check-list'>
+            <ul className='check-list'>
                 {list.map((item, key) => {
                     return (
                         <li key={key}>

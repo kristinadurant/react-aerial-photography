@@ -1,14 +1,17 @@
 import React from 'react';
-import { Banner } from '../../components';
-const image = require('../../assets/images/IMG_1531.jpg');
+import { Banner, Steps } from '../../components';
+import { bannerImage, steps } from './Content';
 
 const Photoshoot = () => {
     return (
         <main>
-            <Banner title='Aerial Photo & Video Shoot' image={image}>
+            <Banner title='Aerial Photo & Video Shoot' image={bannerImage}>
                 <p className='font2' style={{ fontWeight: 'bold'}}>Miami, FL</p>
                 <button className='button'>Schedule Now</button>
             </Banner>
+
+            <Steps list={steps} />
+
         </main>
     )
 }

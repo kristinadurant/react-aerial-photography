@@ -77,17 +77,18 @@ button {
   padding: 0 1em;
 }
 button,
-button:focus,
+:focus,
 button:active,
 input,
-input:focus,
 input:active,
 textarea,
-textarea:focus,
 textarea:active {
   outline: none;
   border: none;
   font-family: inherit;
+}
+:focus-visible {
+  outline: 2px solid rgb(235, 117, 20);
 }
 fieldset {
   border: none;
@@ -182,6 +183,10 @@ header.white .main-menu-desktop {
 header nav button {
   .font2;
   font-size: inherit;
+  line-height: 44px;
+}
+header nav a {
+  line-height: 44px;
 }
 .main-menu-desktop .inner {
   .flex-justify;
@@ -403,8 +408,8 @@ i.fa-check {
   width: 2em;
 }
 .photo-editing .checkmark {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.25em;
+  height: 1.25em;
   margin-right: 1em;
   border-color: @color-primary-light;
 }
