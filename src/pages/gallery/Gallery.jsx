@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Helmet } from 'react-helmet';
 import Images from './Images';
 import Intro from './Intro';
 import Modal from './Modal';
@@ -10,6 +11,13 @@ const Gallery = () => {
     
     return (
         <main id='gallery-page'>
+
+            <Helmet>
+                <title>High Resolution Images & Videos</title>
+                <meta name='description' content='Download high resolution photos and videos.' />
+                <meta name='keywords' content='Aerial Photo Video Drone Gallery Images' />
+            </Helmet>
+
             <GalleryContextProvider>
 
                 <Banner 
