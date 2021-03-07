@@ -119,6 +119,8 @@ textarea {
 .button.secondary {
   background-color: #062b2d;
   min-width: 200px;
+  font-size: 0.75rem;
+  text-align: center;
 }
 li {
   list-style: none;
@@ -127,7 +129,6 @@ a {
   text-decoration: none;
   color: inherit;
   display: inline-block;
-  line-height: 44px;
 }
 /*=================
     Global Style
@@ -182,7 +183,6 @@ header nav button {
   letter-spacing: 0.2em;
   font-size: 0.8em;
   font-size: inherit;
-  line-height: 44px;
 }
 .main-menu-desktop .inner {
   display: flex;
@@ -300,10 +300,6 @@ footer form input {
   border-bottom: 1px solid #062b2d !important;
   padding: 0.5em;
   margin: 2em 0 1em;
-}
-footer form .button.secondary {
-  font-size: 0.875em;
-  min-width: 250px;
 }
 /*=================
     Banner
@@ -459,6 +455,9 @@ section.photo-shoots {
 /*=================
     Page Home
 ===================*/
+#home-page .gallery {
+  background-color: #edebe6;
+}
 #home-page .gallery a {
   font-weight: 200;
   text-transform: uppercase;
@@ -470,6 +469,30 @@ section.photo-shoots {
   padding: 1em 2.2em;
   background-color: #062b2d;
   min-width: 200px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.steps-home li {
+  margin-bottom: 1em;
+}
+.steps-home li:first-of-type:before {
+  content: "one";
+}
+.steps-home li:nth-of-type(2):before {
+  content: "two";
+}
+.steps-home li:nth-of-type(3):before {
+  content: "three";
+}
+.steps-home li:before {
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+  display: block;
+  font-weight: bold;
+  color: #77929257;
+  line-height: 1;
 }
 /*=================
     Page About
@@ -510,30 +533,30 @@ section.intro {
   background-color: transparent;
   width: 100%;
 }
-section.gallery .inner {
+#gallery-page .gallery .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-section.gallery .image {
+#gallery-page .gallery .image {
   width: 33%;
   padding-bottom: 20%;
   overflow: hidden;
   position: relative;
 }
-section.gallery .image img {
+#gallery-page .gallery .image img {
   position: absolute;
   transition: transform 0.5s;
 }
-section.gallery .image button {
+#gallery-page .gallery .image button {
   position: absolute;
 }
-section.gallery .image .overlay {
+#gallery-page .gallery .image .overlay {
   position: absolute;
   cursor: pointer;
 }
-section.gallery .image:hover img {
+#gallery-page .gallery .image:hover img {
   cursor: pointer;
   background-color: #000;
   transform: scale(1.2);
@@ -586,28 +609,6 @@ section.gallery .image:hover img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-/*======================
-    Steps Home
-=========================*/
-.steps-home li:first-of-type:before {
-  content: "one";
-}
-.steps-home li:nth-of-type(2):before {
-  content: "two";
-}
-.steps-home li:nth-of-type(3):before {
-  content: "three";
-}
-.steps-home li:nth-of-type(4):before {
-  content: "four";
-}
-.steps-home li:before {
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.8em;
-  display: block;
 }
 /*=================
     Page Photo Editing

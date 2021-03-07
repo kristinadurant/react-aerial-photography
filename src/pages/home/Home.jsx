@@ -9,6 +9,16 @@ const Home = () => {
             <BannerVideo />
             <Services />
 
+            <section className='gallery padding'>
+                <div className='inner'>
+                    <StepsHome 
+                        subTitle={'High Resolution'}
+                        title={'Photos & Videos'}
+                        list={gallerySteps} link={{url: '/gallery', text: 'View Gallery'}}
+                    />
+                </div>
+            </section>
+
             <section className='photo-shoots full-screen'>
                 <Carousel />
                 <div className='inner'>
@@ -18,16 +28,9 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='gallery full-screen padding'>
-                <div className='inner'>
-                    <StepsHome 
-                        title={'Download High Resolution Photos & Videos'}
-                        list={gallerySteps} link={{url: '/gallery', text: 'View Gallery'}}
-                    />
-                </div>
-            </section>
 
-            <section className='full-screen photo-editing'>
+
+            <section className='full-screen photo-editing padding'>
                 <div className='inner flex-justify'>
                                 
                     <BeforeAfter before={before} after={after} />

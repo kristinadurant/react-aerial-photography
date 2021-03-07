@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Services } from '../../components';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
     return (
         <main>
+            
+            <Helmet>
+                <title>About Pierre the Photographer</title>
+                <meta name='description' content='Being open-minded allows me to feed off of other ideas while having a solid direction in mind.' />
+            </Helmet>
 
             <section id='about' className='full-screen'>
                 <div className='inner'>

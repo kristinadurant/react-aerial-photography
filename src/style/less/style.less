@@ -123,6 +123,8 @@ textarea {
 .button.secondary {
   background-color: @color-primary-dark;
   min-width: 200px;
+  font-size: 0.75rem;
+  text-align: center;
 }
 li {
   list-style: none;
@@ -131,7 +133,6 @@ a {
   text-decoration: none;
   color: inherit;
   display: inline-block;
-  line-height: 44px;
 }
 /*=================
     Global Style
@@ -181,7 +182,6 @@ header.white .main-menu-desktop {
 header nav button {
   .font2;
   font-size: inherit;
-  line-height: 44px;
 }
 .main-menu-desktop .inner {
   .flex-justify;
@@ -290,10 +290,7 @@ footer form input {
   padding: 0.5em;
   margin: 2em 0 1em;
 }
-footer form .button.secondary {
-  font-size: 0.875em;
-  min-width: 250px;
-}
+
 /*=================
     Banner
 ===================*/
@@ -441,9 +438,31 @@ section.photo-shoots {
 /*=================
     Page Home
 ===================*/
+#home-page .gallery {
+  background-color: @color-accent-ligth;
+}
 #home-page .gallery a {
   .button;
   .button.secondary;
+}
+.steps-home li {
+  margin-bottom: 1em;
+}
+.steps-home li:first-of-type:before {
+  content: "one";
+}
+.steps-home li:nth-of-type(2):before {
+  content: "two";
+}
+.steps-home li:nth-of-type(3):before {
+  content: "three";
+}
+.steps-home li:before {
+  .font2;
+  display: block;
+  font-weight: bold;
+  color: @color-primary-light;
+  line-height: 1;
 }
 
 /*=================
@@ -482,28 +501,28 @@ section.intro {
   background-color: transparent;
   width: 100%;
 }
-section.gallery .inner {
+#gallery-page .gallery .inner {
   .flex-justify;
   flex-wrap: wrap;
 }
-section.gallery .image {
+#gallery-page .gallery .image {
   width: 33%;
   padding-bottom: 20%;
   overflow: hidden;
   position: relative;
 }
-section.gallery .image img {
+#gallery-page .gallery .image img {
   position: absolute;
   transition: transform 0.5s;
 }
-section.gallery .image button {
+#gallery-page .gallery .image button {
   position: absolute;
 }
-section.gallery .image .overlay {
+#gallery-page .gallery .image .overlay {
   position: absolute;
   cursor: pointer;
 }
-section.gallery .image:hover img {
+#gallery-page .gallery .image:hover img {
   cursor: pointer;
   background-color: #000;
   transform: scale(1.2);
@@ -551,25 +570,6 @@ section.gallery .image:hover img {
   .flex-center;
 }
 
-/*======================
-    Steps Home
-=========================*/
-.steps-home li:first-of-type:before {
-  content: "one";
-}
-.steps-home li:nth-of-type(2):before {
-  content: "two";
-}
-.steps-home li:nth-of-type(3):before {
-  content: "three";
-}
-.steps-home li:nth-of-type(4):before {
-  content: "four";
-}
-.steps-home li:before {
-  .font2;
-  display: block;
-}
 /*=================
     Page Photo Editing
 ===================*/

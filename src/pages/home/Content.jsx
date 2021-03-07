@@ -1,8 +1,7 @@
 export const gallerySteps = [
     'Bookmark Images',
     'Send an Inquiry',
-    'Choose type of Payment',
-    'Receive High Resolution Files'
+    'Download High Resolution Files'
 ];
 
 export const before = { img: require('../../assets/images/photoEditing/before.jpg').default, title: 'before'};
