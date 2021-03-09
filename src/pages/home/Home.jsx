@@ -43,7 +43,7 @@ const Home = () => {
                                 
                     <BeforeAfter before={before} after={after} />
             
-                    <CheckList title='Proffesional Photo Editing' list={photoEditing} />
+                    <CheckList title='Professional Photo Editing' list={photoEditing} />
 
                 </div>
             </section>

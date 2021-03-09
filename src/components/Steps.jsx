@@ -8,7 +8,7 @@ const Steps = ({ list }) => {
                     {list.map(( li, key) => {
                         return (
                             <li key={key}>
-                                <span className='number'>0{key+1}</span>
+                                <span className='number' aria-label={`step ${key+1}`}>0{key+1}</span>
                                 <span className='text'>{li}</span>
                             </li>
                     )})}
