@@ -9,12 +9,12 @@ const BeforeAfter = ({ before, after }) => {
             <div className='image' style={{ cursor: 'pointer'}}>
                 <img 
                     onClick={() => setClip(90)}
-                    className='before' src={before.img} alt={before.description}
+                    className='before' src={before.img} alt={before.description + ' before editing'}
                     style={{ cursor: clip<90? 'pointer': 'initial'}}
                 />
                 <img 
                     onClick={() => setClip(10)}
-                    className='after' src={after.img} alt={after.description}
+                    className='after' src={after.img} alt={after.description + ' after editing'}
                     style={{ 
                         clipPath: `polygon(${2*clip}% 0%,100% 0%,100% 100%,0% 100%,0% ${2*clip}%, ${clip}% ${clip}%)`, 
                         transition: 'all 1s',

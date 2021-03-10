@@ -14,9 +14,7 @@ const ContactForm = () => {
     return (
         <section id='contact-form' className='inner'>
 
-            <h2 className='font1'>{options[option].title}</h2>
-
-            <Form option={option} textarea={options[option].textarea}>
+            <Form title={options[option].title}>
                 {option === 'message' && <FormMessage />}
                 {option === 'schedule' && <FormSchedule />}
                 {option === 'inquiry' && <FormInquiry />}

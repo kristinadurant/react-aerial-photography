@@ -106,8 +106,8 @@ textarea {
   max-width: 650px;
   color: inherit;
 }
-.required::after {
-  content: "*";
+label strong,
+legend strong {
   color: red;
 }
 .button {

@@ -3,8 +3,8 @@ import React from 'react'
 const FormMessage = () => {
     return (
         <div>
-            <label htmlFor='message' className='required'>
-                Questions/Comments
+            <label htmlFor='message'>
+                Questions/Comments <strong title="required" aria-label='required'>*</strong>
             </label>
             <textarea id='message' name='message' rows="4" required/>
         </div>

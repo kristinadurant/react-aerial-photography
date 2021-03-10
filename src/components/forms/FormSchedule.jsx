@@ -4,8 +4,8 @@ const FormSchedule = () => {
     return (
         <>
             <div>
-                <label htmlFor='date' className='required'>
-                    Date of Photo/Video Shoot
+                <label htmlFor='date'>
+                    Date of Photo/Video Shoot <strong title="required" aria-label='required'>*</strong>
                 </label>
                 <input 
                     type="date" required
@@ -14,8 +14,8 @@ const FormSchedule = () => {
                 />
             </div>
             <div>
-                <label htmlFor='message' className='required'>
-                    Tell us a bit more about yourself or your project
+                <label htmlFor='message'>
+                    Tell us a bit more about yourself or your project <strong title="required" aria-label='required'>*</strong>
                 </label>
                 <textarea id='message' name='message' rows="4" required/>
             </div>

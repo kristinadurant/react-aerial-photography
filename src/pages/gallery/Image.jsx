@@ -8,8 +8,8 @@ const Image = ({ img }) => {
     const [ disabled, setDisabled ] = useState(false);
 
     useEffect(()=> {
-        const bookmarked = bookmarks.filter(bookmark => bookmark.url === img.url);
-        bookmarked.length > 0? setDisabled(true) : setDisabled(false);
+        const bookmarked = bookmarks?.filter(bookmark => bookmark.url === img.url);
+        bookmarked?.length > 0? setDisabled(true) : setDisabled(false);
     }, [bookmarks]);
 
     return (

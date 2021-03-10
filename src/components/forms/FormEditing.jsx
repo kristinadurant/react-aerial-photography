@@ -16,26 +16,27 @@ const FormEditing = () => {
     return (
         <>
             <div>
-                <label htmlFor='number-of-photos' className='required'>
-                    Number of Photos to be editted
+                <label htmlFor='number-of-photos'>
+                    Number of Photos to be editted <strong title="required" aria-label='required'>*</strong>
                 </label>
                 <input 
                     type='number' id='number-of-photos' name='number-of-photos' 
-                    required min='0' max='10' 
+                    required min='1' max='10' 
                     value={number} onChange={(e) => setNumber(e.target.value)}
                 />
             </div>
 
             <fieldset>
-                <legend className='required'>
-                    Upload files
+                <legend>
+                    Upload files <strong title="required" aria-label='required'>*</strong>
                 </legend>
                 <div>{hmtlUpload}</div>        
             </fieldset>
 
             <div>
-                <label htmlFor='message' className='required'>
-                Tell us a bit more about edits you would like to implement
+                <label htmlFor='message'>
+                    Tell us a bit more about edits you would like to implement 
+                    <strong title="required" aria-label='required'> *</strong>
                 </label>
                 <textarea id='message' name='message' rows="4" required/>
             </div>

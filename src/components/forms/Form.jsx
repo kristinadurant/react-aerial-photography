@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import { db } from '../../firebase';
 
-const Form = ({ children }) => {
+const Form = ({ title, children }) => {
     const [loading, setLoading] = useState(false);  
 
     const handleSubmit = async (e) => {
@@ -22,15 +22,17 @@ const Form = ({ children }) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h2 className='font1'>{title}</h2>
+
             <div>
-                <label htmlFor='name' className='required'>
-                    Name
+                <label htmlFor='name'>
+                    Name <strong title="required" aria-label='required'>*</strong>
                 </label>
                 <input type='text' id='name' name='name' required autoFocus/>
             </div>
             <div>
-                <label htmlFor='email' className='required'>
-                    Email
+                <label htmlFor='email'>
+                    Email <strong title="required" aria-label='required'>*</strong>
                 </label>
                 <input type='email' id='email' name='email' required />
             </div>
