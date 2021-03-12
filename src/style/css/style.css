@@ -84,7 +84,7 @@ textarea:active {
   font-family: inherit;
 }
 :focus-visible {
-  outline: 2px solid #eb7514;
+  background-color: #edebe6 !important;
 }
 fieldset {
   border: none;
@@ -160,113 +160,7 @@ section.full-screen {
 section:first-of-type > .inner {
   padding-top: 100px;
 }
-/*=================
-    Header Desktop
-===================*/
-header {
-  position: absolute;
-  width: 100%;
-  color: white;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-}
-header nav {
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.8em;
-}
-header.white .main-menu-desktop {
-  background-color: #fff;
-  color: #33413f;
-}
-header nav button {
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.8em;
-  font-size: inherit;
-  line-height: 44px;
-}
-header nav a {
-  line-height: 44px;
-}
-.main-menu-desktop .inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-}
-header.white .submenu ul {
-  background-color: #fff;
-}
-nav .submenu li {
-  position: relative;
-  font-size: 0.875em;
-  border-bottom: 1px solid #deddd9;
-}
-nav .submenu li:last-of-type {
-  border-bottom: none;
-}
-nav .submenu ul {
-  position: absolute;
-  font-size: 0.875rem;
-  font-weight: bold;
-  text-transform: initial;
-  padding: 0 1rem;
-}
-header .logo {
-  font-family: "Italiana", serif;
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-.main-menu-desktop nav.menu > ul {
-  display: flex;
-  justify-content: flex-end;
-}
-.main-menu-desktop nav.menu > ul > li > :first-child {
-  padding: 0.2em 0.5em;
-}
-.main-menu-desktop li.cta a {
-  border: 2px solid #edebe6;
-}
-/*=================
-    Bookmarks
-===================*/
-.bookmarks {
-  background-color: #000;
-}
-.bookmarks .inner {
-  position: relative;
-}
-.bookmarks .inner button {
-  color: #fff;
-  margin: auto;
-  margin-right: 0;
-}
-.bookmarks button .total {
-  margin-right: 5px;
-}
-.bookmarks .container {
-  position: absolute;
-  right: 0;
-  background-color: #000;
-  font-size: 0.75em;
-  padding: 1em;
-  padding-right: 0;
-}
-.bookmarks .container li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.bookmarks .container p {
-  padding-right: 1em;
-  text-align: center;
-  margin-top: 1em;
-  color: #edebe6;
-}
+
 /*=================
     Footer
 ===================*/

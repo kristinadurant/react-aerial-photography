@@ -1,0 +1,79 @@
+header {
+  position: absolute;
+  width: 100%;
+  color: white;
+  z-index: 20;
+}
+header.white {
+  background-color: #fff;
+  color: #33413f;
+}
+header > .inner {
+  height: 100px;
+}
+
+header .logo {
+  font-family: "Italiana", serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.menu-bars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.menu-bars span {
+  display: block;
+  margin-top: 0.3rem;
+  width: 2rem;
+  border-bottom: 0.1rem solid white;
+}
+.menu-bars span:nth-of-type(2) {
+  width: 1.5rem;
+}
+
+.button-bookmarks {
+  color: #fff;
+  width: 44px;
+  border: 1px solid white;
+  margin-left: 10px;
+}
+.button-bookmarks .total {
+  margin-right: 5px;
+}
+
+header .button-container {
+  position: relative;
+}
+
+header .dropdown {
+  background-color: #fff;
+  color: #000;
+  position: absolute;
+  right: 0;
+  top: 44px;
+  width: 250px;
+}
+header .dropdown li {
+  position: relative;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #deddd9;
+  padding: 0.5em;
+}
+header .dropdown li:last-of-type {
+  border-bottom: none;
+}
+header .dropdown li > :first-child {
+  width: 100%;
+}
+header .dropdown li button {
+  min-height: auto;
+}
+
+header .submenu {
+  position: relative;
+}
+header .submenu li {
+  border-bottom: none;
+}

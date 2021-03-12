@@ -1,23 +1,28 @@
-import React, { useState, useContext } from 'react';
-import BookmarksList from './BookmarksList';
+import React, { useContext, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { BookmarksContext } from '../../context/BookmarksContext';
 
-const Bookmarks = () => {
-    const { bookmarks } = useContext(BookmarksContext);
-    const [open, setOpen] = useState(false);
 
-    return bookmarks?.length? (
-        <div className='bookmarks'>
-            <div className='inner'>
-                <button onClick={() => setOpen(!open)} title='Bookmarks'>
-                    <span className='total'>{bookmarks.length}</span>
-                    <span className='hide'>Bookmarked Images</span>
-                    <i className="far fa-bookmark"></i>
-                </button>
-                {open && <BookmarksList setOpen={setOpen}/>}
-            </div>       
+const Bookmarks = ({ setOpen }) => {
+    const { bookmarks, removeBookmark } = useContext(BookmarksContext);
+    const [ list, setList] = useState(bookmarks);
+
+    useEffect(() => setList(bookmarks), [bookmarks]);
+
+    return (
+        <div id='bookmarks' className='dropdown' onMouseLeave={() => setOpen(false)}>
+            <ul>
+                {list.map( item => {
+                    return (
+                    <li key={item.id}>
+                        {item.title}
+                        <button className='square' onClick={() => removeBookmark(item)}>x</button>
+                    </li>
+                )})}
+            </ul>
+            <Link to='/contact'>Send inquiry about your bookmarks</Link>
         </div>
-    ) : null;
+    )
 }
 
 export default Bookmarks;

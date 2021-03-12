@@ -7,10 +7,10 @@ const BookmarksContextProvider = ({ children }) => {
     const [ bookmarks, setBookmarks] = useState([]);
 
 	useEffect(() => {
-		const localStorageBookmarks = JSON.parse(
-			localStorage.getItem('pierre-gallery-bookmarks')
-		);
-		setBookmarks(localStorageBookmarks);
+    if(localStorage.getItem('pierre-gallery-bookmarks')) {
+      setBookmarks(JSON.parse(
+			localStorage.getItem('pierre-gallery-bookmarks')));
+      };
 	}, []);
 
 	const saveToLocalStorage = (items) => {

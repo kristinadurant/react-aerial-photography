@@ -8,7 +8,7 @@ const FormEditing = () => {
         setHtmlUpload([]);
         const html = [];
         for (let i = 1; i <= number; i++) {
-            html.push(<div><input type='file' accept='.jpg, .jpeg' id='upload-photos' name='upload-photos'/></div>);
+            html.push(<div key={i}><input type='file' accept='.jpg, .jpeg' id='upload-photos' name='upload-photos'/></div>);
         }
         setHtmlUpload(html);
     }, [number]);
