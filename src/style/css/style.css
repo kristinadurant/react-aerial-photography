@@ -10,6 +10,9 @@
   letter-spacing: 0.2em;
   font-size: 0.8em;
 }
+.accent-color {
+  color: #ffab00;
+}
 /*=================
     Less Styles
 ===================*/
@@ -160,7 +163,6 @@ section.full-screen {
 section:first-of-type > .inner {
   padding-top: 100px;
 }
-
 /*=================
     Banner
 ===================*/

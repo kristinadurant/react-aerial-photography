@@ -10,12 +10,12 @@ const Bookmarks = ({ setOpen }) => {
     useEffect(() => setList(bookmarks), [bookmarks]);
 
     return (
-        <div id='bookmarks' className='dropdown' onMouseLeave={() => setOpen(true)}>
+        <div id='bookmarks' className='dropdown' onMouseLeave={() => setOpen(false)}>
 
             {bookmarks.length === 0
             ? <>
-                <p>You haven't added any bookmarks yet.</p>
-                <Link to='/gallery'>View Gallery</Link>
+                <p style={{ textAlign: 'center', padding: '1.5em 1em'}}>You haven't added any bookmarks yet.</p>
+                <p><Link to='/gallery' className='font2'>View Gallery</Link></p>
               </>
             
             : <>
@@ -23,12 +23,12 @@ const Bookmarks = ({ setOpen }) => {
                     {list.map( item => {
                         return (
                         <li key={item.id}>
-                            {item.title}
+                            <span>{item.title}</span>
                             <button className='square' onClick={() => removeBookmark(item)}>x</button>
                         </li>
                     )})}
                 </ul>
-                <Link to='/contact'>Send inquiry about your bookmarks</Link>
+                <p><Link to='/contact' className='font2'>Send an inquiry</Link></p>
               </>
             }
         </div>

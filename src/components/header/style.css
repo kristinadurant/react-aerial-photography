@@ -1,3 +1,4 @@
+/* Header */
 header {
   position: absolute;
   width: 100%;
@@ -11,12 +12,14 @@ header > .inner {
   height: 80px;
 }
 
+/* Logo */
 header .logo {
   font-family: "Italiana", serif;
   font-size: 1.5em;
   text-transform: uppercase;
 }
 
+/* Buttons */
 .menu-bars {
   display: flex;
   flex-direction: column;
@@ -32,10 +35,15 @@ header .logo {
   width: 1.5rem;
 }
 
+.button-menu {
+  height: 50px;
+}
 .button-bookmarks {
   color: #fff;
-  width: 44px;
-  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #f7f1f147;
+  border-radius: 100%;
   margin-left: 10px;
 }
 .button-bookmarks .total {
@@ -46,32 +54,66 @@ header .button-container {
   position: relative;
 }
 
+/* Dropdown */
 header .dropdown {
   background-color: #fff;
   color: #000;
   position: absolute;
   right: 0;
-  top: 44px;
+  top: 60px;
   width: 250px;
 }
 header .dropdown li {
-  position: relative;
   font-size: 0.875rem;
   border-bottom: 1px solid #deddd9;
-  padding: 0.5em;
+  line-height: 44px;
+  padding-left: 1em;
 }
-header .dropdown li:last-of-type {
+header .dropdown p {
+  font-size: 0.875rem;
+  border-bottom: 1px solid #deddd9;
+  padding-left: 1em;
+}
+header .dropdown > :last-child {
   border-bottom: none;
 }
 header .dropdown li > :first-child {
   width: 100%;
 }
-header .dropdown li button {
+header .dropdown a.font2 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  line-height: 44px;
+}
+header .dropdown li.submenu button {
   min-height: auto;
+  border-bottom: 1px solid #deddd9;
+  padding-left: 1em;
+  font-size: 0.875rem;
+  line-height: 44px;
+}
+header #bookmarks li {
+  display: flex;
+}
+header #bookmarks li span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-header .submenu {
+/* Submenu */
+header .submenu .fa-chevron-down {
+  margin-right: 1em;
+}
+header li.submenu {
   position: relative;
+  border-bottom: 0;
+  padding: 0;
+}
+header .submenu ul {
+  border-bottom: 1px solid #deddd9;
+  list-style: armenian;
 }
 header .submenu li {
   border-bottom: none;

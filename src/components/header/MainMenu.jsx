@@ -16,9 +16,9 @@ const MainMenu = ({ setOpenMenu }) => {
                         </button>
                         {open && 
                         <ul>
-                            <li><Link to='/gallery'>Download Photos & Videos</Link></li>
-                            <li><Link to='/aerial-photo-video-shoot'>Aerial Video & Photo Shoots</Link></li>                      
-                            <li><Link to='/professional-photo-editing'>Professional Photo Retouching</Link></li>
+                            <li><Link to='/gallery'>- Download Photos & Videos</Link></li>
+                            <li><Link to='/aerial-photo-video-shoot'> - Aerial Video & Photo Shoots</Link></li>                      
+                            <li><Link to='/professional-photo-editing'>- Professional Photo Retouching</Link></li>
                         </ul>
                         }
                     </li>
