@@ -162,48 +162,6 @@ section:first-of-type > .inner {
 }
 
 /*=================
-    Footer
-===================*/
-footer {
-  background-color: #edebe6;
-  color: #062b2d;
-  padding: 5% 0 2%;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.8em;
-  font-size: 0.75em;
-}
-footer .inner > div:first-of-type {
-  border-bottom: 1px solid #062b2d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-footer .social a {
-  font-size: 1.5em;
-  margin-left: 0.5em;
-}
-footer .main {
-  padding: 3em 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-footer .bottom {
-  border-top: 1px solid #062b2d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: right;
-}
-footer form input {
-  background-color: transparent;
-  border-bottom: 1px solid #062b2d !important;
-  padding: 0.5em;
-  margin: 2em 0 1em;
-}
-/*=================
     Banner
 ===================*/
 .banner {

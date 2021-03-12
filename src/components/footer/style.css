@@ -1,0 +1,47 @@
+footer {
+  background-color: #edebe6;
+  color: #062b2d;
+  padding: 6% 0 4%;
+  font-size: 0.75em;
+  margin-top: 100px;
+}
+footer .inner > div:first-of-type {
+  border-bottom: 1px solid #062b2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .social a {
+  font-size: 1.5em;
+  margin-left: 0.5em;
+}
+footer .main {
+  padding: 3% 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+footer .main li,
+footer .main h3 {
+  margin: 0.5em 0;
+}
+footer .main li,
+footer .main h3 + p {
+  font-weight: 200;
+}
+footer .bottom {
+  border-top: 1px solid #062b2d;
+  display: flex;
+  padding-top: 1em;
+}
+footer .bottom i {
+  margin-left: 1em;
+}
+footer form input {
+  background-color: transparent;
+  border-bottom: 1px solid #062b2d !important;
+  padding: 0.5em;
+  margin: 1em 0 1em;
+}

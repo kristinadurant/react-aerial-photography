@@ -5,11 +5,10 @@ header {
   z-index: 20;
 }
 header.white {
-  background-color: #fff;
-  color: #33413f;
+  background-color: #062b2d;
 }
 header > .inner {
-  height: 100px;
+  height: 80px;
 }
 
 header .logo {

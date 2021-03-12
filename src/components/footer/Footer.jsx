@@ -1,3 +1,4 @@
+import './style.css';
 import React from 'react';
 import FooterMain from './FooterMain';
 
@@ -5,6 +6,7 @@ const Footer = () => {
     return (
         <footer>
             <div className='inner'>
+
                 <div>
                     <h2>Explore</h2>
                     <div className='social'>
@@ -18,11 +20,13 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
+
                 <FooterMain />
-                <div className='bottom'>
+
+                <div className='bottom flex-justify'>
                     <p>Copyrights</p>
                     <button onClick={() => window.scrollTo(0,0)}> 
-                        Back to Top<i className="fas fa-long-arrow-alt-up"></i>
+                        Back to Top <i className="fas fa-long-arrow-alt-up"></i>
                     </button>     
                 </div>   
             </div>        
