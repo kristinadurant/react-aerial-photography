@@ -10,17 +10,27 @@ const Bookmarks = ({ setOpen }) => {
     useEffect(() => setList(bookmarks), [bookmarks]);
 
     return (
-        <div id='bookmarks' className='dropdown' onMouseLeave={() => setOpen(false)}>
-            <ul>
-                {list.map( item => {
-                    return (
-                    <li key={item.id}>
-                        {item.title}
-                        <button className='square' onClick={() => removeBookmark(item)}>x</button>
-                    </li>
-                )})}
-            </ul>
-            <Link to='/contact'>Send inquiry about your bookmarks</Link>
+        <div id='bookmarks' className='dropdown' onMouseLeave={() => setOpen(true)}>
+
+            {bookmarks.length === 0
+            ? <>
+                <p>You haven't added any bookmarks yet.</p>
+                <Link to='/gallery'>View Gallery</Link>
+              </>
+            
+            : <>
+                <ul>
+                    {list.map( item => {
+                        return (
+                        <li key={item.id}>
+                            {item.title}
+                            <button className='square' onClick={() => removeBookmark(item)}>x</button>
+                        </li>
+                    )})}
+                </ul>
+                <Link to='/contact'>Send inquiry about your bookmarks</Link>
+              </>
+            }
         </div>
     )
 }
