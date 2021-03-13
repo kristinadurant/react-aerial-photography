@@ -1,21 +1,24 @@
-.photo-editing-page .color-adjustment {
-  background-image: url("../../assets/paint-brush-solid.svg");
-  background-repeat: no-repeat;
-  background-size: 30%;
-  background-position: 80% 100%;
-  padding: 8% 0 10%;
+.photo-editing .text ul {
+  padding-left: 2em;
 }
-.photo-editing-page .color-adjustment .inner {
+
+section.color-adjustment,
+section.background-manipulation {
+  padding: 8% 0 10%;
   display: flex;
 }
-.color-adjustment .before-after .image {
-  width: 700px;
-  height: 400px;
+section.background-manipulation {
+  flex-direction: row-reverse;
 }
-.photo-editing .text {
+section.color-adjustment .text {
   margin-left: 5%;
   padding-top: 3%;
 }
-.photo-editing .text ul {
-  padding-left: 2em;
+section.background-manipulation .text {
+  margin-right: 5%;
+  padding-top: 3%;
+}
+section.photo-editing .before-after .image {
+  width: 700px;
+  height: 400px;
 }

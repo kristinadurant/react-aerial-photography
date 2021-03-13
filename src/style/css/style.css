@@ -10,11 +10,22 @@
   letter-spacing: 0.2em;
   font-size: 0.8em;
 }
+h2.two-lines {
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+}
 .accent-color {
   color: #ffab00;
 }
 .light-grey {
   color: #a9a9a9;
+}
+.link {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  font-size: 0.75em;
 }
 /*=================
     Less Styles
@@ -326,23 +337,6 @@ section.photo-shoots {
 /*=================
     Page Home
 ===================*/
-#home-page .gallery {
-  background-color: #edebe6;
-}
-#home-page .gallery a {
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.8em;
-  font-size: 0.75em;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 1em 2.2em;
-  background-color: #062b2d;
-  min-width: 200px;
-  font-size: 0.75rem;
-  text-align: center;
-}
 .steps-home li {
   margin-bottom: 1em;
 }
@@ -365,24 +359,7 @@ section.photo-shoots {
   color: #77929257;
   line-height: 1;
 }
-/*=================
-    Page About
-===================*/
-#about .inner {
-  height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-#about .inner > :nth-child(n) {
-  width: 40%;
-}
-#about .image {
-  position: absolute;
-  left: 0;
-}
+
 /*=================
     Gallery
 ===================*/

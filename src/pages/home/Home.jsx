@@ -1,7 +1,7 @@
 import React from 'react';
-import Carousel from './Carousel';
-import { BannerVideo, Services, StepsHome, BeforeAfter, CheckList } from '../../components';
-import { gallerySteps, before, after, photoEditing } from './Content';
+import { Link } from 'react-router-dom';
+import { BannerVideo, BeforeAfter, CheckList, Section1 } from '../../components';
+import { before, after, photoEditing, gallery, aerialShoots } from './Content';
 import { Helmet } from 'react-helmet';
 
 const Home = () => {
@@ -15,35 +15,48 @@ const Home = () => {
             </Helmet>
 
             <BannerVideo />
-            <Services />
 
-            <section className='gallery padding'>
-                <div className='inner'>
-                    <StepsHome 
-                        subTitle={'High Resolution'}
-                        title={'Photos & Videos'}
-                        list={gallerySteps} link={{url: '/gallery', text: 'View Gallery'}}
-                    />
-                </div>
-            </section>
-
-            <section className='photo-shoots full-screen'>
-                <Carousel />
-                <div className='inner'>
-                    <h2 className='font1'>
-                        Aerial Photo & Video Shoots
+            
+            <div className='inner'>
+                <Section1 
+                    name={'gallery'}
+                    url={require('../../assets/images/Zion Landscape.jpg').default}
+                    alt='Aerial Photo of Zion Landscape'
+                >
+                    <h2 className='two-lines'>
+                        <span className='font2'>Download High Resolution</span>
+                        <span className='font1'>Photos & Videos</span>
                     </h2>
-                </div>
-            </section>
+                    <p>{gallery}</p>
+                    <Link className='accent-color link' to='/gallery'>
+                        View Gallery
+                    </Link>
+                </Section1>
 
+                <Section1 
+                    name={'aerial-shoots'}
+                    url={require('../../assets/images/Zion Landscape.jpg').default}
+                    alt='Aerial Photo of Zion Landscape'
+                >
+                    <h2 className='two-lines'>
+                        <span className='font2'>High Quality Aerial</span>
+                        <span className='font1'>Photo & Video Shoots</span>
+                    </h2>
+                    <p>{aerialShoots}</p>
+                    <Link className='accent-color link' to='/gallery'>
+                        Find out more
+                    </Link>
+                </Section1>
+            </div>
 
-
-            <section className='full-screen photo-editing padding'>
+            <section className='photo-editing'>
                 <div className='inner flex-justify'>
                                 
                     <BeforeAfter before={before} after={after} />
-            
-                    <CheckList title='Professional Photo Editing' list={photoEditing} />
+
+                    <div className='text'>
+                        <CheckList title='Professional Photo Editing' list={photoEditing} />
+                    </div>
 
                 </div>
             </section>

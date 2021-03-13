@@ -1,9 +1,10 @@
 import './style.css';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Banner, Steps, CheckList, BeforeAfter } from '../../components';
-import { bannerImage, steps, services } from './Content';
+import { Banner, Steps, CheckList, Section1 } from '../../components';
+import { steps, services } from './Content';
 import ColorAdjustment from './ColorAdjustment';
+import PhotoRestauration from './PhotoRestauration';
 
 const PhotoEditing = () => {
     return (
@@ -18,29 +19,28 @@ const PhotoEditing = () => {
             <Banner 
                 title='Professional Photo Editing' 
                 subtitle='Retouch - Color Adjustment - Object removal'
-                image={bannerImage}
+                image={require('../../assets/images/IMG_1531.jpg')}
             />
 
             <Steps list={steps} />
 
-            <ColorAdjustment section={services[0]} />
 
-            <section className='photo-editing portrait'>
-                <CheckList title={services[1].title} list={services[1].services} /> 
-            </section>
+            <div className='inner'>
+                <ColorAdjustment section={services[0]} name='color-adjustment' />
 
-            <section className='photo-editing portrait'>
-                <CheckList title={services[2].title} list={services[2].services} /> 
-            </section>
+                <ColorAdjustment section={services[2]} name='background-manipulation' />
 
-            <section className='photo-editing portrait'>
-                <CheckList title={services[3].title} list={services[3].services} /> 
-            </section>
+                <Section1 
+                    name='photo-editing portrait'
+                    url={require('../../assets/images/photoEditing/portrait.jpg').default}
+                    alt='Photo with Portrait Retouch done'
+                >
+                    <CheckList title={services[1].title} list={services[1].services} />
+                </Section1>
 
-            <section className='photo-editing portrait'>
-                <CheckList title={services[4].title} list={services[4].services} /> 
-            </section>
+                <PhotoRestauration />
 
+            </div>
         </main>
     )
 }

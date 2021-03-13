@@ -3,7 +3,7 @@ import React from 'react';
 const CheckList = ({ title, list }) => {
 
     return (
-        <div className='text'>
+        <>
             <h2 className='font1'>{title}</h2>
             <ul className='check-list'>
                 {list.map((item, key) => {
@@ -14,7 +14,7 @@ const CheckList = ({ title, list }) => {
                         </li>
                 )})}
             </ul>
-        </div>
+        </>
     )
 }
 
