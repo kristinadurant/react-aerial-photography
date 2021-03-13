@@ -1,7 +1,9 @@
+import './style.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BannerVideo, BeforeAfter, CheckList, Section1 } from '../../components';
-import { before, after, photoEditing, gallery, aerialShoots } from './Content';
+import Gallery from './Gallery';
+import { before, after, photoEditing, gallery, aerialShoots, galleryImages } from './Content';
 import { Helmet } from 'react-helmet';
 
 const Home = () => {
@@ -18,20 +20,19 @@ const Home = () => {
 
             
             <div className='inner'>
-                <Section1 
-                    name={'gallery'}
-                    url={require('../../assets/images/Zion Landscape.jpg').default}
-                    alt='Aerial Photo of Zion Landscape'
-                >
-                    <h2 className='two-lines'>
-                        <span className='font2'>Download High Resolution</span>
-                        <span className='font1'>Photos & Videos</span>
-                    </h2>
-                    <p>{gallery}</p>
-                    <Link className='accent-color link' to='/gallery'>
-                        View Gallery
-                    </Link>
-                </Section1>
+                <section className='gallery'>
+                    <div className='text' style={{ maxWidth: '400px'}}>
+                        <h2 className='two-lines'>
+                            <span className='font2'>Download High Resolution</span>
+                            <span className='font1'>Photos & Videos</span>
+                        </h2>
+                        <p>{gallery}</p>
+                        <Link className='accent-color link' to='/gallery'>
+                            View Gallery
+                        </Link>
+                    </div>
+                </section>
+                <Gallery images={galleryImages} />
 
                 <Section1 
                     name={'aerial-shoots'}

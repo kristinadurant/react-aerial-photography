@@ -1,0 +1,9 @@
+section.section2 .images {
+  display: flex;
+}
+section.section2 .images div {
+  width: 31%;
+  padding-top: 30%;
+  margin-right: 1%;
+  position: relative;
+}
