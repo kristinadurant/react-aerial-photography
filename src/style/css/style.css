@@ -13,6 +13,9 @@
 .accent-color {
   color: #ffab00;
 }
+.light-grey {
+  color: #a9a9a9;
+}
 /*=================
     Less Styles
 ===================*/
@@ -448,14 +451,6 @@ section.intro {
 /*=================
     Photo Editing
 ===================*/
-.photo-editing .text {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 50%;
-}
 .before-after .image {
   width: 500px;
   height: 400px;
@@ -477,15 +472,6 @@ section.intro {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-/*=================
-    Page Photo Editing
-===================*/
-.photo-editing-page section.photo-editing:nth-of-type(2n + 1) {
-  background-color: #77929257;
-}
-.photo-editing-page section.photo-editing:nth-of-type(2n) .inner {
-  flex-direction: row-reverse;
 }
 /*=================
     Contact

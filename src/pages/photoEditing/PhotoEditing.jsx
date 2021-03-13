@@ -1,7 +1,9 @@
+import './style.css';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Banner, Steps, CheckList, BeforeAfter } from '../../components';
 import { bannerImage, steps, services } from './Content';
+import ColorAdjustment from './ColorAdjustment';
 
 const PhotoEditing = () => {
     return (
@@ -21,16 +23,23 @@ const PhotoEditing = () => {
 
             <Steps list={steps} />
 
-            {services.map(section => {
-                return (
-                    <section key={section.title} className='photo-editing padding'>     
-                        <div className='inner flex-justify'> 
-                            <CheckList title={section.title} list={section.services} />
-                            <BeforeAfter before={section.before} after={section.after} />
-                        </div> 
-                    </section>
-                )
-            })}
+            <ColorAdjustment section={services[0]} />
+
+            <section className='photo-editing portrait'>
+                <CheckList title={services[1].title} list={services[1].services} /> 
+            </section>
+
+            <section className='photo-editing portrait'>
+                <CheckList title={services[2].title} list={services[2].services} /> 
+            </section>
+
+            <section className='photo-editing portrait'>
+                <CheckList title={services[3].title} list={services[3].services} /> 
+            </section>
+
+            <section className='photo-editing portrait'>
+                <CheckList title={services[4].title} list={services[4].services} /> 
+            </section>
 
         </main>
     )

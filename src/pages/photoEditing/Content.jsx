@@ -12,6 +12,12 @@ export const steps = [
 
 export const services = [
     {
+        title: 'Color Adjustment',
+        services: ['Color adjustment', 'Saturation', 'Exposure' ],
+        before: { img: pathTo('before.jpg'), description: 'before'},
+        after: { img: pathTo('after.jpg'), description: 'before'}
+    },
+    {
         title: 'Portrait Retouching',
         services: ['Color adjustment', 'Skin smoothing', 'Makeup enhancement' ],
         before: { img: pathTo('before.jpg'), description: 'before'},

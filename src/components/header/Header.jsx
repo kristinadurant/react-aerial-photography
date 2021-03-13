@@ -12,7 +12,7 @@ const Header = () => {
     const [openBookmarks, setOpenBookmarks ] = useState(false);
     const location = useLocation();
     const path = location.pathname;
-    const headerClassName = path==='/'? 'transparent': 'white';
+    const headerClassName ='transparent';
 
     return (
         <header className={headerClassName}>
