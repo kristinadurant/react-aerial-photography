@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Services, Section1 } from '../../components';
+import { Section1 } from '../../components';
 import { Helmet } from 'react-helmet';
-
+import Instagram from '../../components/instagram/Instagram';
 
 const About = () => {
     return (
@@ -40,9 +40,9 @@ const About = () => {
                     <Link to='/contact' className='link'>Have a question?</Link>
                 </Section1>
 
-                <Services />
             </div>
 
+            <Instagram />
             
 
         </main>
