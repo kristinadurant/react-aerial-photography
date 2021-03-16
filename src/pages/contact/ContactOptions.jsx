@@ -17,12 +17,12 @@ const ContactOptions = () => {
                     </HashLink>
                 </li>
 
-                <li className={option==='schedule' && 'active'}>                                                   
+                {/* <li className={option==='schedule' && 'active'}>                                                   
                     <HashLink smooth to='#contact-form' onClick={() => setOption('schedule')}>
                         <span className='checkmark'><i /></span>
                         <span>Schedule an Aerial Photo & Video Shoot</span>
                     </HashLink>
-                </li>
+                </li> */}
 
                 <li className={option==='inquiry' && 'active'}>                                                
                     <HashLink smooth to='#contact-form' onClick={() => setOption('inquiry')}>

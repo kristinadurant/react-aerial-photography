@@ -17,12 +17,10 @@ const MainMenu = ({ setOpenMenu }) => {
                         {open && 
                         <ul>
                             <li><Link to='/gallery'>- Download Photos & Videos</Link></li>
-                            <li><Link to='/aerial-photo-video-shoot'> - Aerial Video & Photo Shoots</Link></li>                      
                             <li><Link to='/professional-photo-editing'>- Professional Photo Retouching</Link></li>
                         </ul>
                         }
                     </li>
-                    <li><Link to='/gallery'>Gallery</Link></li>
                     <li><Link to='/about-pierre-photographer'>About</Link></li>                      
                     <li><Link to='/contact'>Contact</Link></li>
                 </ul>
