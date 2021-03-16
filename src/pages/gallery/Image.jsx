@@ -15,7 +15,7 @@ const Image = ({ img }) => {
     return (
         <div key={img.id} className='image'>
             <img src={require(`../../assets/images/${img.url}`).default} alt={img.title} height='auto' width='100%' />       
-            <div className='overlay' onClick={() => setModal(img)} />
+            <div className='overlay' onClick={() => setModal(img)}>
             <button 
                 className='square'
                 onClick={() => addBookmark(img)} disabled={disabled} 
@@ -27,7 +27,7 @@ const Image = ({ img }) => {
                 : <i className="far fa-bookmark"></i>
                 }
             </button>    
-            
+            </div>
         </div>
     )
 }

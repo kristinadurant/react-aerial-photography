@@ -1,3 +1,4 @@
+import './style.css';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Images from './Images';

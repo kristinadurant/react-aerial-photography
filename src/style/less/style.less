@@ -343,61 +343,6 @@ section.photo-shoots {
   color: @color-primary-light;
   line-height: 1;
 }
-
-/*=================
-    Gallery
-===================*/
-section.intro {
-  .padding;
-  .flex-justify;
-}
-.search form {
-  .flex-justify;
-  width: 70%;
-  max-width: 400px;
-  border-bottom: 1px solid @color;
-}
-.search input {
-  background-color: transparent;
-  width: 100%;
-}
-#gallery-page .gallery .inner {
-  .flex-justify;
-  flex-wrap: wrap;
-}
-#gallery-page .gallery .image {
-  width: 33%;
-  padding-bottom: 20%;
-  overflow: hidden;
-  position: relative;
-}
-#gallery-page .gallery .image img {
-  position: absolute;
-  transition: transform 0.5s;
-}
-#gallery-page .gallery .image button {
-  position: absolute;
-}
-#gallery-page .gallery .image .overlay {
-  position: absolute;
-  cursor: pointer;
-}
-#gallery-page .gallery .image:hover img {
-  cursor: pointer;
-  background-color: #000;
-  transform: scale(1.2);
-}
-/*=================
-    Gallery Modal
-===================*/
-#modal {
-  .overlay;
-  .flex-center;
-  position: fixed;
-  z-index: 99;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 /*=================
     Photo Editing
 ===================*/

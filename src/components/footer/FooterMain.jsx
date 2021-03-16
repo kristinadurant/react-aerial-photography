@@ -15,12 +15,13 @@ const FooterMain = () => {
                         <Link to='/professional-photo-editing'>Professional Photo Editing</Link>
                     </li>
                 </ul>
+                <h3><Link to='/gallery'>View Gallery</Link></h3>
             </div>
             <div>
                 <h3>About</h3>
                 <ul>
                     <li><Link to='/about-pierre-photographer'>About Pierre</Link></li>
-                    <li><Link to='/gallery'>Gallery</Link></li>
+                    <li><Link to='/frequently-asked-questions'>FAQ</Link></li>
                     <li><Link to='/contact'>Contact</Link></li>
                 </ul>
             </div>
