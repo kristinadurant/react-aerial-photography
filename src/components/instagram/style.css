@@ -1,4 +1,4 @@
-.instagram-feed {
+.instagram-feed .container{
     display: flex;
 }
 .instagram-feed .background-image {
