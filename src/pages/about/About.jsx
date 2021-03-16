@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { Section1 } from '../../components';
 import { Helmet } from 'react-helmet';
-import Instagram from '../../components/instagram/Instagram';
+import { Instagram } from '../../components';
 
 const About = () => {
     return (

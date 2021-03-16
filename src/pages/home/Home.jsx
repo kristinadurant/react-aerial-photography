@@ -1,7 +1,7 @@
 import './style.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BannerVideo, BeforeAfter, CheckList, Section1 } from '../../components';
+import { BannerVideo, BeforeAfter, CheckList, Section1, Instagram } from '../../components';
 import { before, after, photoEditing, gallery } from './Content';
 import { Helmet } from 'react-helmet';
 
@@ -49,6 +49,8 @@ const Home = () => {
 
                 </div>
             </section>
+
+            <Instagram />
         </main>
     )
 }

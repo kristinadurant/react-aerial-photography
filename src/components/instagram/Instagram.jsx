@@ -17,7 +17,7 @@ const Instagram = () => {
     }, []);
 
     return apiData && (
-        <div className='instagram-feed inner'>
+        <section className='instagram-feed inner'>
             <h2>
                 <span className='font2'>Latest on Instagram</span>
                 <span className='font1'>
@@ -39,7 +39,7 @@ const Instagram = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

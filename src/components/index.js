@@ -9,3 +9,4 @@ export { default as Steps } from './Steps';
 export { default as CheckList } from './CheckList';
 export { default as BeforeAfter } from './BeforeAfter';
 export { default as Section1 } from './sections/Section1';
+export { default as Instagram } from './instagram/Instagram';
