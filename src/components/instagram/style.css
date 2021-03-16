@@ -1,11 +1,26 @@
+.instagram-feed h2 {
+    font-size: 1em;
+    width: 55%;
+    margin: 0 auto 1em;
+    border-bottom: 0.5em solid #edebe6;
+    text-align: center;
+}
+.instagram-feed h2 .font1 {
+    font-size: 1.125em;
+    font-style: italic;
+    margin-left: 0.5em;
+}
 .instagram-feed .container{
     display: flex;
+    justify-content: center;
 }
 .instagram-feed .background-image {
     position: relative;
     overflow: hidden;
     width: 20%;
     padding-bottom: 20%;
+    margin-right: 1px;
+    border-radius: 3px;
 }
 .instagram-feed .background-image a {
     position: absolute;
@@ -14,4 +29,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: 500ms;
+    background-color: rgba(255,255,255,0.5);
+}
+.instagram-feed .background-image:hover a {
+    opacity: 1;
 }
