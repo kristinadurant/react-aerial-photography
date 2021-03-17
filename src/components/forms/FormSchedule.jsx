@@ -16,7 +16,7 @@ const FormSchedule = () => {
                     data-date-inline-picker="true"
                 />
             </div>
-            <InputTextarea label='Tell us a bit more about yourself or your project' id='message' rows='4' required/>
+            <InputTextarea label='Tell us a bit more about yourself or your project' required/>
         </>
     )
 }

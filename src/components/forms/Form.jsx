@@ -1,3 +1,4 @@
+import './style.css';
 import React, { useState } from 'react';
 import { db } from '../../firebase';
 
@@ -26,7 +27,7 @@ const Form = ({ title, children }) => {
         <form onSubmit={handleSubmit}>
             <h2 className='font1'>{title}</h2>
 
-            
+
 
             { children }
 

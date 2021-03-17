@@ -23,7 +23,7 @@ const FormInquiry = () => {
                     )})}
                 </ul>
             </fieldset>
-            <InputTextarea label='Questions/Comments' id='message' rows='4' />
+            <InputTextarea label='Questions/Comments' />
         </>
     )
 }

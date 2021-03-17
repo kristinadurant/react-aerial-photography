@@ -1,0 +1,20 @@
+.input-files .background-image {
+  height: 3.5em;
+  width: 3.5em;
+  display: flex;
+  border: 1px solid #062b2d;
+  border-radius: 3px;
+  background-size: cover;
+}
+#contact-form .input-files input {
+  border-bottom: none;
+}
+#contact-form .input-files input:focus + label {
+  border: 1px solid red;
+}
+#contact-form .input-files label {
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
+  line-height: 3.5em;
+}

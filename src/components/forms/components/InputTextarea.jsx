@@ -1,12 +1,12 @@
 import React from 'react';
 
-const InputTextarea = ({id, label, ...rest}) => {
+const InputTextarea = ({label, ...rest}) => {
     return (
         <div>
-            <label htmlFor={id}>
+            <label htmlFor='message'>
                 {label}
             </label>
-            <textarea id={id} name={label} rows='5' {...rest} />
+            <textarea id='message' name={label} rows='4' {...rest} />
         </div>
     )
 }

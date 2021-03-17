@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { InputText, InputTextarea, InputFile } from './components';
 
 const FormEditing = () => {
     const [number, setNumber] = useState(1);
     const [hmtlUpload, setHtmlUpload] = useState([]);
-
+    const [images, setImages] = useState(null);
+console.log(images)
     useEffect(() =>{
         setHtmlUpload([]);
         const html = [];
@@ -15,6 +17,8 @@ const FormEditing = () => {
 
     return (
         <>
+            <InputText label='Name' id='name' required />
+            <InputText label='Email' id='email' required type='email' />
             <div>
                 <label htmlFor='number-of-photos'>
                     Number of Photos to be editted <strong title="required" aria-label='required'>*</strong>
@@ -26,20 +30,18 @@ const FormEditing = () => {
                 />
             </div>
 
-            <fieldset>
+            <fieldset className='input-files'>
                 <legend>
-                    Upload files <strong title="required" aria-label='required'>*</strong>
+                    Upload images <strong title="required" aria-label='required'>*</strong>
                 </legend>
-                <div>{hmtlUpload}</div>        
+                {/* <div><input type='file' accept='.jpg, .jpeg' id='upload-photos' name='upload-photos'
+                    onChange={(e) => setImages(URL.createObjectURL(e.target.files[0]))}
+                /></div>  */}
+                <InputFile label='Image' id='file1' />
+                <InputFile label='Image' id='file2' />
+                <InputFile label='Image' id='file3' />
             </fieldset>
-
-            <div>
-                <label htmlFor='message'>
-                    Tell us a bit more about edits you would like to implement 
-                    <strong title="required" aria-label='required'> *</strong>
-                </label>
-                <textarea id='message' name='message' rows="4" required/>
-            </div>
+            <InputTextarea label='Message/Questions' />
         </>
     )
 }

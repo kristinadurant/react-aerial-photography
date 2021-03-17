@@ -158,7 +158,8 @@ a {
   display: none;
 }
 span.hide,
-label.hide {
+label.hide,
+input.hide {
   overflow: hidden;
   color: transparent;
   width: 1px;
