@@ -26,18 +26,7 @@ const Form = ({ title, children }) => {
         <form onSubmit={handleSubmit}>
             <h2 className='font1'>{title}</h2>
 
-            <div>
-                <label htmlFor='name'>
-                    Name <strong title="required" aria-label='required'>*</strong>
-                </label>
-                <input type='text' id='name' name='name' required autoFocus/>
-            </div>
-            <div>
-                <label htmlFor='email'>
-                    Email <strong title="required" aria-label='required'>*</strong>
-                </label>
-                <input type='email' id='email' name='email' required />
-            </div>
+            
 
             { children }
 

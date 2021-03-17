@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { BookmarksContext } from '../../context/BookmarksContext';
+import { InputText, InputTextarea } from './components';
 
 const FormInquiry = () => {
     const { bookmarks } = useContext(BookmarksContext);
     
     return (
         <>
+            <InputText label='Name' id='name' required />
+            <InputText label='Email' id='email' required type='email' />
             <fieldset>
                 <legend>Bookmarked Photos & Videos</legend>
                 <ul>
@@ -20,13 +23,7 @@ const FormInquiry = () => {
                     )})}
                 </ul>
             </fieldset>
-
-            <div>
-                <label htmlFor='message'>
-                    Questions/Comments
-                </label>
-                <textarea id='message' name='message' rows="4"/>
-            </div>
+            <InputTextarea label='Questions/Comments' id='message' rows='4' />
         </>
     )
 }
