@@ -1,0 +1,46 @@
+.banner button {
+    color: #fff;
+}
+.banner p + button {
+    margin-top: 2rem;
+}
+.banner {
+    position: relative;
+}
+.banner .video-container {
+height: 100%;
+overflow: hidden;
+}
+.banner video {
+display: block;
+min-height: 100%;
+width: auto;
+}
+.banner h1 {
+font-family: "Italiana", serif;
+font-size: 2.4em;
+line-height: 1;
+margin-bottom: 1em;
+color: #fff;
+}
+#home-page .banner .inner {
+position: absolute;
+z-index: 5;
+bottom: 8%;
+left: 50%;
+transform: translateX(-50%);
+}
+#home-page .banner h1 {
+border-bottom: 2px solid white;
+margin-bottom: 0;
+}
+#home-page .banner button {
+margin: auto;
+color: #fff;
+}
+.banner.background-image .inner {
+margin-top: 20%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}

@@ -1,7 +1,11 @@
+import './style.css';
 import React from 'react';
 
+const Banner = ({ title, subtitle, image }) => {
 
-const Banner = ({ title, subtitle, image, children }) => {
+    function handleScroll() {
+        document.querySelector('.banner + *').scrollIntoView();
+    }
 
     return (
         <section 
@@ -12,7 +16,13 @@ const Banner = ({ title, subtitle, image, children }) => {
                 <div className='inner '>
                     <h1>{title}</h1>
                     <p className='font2 light-grey' style={{ fontWeight: 'bold'}}>{subtitle}</p>
-                    {children}
+                    <button 
+                        className='square' title='Scroll Down'
+                        onClick={handleScroll} 
+                    >
+                        <span className='hide'>Scroll Down</span>
+                        <i className="fas fa-sort-down fa-3x"></i>
+                    </button>
                 </div>   
             </div>
         </section>

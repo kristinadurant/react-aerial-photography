@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = () => {
       
     function handleScroll() {
-        document.getElementById('services').scrollIntoView();
+        document.querySelector('.banner + *').scrollIntoView()
     }
 
     return (

@@ -1,7 +1,7 @@
 export { default as Header } from './header/Header';
 export { default as Footer } from './footer/Footer';
-export { default as BannerVideo } from './BannerVideo';
-export { default as Banner } from './Banner';
+export { default as BannerVideo } from './banner/BannerVideo';
+export { default as Banner } from './banner/Banner';
 export { default as Services } from './Services';
 export { default as Carousel } from './carousel/Carousel';
 export { default as StepsHome } from './StepsHome';
