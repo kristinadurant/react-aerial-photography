@@ -4,20 +4,20 @@ const ListItem = ({id, q, a}) => {
     const [open, setOpen] = useState(false);
 
     return (
-        <li>
-            <p>
+        <li className={open && 'open'}>    
+            <h2>
                 <button 
                     onClick={() => setOpen(!open)}
                     aria-expanded={open}
                     aria-controls={id}
                 >
-                <span aria-hidden='true'>
-                    {open? '-' : '+'}
-                </span>
-                {q}
+                    <span aria-hidden='true'>
+                        {open? '-' : '+'}
+                    </span>
+                    {q}
                 </button>
-            </p>
-            <p id={id} className={open && 'open'} aria-hidden={!open}>{a}</p>
+            </h2>
+            <div><p id={id} aria-hidden={!open}>{a}</p></div>
         </li>
     )
 }

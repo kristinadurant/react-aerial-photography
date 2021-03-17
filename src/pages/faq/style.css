@@ -1,0 +1,35 @@
+.faq-page li {
+    border-bottom: 1px solid  #cecdcb;
+}
+.faq-page li button {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 2;
+}
+.faq-page li button span {
+    font-size: 1.5em;
+    display: block;
+    width: 1.5em;
+    margin-left: 10px;
+    text-align: left;
+}
+.faq-page li div {
+    height: 0;
+    overflow: hidden;
+    transition: height 200ms;
+    transition-timing-function: ease-out;
+}
+.faq-page li p {
+    display: none;
+    font-size: 1rem;
+    margin-left: 2em;
+}
+.faq-page li.open div {
+    height: 2rem;
+    transition: height 500ms;
+}
+.faq-page li.open p {
+    display: block;
+}

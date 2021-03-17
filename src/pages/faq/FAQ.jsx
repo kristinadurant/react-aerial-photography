@@ -6,7 +6,7 @@ import { data } from './data.js';
 
 const FAQ = () => {
     return (
-        <main>
+        <main className='faq-page'>
             <Helmet>
                 <title>Frequently asked questions</title>
                 <meta name='description' content='Find answers to frequently asked questions about our services.' />
