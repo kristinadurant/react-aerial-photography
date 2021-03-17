@@ -21,7 +21,7 @@ const FooterMain = () => {
                 <h3>About</h3>
                 <ul>
                     <li><Link to='/about-pierre-photographer'>About Pierre</Link></li>
-                    <li><Link to='/frequently-asked-questions'>FAQ</Link></li>
+                    <li><Link to='/frequently-asked-questions' aria-label='frequently asked questions'>FAQ</Link></li>
                     <li><Link to='/contact'>Contact</Link></li>
                 </ul>
             </div>
