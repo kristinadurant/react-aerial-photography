@@ -19,6 +19,22 @@ header .logo {
   text-transform: uppercase;
 }
 
+/* Nav */
+header nav > ul > li > :first-child {
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
+header nav > ul > li {
+  padding: 0.5em;
+}
+
+/* Submenu */
+header .submenu ul {
+  border-bottom: 1px solid #deddd9;
+  list-style: armenian;
+}
+
 /* Buttons */
 .menu-bars {
   display: flex;
@@ -51,13 +67,15 @@ header .logo {
 header .button-container {
   position: relative;
 }
+header .button-container .dropdown {
+  right: 0;
+}
 
 /* Dropdown */
 header .dropdown {
   background-color: #fff;
   color: #000;
   position: absolute;
-  right: 0;
   top: 60px;
   width: 250px;
 }
@@ -75,20 +93,10 @@ header .dropdown p {
 header .dropdown > :last-child {
   border-bottom: none;
 }
-header .dropdown li > :first-child {
-  width: 100%;
-}
 header .dropdown a.font2 {
   width: 100%;
   text-align: center;
   font-weight: bold;
-  line-height: 44px;
-}
-header .dropdown li.submenu button {
-  min-height: auto;
-  border-bottom: 1px solid #deddd9;
-  padding-left: 1em;
-  font-size: 0.875rem;
   line-height: 44px;
 }
 header #bookmarks li {
@@ -98,21 +106,4 @@ header #bookmarks li span {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}
-
-/* Submenu */
-header .submenu .fa-chevron-down {
-  margin-right: 1em;
-}
-header li.submenu {
-  position: relative;
-  border-bottom: 0;
-  padding: 0;
-}
-header .submenu ul {
-  border-bottom: 1px solid #deddd9;
-  list-style: armenian;
-}
-header .submenu li {
-  border-bottom: none;
 }

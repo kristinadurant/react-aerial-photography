@@ -15,7 +15,7 @@ const FooterMain = () => {
                         <Link to='/professional-photo-editing'>Professional Photo Editing</Link>
                     </li>
                 </ul>
-                <h3><Link to='/gallery'>View Gallery</Link></h3>
+                <h3><Link to='/gallery'>Gallery</Link></h3>
             </div>
             <div>
                 <h3>About</h3>

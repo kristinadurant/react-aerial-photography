@@ -1,6 +1,9 @@
+.input-files .container {
+  display: flex;
+}
 .input-files .background-image {
-  height: 3.5em;
-  width: 3.5em;
+  height: 4em;
+  width: 4em;
   display: flex;
   border: 1px solid #062b2d;
   border-radius: 3px;
@@ -12,9 +15,23 @@
 #contact-form .input-files input:focus + label {
   border: 1px solid red;
 }
-#contact-form .input-files label {
+#contact-form .input-files .background-image label {
   flex-grow: 1;
   cursor: pointer;
   text-align: center;
-  line-height: 3.5em;
+  margin-bottom: 0;
+}
+#contact-form .input-files .background-image + div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+#contact-form .input-files .background-image + div label {
+  margin-bottom: 0;
+}
+#contact-form .input-files textarea {
+  background-color: #efefef;
+  border-bottom: none;
+  width: 500px;
+  max-width: 100%;
 }

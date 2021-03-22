@@ -23,7 +23,8 @@ const Header = () => {
 
     
                 <div className='flex-justify'>
-                    <div className='button-container'>
+                <MainMenu />
+                    {/* <div className='button-container'>
                         <button className='button-menu' title='Main Menu'
                             onClick={() => setOpenMenu(true)}
                         >
@@ -33,9 +34,8 @@ const Header = () => {
                                 <span></span>
                                 <span></span>
                             </div>
-                        </button>
-                        {openMenu && <MainMenu setOpenMenu={setOpenMenu} />}
-                    </div>
+                        </button>                      
+                    </div> */}
                     <div className='button-container'>
                         <button 
                             className='button-bookmarks' title='Bookmarks'
