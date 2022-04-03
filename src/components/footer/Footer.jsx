@@ -1,21 +1,23 @@
 import './style.css';
 import React from 'react';
 import FooterMain from './FooterMain';
+import appConfig from '../../assets/config';
+import { Hidden } from '../../styledComponents/elements';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer id="contact">
             <div className='inner'>
 
                 <div>
                     <h2>Explore</h2>
                     <div className='social'>
-                        <a href='mailto: pierre.videophotographer@gmail.com' title='email'>
-                            <span className='hide'>Email</span>
+                        <a href={`mailto: ${appConfig.linkEmail}`} title='email'>
+                            <Hidden>Email</Hidden>
                             <i className="far fa-envelope"></i>
                         </a>
-                        <a href='https://www.instagram.com/pieri_takingoff/' target='_blank' rel='noreferrer' title='instagram'>
-                            <span className='hide'>Instagram</span>
+                        <a href={appConfig.linkIG} target='_blank' rel='noreferrer' title='Instagram'>
+                            <Hidden>Instagram</Hidden>
                             <i className="fab fa-instagram"></i>
                         </a>
                     </div>

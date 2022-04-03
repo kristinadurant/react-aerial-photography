@@ -7,7 +7,7 @@ const Modal = () => {
     return modal && (
         <div id='modal' onClick={() => setModal(false)}>
             <button onClick={() => setModal(false)}>x</button>
-            <img src={require(`../../assets/images/${modal.url}`).default} alt={modal.description} height='auto' width='50%' />
+            <img src={require(`../../assets/images/${modal.url}`)} alt={modal.description} height='auto' width='50%' />
         </div>
     )
 }

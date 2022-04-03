@@ -10,7 +10,7 @@ const Bookmarks = ({ setOpen }) => {
     useEffect(() => setList(bookmarks), [bookmarks]);
 
     return (
-        <div id='bookmarks' className='dropdown' onMouseLeave={() => setOpen(false)}>
+        <div id='bookmarks' className='dropdown' onMouseLeave={() => setOpen(true)}>
 
             {bookmarks.length === 0
             ? <>

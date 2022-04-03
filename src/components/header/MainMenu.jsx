@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import Header from './style.js';
 
 
 const MainMenu = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav>
+        <Header.Menu>
             <ul className='flex-justify'>
                 <li><Link to='/gallery'>GALLERY</Link></li>
                 <li className='submenu'>
@@ -14,15 +16,16 @@ const MainMenu = () => {
                         SERVICES
                     </button>
                     {open && 
-                    <ul className='dropdown'>
-                        <li><Link to='/gallery'>- Download Photos & Videos</Link></li>
-                        <li><Link to='/professional-photo-editing'>- Professional Photo Retouching</Link></li>
+                    <ul className='dropdown' onMouseLeave={() => setOpen(false)}>
+                        <li><Link to='/gallery'>Download Photos & Videos</Link></li>
+                        <li><Link to='/professional-photo-editing'>Professional Photo Retouching</Link></li>
                     </ul>
                     }
-                </li>                                    
-                <li><Link to='/contact'>CONTACT</Link></li>
+                </li>
+                <li><HashLink to='#about'>ABOUT</HashLink></li>                                    
+                <li><HashLink to='#contact'>CONTACT</HashLink></li>
             </ul>
-        </nav>
+        </Header.Menu>
     )
 }
 

@@ -31,7 +31,7 @@ const ImagesCarousel = () => {
                     return (
                         <img 
                             key={item.id}
-                            src={require(`../../assets/images/${item.img}`).default} 
+                            src={require(`../../assets/images/${item.img}`)} 
                             alt={item.descripiton} 
                             width="100%" height="auto" 
                         />

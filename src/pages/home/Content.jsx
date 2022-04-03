@@ -1,5 +1,5 @@
 
-const pathTo = img => require(`../../assets/images/${img}`).default;
+const pathTo = img => require(`../../assets/images/${img}`);
 export const before = { img: pathTo('photoEditing/before.jpg'), description: 'before'};
 export const after = { img: pathTo('photoEditing/after.jpg'), description: 'after'};
 export const photoEditing = [ 

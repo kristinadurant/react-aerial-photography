@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CheckList = ({ title, list }) => {
+const CheckList = ({ list }) => {
 
     return (
         <ul className='check-list'>

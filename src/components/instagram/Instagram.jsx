@@ -1,6 +1,7 @@
 import './style.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Hidden } from '../../styledComponents/elements';
 
 const Instagram = () => {
     const [apiData, setApiData] = useState(null);
@@ -33,7 +34,7 @@ const Instagram = () => {
                         style={{backgroundImage: `url(${post.media_type==='VIDEO'? post.thumbnail_url: post.media_url})`}}
                     >
                         <a href={post.permalink} target='_blank' rel='noreferrer'>
-                            <span className='hide'>View Instagram Post</span>
+                            <Hidden>View Instagram Post</Hidden>
                             <i className='fab fa-instagram'></i>
                         </a>
                     </div>

@@ -6,7 +6,6 @@ import Intro from './Intro';
 import Modal from './Modal';
 import { Banner, Steps } from '../../components';
 import { GalleryContextProvider } from '../../context/GalleryContext';
-import { steps } from './Content';
 
 const Gallery = () => {
     
@@ -27,7 +26,7 @@ const Gallery = () => {
                     image={require('../../assets/images/IMG_1531.jpg')}
                 />
 
-                <Steps list={steps} />
+                {/* <Steps list={steps} /> */}
                 <Intro />
                 <Images />
                 <Modal />

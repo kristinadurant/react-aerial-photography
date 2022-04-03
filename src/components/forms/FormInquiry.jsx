@@ -12,7 +12,7 @@ const FormInquiry = () => {
             <fieldset>
                 <legend>Bookmarked Photos & Videos</legend>
                 <ul>
-                    {bookmarks?.map( item => {
+                    {bookmarks.map( item => {
                         return (
                             <li key={item.url}>                           
                                 <input type='checkbox' defaultChecked

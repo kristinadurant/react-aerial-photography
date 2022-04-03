@@ -1,5 +1,6 @@
 import './style.css';
 import React from 'react';
+import { Hidden } from '../../styledComponents/elements';
 
 const Banner = ({ title, subtitle, image }) => {
 
@@ -20,7 +21,7 @@ const Banner = ({ title, subtitle, image }) => {
                         className='square' title='Scroll Down'
                         onClick={handleScroll} 
                     >
-                        <span className='hide'>Scroll Down</span>
+                        <Hidden>Scroll Down</Hidden>
                         <i className="fas fa-sort-down fa-3x"></i>
                     </button>
                 </div>   

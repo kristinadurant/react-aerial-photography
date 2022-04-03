@@ -1,7 +1,3 @@
-.photo-editing .text ul {
-  padding-left: 2em;
-}
-
 section.color-adjustment,
 section.background-manipulation {
   padding: 8% 0 10%;
@@ -17,8 +13,4 @@ section.color-adjustment .text {
 section.background-manipulation .text {
   margin-right: 5%;
   padding-top: 3%;
-}
-section.photo-editing .before-after .image {
-  width: 700px;
-  height: 400px;
 }

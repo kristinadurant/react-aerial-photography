@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Hidden } from '../styledComponents/elements';
 
 const BeforeAfter = ({ before, after }) => {
     const [clip, setClip] = useState(50);
@@ -25,13 +26,13 @@ const BeforeAfter = ({ before, after }) => {
 
             <div className='buttons'>
                     <button className='square' onClick={() => setClip(10)} title='Before'>
-                        <span className='hide'>Before</span>
+                        <Hidden>Before</Hidden>
                         <i className="fas fa-caret-left fa-2x"></i>
                     </button>
 
                     <button className='square' onClick={() => setClip(90)} title='After'>
                         <i className="fas fa-caret-right fa-2x"></i>   
-                        <span className='hide'>After</span>            
+                        <Hidden>After</Hidden>            
                     </button>
             </div>     
 

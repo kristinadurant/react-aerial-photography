@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Banner, Steps } from '../../components';
-import { bannerImage, steps } from './Content';
+// import { bannerImage, steps } from './Content';
 
 const Photoshoot = () => {
     return (
@@ -15,12 +15,12 @@ const Photoshoot = () => {
             <Banner 
                 title='Aerial Photo & Video Shoot'
                 subtitle='Miami, FL'
-                image={bannerImage}
+                image={""}
             >
                 <button className='button'>Schedule Now</button>
             </Banner>
 
-            <Steps list={steps} />
+            {/* <Steps list={steps} /> */}
 
         </main>
     )

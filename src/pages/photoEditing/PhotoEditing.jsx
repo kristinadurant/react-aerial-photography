@@ -2,7 +2,7 @@ import './style.css';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Banner, Steps, CheckList, Section1 } from '../../components';
-import { steps, services } from './Content';
+// import { steps, services } from './Content';
 import ColorAdjustment from './ColorAdjustment';
 import PhotoRestauration from './PhotoRestauration';
 
@@ -22,20 +22,20 @@ const PhotoEditing = () => {
                 image={require('../../assets/images/IMG_1531.jpg')}
             />
 
-            <Steps list={steps} />
+            {/* <Steps list={steps} /> */}
 
 
             <div className='inner'>
-                <ColorAdjustment section={services[0]} name='color-adjustment' />
+                {/* <ColorAdjustment section={services[0]} name='color-adjustment' />
 
-                <ColorAdjustment section={services[2]} name='background-manipulation' />
+                <ColorAdjustment section={services[2]} name='background-manipulation' /> */}
 
                 <Section1 
                     name='photo-editing portrait'
-                    url={require('../../assets/images/photoEditing/portrait.jpg').default}
+                    url={require('../../assets/images/photoEditing/portrait.jpg')}
                     alt='Photo with Portrait Retouch done'
                 >
-                    <CheckList title={services[1].title} list={services[1].services} />
+                    {/* <CheckList title={services[1].title} list={services[1].services} /> */}
                 </Section1>
 
                 <PhotoRestauration />

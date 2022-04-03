@@ -21,7 +21,7 @@ const Gallery = ({ images }) => {
         //             left: 0,
         //             willChange: 'opacity'}}                
         //         >
-        //             <img src={require(`../../assets/images/${item.img}`).default} width='1920px' height='auto'  alt={item.description} 
+        //             <img src={require(`../../assets/images/${item.img}`)} width='1920px' height='auto'  alt={item.description} 
         //             />
         //         </animated.div>
                 
