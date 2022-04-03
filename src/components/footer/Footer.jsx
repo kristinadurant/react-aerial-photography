@@ -1,17 +1,18 @@
-import './style.css';
 import React from 'react';
 import FooterMain from './FooterMain';
 import appConfig from '../../assets/config';
+import { Inner } from '../../styledComponents/containers';
 import { Hidden } from '../../styledComponents/elements';
+import Footer from './style.js';
 
-const Footer = () => {
+const FooterComponent = () => {
     return (
-        <footer id="contact">
-            <div className='inner'>
+        <Footer id="contact">
+            <Inner>
 
-                <div>
+                <Footer.Top>
                     <h2>Explore</h2>
-                    <div className='social'>
+                    <Footer.Social>
                         <a href={`mailto: ${appConfig.linkEmail}`} title='email'>
                             <Hidden>Email</Hidden>
                             <i className="far fa-envelope"></i>
@@ -20,20 +21,20 @@ const Footer = () => {
                             <Hidden>Instagram</Hidden>
                             <i className="fab fa-instagram"></i>
                         </a>
-                    </div>
-                </div>
+                    </Footer.Social>
+                </Footer.Top>
 
                 <FooterMain />
 
-                <div className='bottom flex-justify'>
+                <Footer.Bottom>
                     <p>Copyrights</p>
                     <button onClick={() => window.scrollTo(0,0)}> 
                         Back to Top <i className="fas fa-long-arrow-alt-up"></i>
                     </button>     
-                </div>   
-            </div>        
-        </footer>
+                </Footer.Bottom>   
+            </Inner>        
+        </Footer>
     )
 }
 
-export default Footer;
+export default FooterComponent;

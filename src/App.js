@@ -4,7 +4,7 @@ import './style/css/style.css';
 import './style/css/responsive.css';
 import ScrollToTop from './ScrollToTop';
 import { Header, Footer } from './components';
-import { Home, Gallery, Photoshoot, PhotoEditing, FAQ } from './pages';
+import { Home, Gallery, Photoshoot, PhotoEditing } from './pages';
 import { BookmarksContextProvider } from './context/BookmarksContext';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Route exact path='/gallery' component={Gallery} /> 
             <Route exact path='/aerial-photo-video-shoot' component={Photoshoot} />
             <Route exact path='/professional-photo-editing' component={PhotoEditing} />
-            <Route exact path='/frequently-asked-questions' component={FAQ} />
+            {/* <Route exact path='/frequently-asked-questions' component={FAQ} /> */}
         </Switch>
       </BookmarksContextProvider>
       <Footer />

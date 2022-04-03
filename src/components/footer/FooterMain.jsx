@@ -1,32 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Subscribe from './Subscribe';
+import Footer from './style.js';
+import appConfig from '../../assets/config';
+import appLocalization from '../../assets/localization';
+import TestimonialForm from './TestimonialForm';
 
 const FooterMain = () => {
     return (
-        <div className='main'>
+        <Footer.Main>
             <div>
-                <h3>Services</h3>
+                <h3>{appLocalization.services}</h3>
                 <ul>
                     <li>
                         <Link to='/gallery'>Download Photos & Videos</Link>
                     </li>
                     <li>
-                        <Link to='/professional-photo-editing'>Professional Photo Editing</Link>
+                        <Link to='/professional-photo-editing'>{appLocalization.photoEditingTitleLarge}</Link>
                     </li>
                 </ul>
-                <h3><Link to='/gallery'>Gallery</Link></h3>
-            </div>
-            <div>
-                <h3>About</h3>
+                <h3><Link to='/gallery'>{appLocalization.gallery} <i className="fas fa-long-arrow-alt-right"></i></Link></h3>
+                <h3>{appLocalization.contact}</h3>
                 <ul>
-                    <li><Link to='/about-pierre-photographer'>About Pierre</Link></li>
-                    <li><Link to='/frequently-asked-questions' aria-label='frequently asked questions'>FAQ</Link></li>
-                    <li><Link to='/contact'>Contact</Link></li>
+                    <li>
+                    <a href={`mailto: ${appConfig.linkEmail}`} title='Email'>
+                        <p>{appConfig.linkEmail}</p>
+                    </a>
+                    </li>
+                    <li>
+                    <a href={appConfig.linkIG} target='_blank' rel='noreferrer' title='Instagram'>
+                        <p>Instagram: {appConfig.accountNameIG}</p>
+                    </a>
+                    </li>
                 </ul>
             </div>
-            <Subscribe />
-        </div>          
+            <Footer.TestimonialFormContainer>
+                <TestimonialForm />
+            </Footer.TestimonialFormContainer>
+            {/* <Subscribe /> */}
+        </Footer.Main>          
     )
 }
 
