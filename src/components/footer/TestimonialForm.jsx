@@ -11,7 +11,7 @@ const TestimonialForm = () => {
   return (
     <div>
         <h3>{appLocalization.testimonialFormTitle}</h3>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="POST" netlify>
                 <div>
                     <input id='name' required aria-label='required' placeholder='Your name'/>
                     <Textarea id='testimonial-text' rows="4" required aria-label='required' placeholder='Describe your experience here...'/>
