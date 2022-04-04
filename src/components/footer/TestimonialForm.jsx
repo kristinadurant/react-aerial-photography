@@ -4,14 +4,11 @@ import { Textarea } from '../../styledComponents/elements'
 
 
 const TestimonialForm = () => {
-    function handleSubmit() {
-        
-    }
 
   return (
     <div>
         <h3>{appLocalization.testimonialFormTitle}</h3>
-        <form onSubmit={handleSubmit} method="POST" netlify>
+        <form name="testimonials" method="POST" netlify>
                 <div>
                     <input id='name' required aria-label='required' placeholder='Your name'/>
                     <Textarea id='testimonial-text' rows="4" required aria-label='required' placeholder='Describe your experience here...'/>
