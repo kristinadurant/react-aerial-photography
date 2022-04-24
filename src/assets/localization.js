@@ -16,6 +16,9 @@ const appLocalization = {
     aboutButtonText: "Have a Question?",
     testimonialFormTitle: "Write a Testimonial",
     testimonialFormButtonText: "Send",
+    notFoundPageTitle: "404 Error",
+    notFoundPageText: "Sorry, this page is not found.",
+    notFoundPageButtonText: "Go home",
 }
 
 export default appLocalization;

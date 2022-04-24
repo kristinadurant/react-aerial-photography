@@ -4,3 +4,4 @@ export { default as Photoshoot } from './photoShoot/Photoshoot';
 export { default as PhotoEditing } from './photoEditing/PhotoEditing';
 export { default as Contact } from './contact/Contact';
 export { default as FAQ } from './faq/FAQ';
+export { default as NotFound } from './notFound/NotFound';
